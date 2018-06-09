@@ -32,30 +32,47 @@
     "friendsList": [
         {
             "id": 1,
-            "friendRequest": 1,
-            "friendAccept": 2
+            "requester": 1,
+            "accepter": 2,
+            "accepted": 1
+        },
+        {
+            "id": 2,
+            "friendRequest": 2,
+            "friendAccept": 3,
+            "friendConfirmed": 1
+        },
+        {
+            "id": 3,
+            "friendRequest": 4,
+            "friendAccept": 1,
+            "friendConfirmed": 1
         }
     ],
     "sharedItems": [
         {
             "id": 1,
-            "itemName": "lawnmower",
-            "itemDescription": "husqvarna push mower",
+            "name": "lawnmower",
+            "description": "husqvarna push mower",
             "lenderUserid": 1,
             "borrowerUserid": 2,
             "dueDate": "8/1/2018",
-           " image": ?????????,
-           "lendDate": "6/8/2018"
+            "image": "http://",
+            "lendDate": "6/8/2018",
+            "archived": false,
+            "returnDate": ""
         },
         {
             "id": 2,
-            "itemName": "Firefly DVD",
-            "itemDescription": "15th Anniv Edition",
+            "name": "Firefly DVD",
+            "description": "15th Anniv Edition",
             "lenderUserid": 3,
             "borrowerUserid": 1,
             "dueDate": "7/14/2018",
-           " image": ?????????,
-           "lendDate": "6/1/2018"
+            "image": "http://",
+            "lendDate": "6/1/2018",
+            "archived": false,
+            "returnDate": ""
         }
     ]
 }
