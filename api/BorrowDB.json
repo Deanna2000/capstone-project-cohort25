@@ -1,78 +1,92 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "fName": "Steve",
-            "lName": "Collie",
-            "email": "steve@steve.com",
-            "password": "123"
-        },
-        {
-            "id": 2,
-            "fName": "Justina",
-            "lName": "Vickers",
-            "email": "justina@justina.com",
-            "password": "123"
-        },
-        {
-            "id":3,
-            "fName": "Aurora",
-            "lName": "Vickers",
-            "email": "aurora@aurora.com",
-            "password": "123"
-        },
-        {
-            "id": 4,
-            "fName": "Brandi",
-            "lName": "Adkins",
-            "email": "brandi@brandi.com",
-            "password": "123"
-        }
-    ],
-    "friendsList": [
-        {
-            "id": 1,
-            "requester": 1,
-            "accepter": 2,
-            "accepted": 1
-        },
-        {
-            "id": 2,
-            "friendRequest": 2,
-            "friendAccept": 3,
-            "friendConfirmed": 1
-        },
-        {
-            "id": 3,
-            "friendRequest": 4,
-            "friendAccept": 1,
-            "friendConfirmed": 1
-        }
-    ],
-    "sharedItems": [
-        {
-            "id": 1,
-            "name": "lawnmower",
-            "description": "husqvarna push mower",
-            "lenderUserid": 1,
-            "borrowerUserid": 2,
-            "dueDate": "8/1/2018",
-            "image": "http://",
-            "lendDate": "6/8/2018",
-            "archived": false,
-            "returnDate": ""
-        },
-        {
-            "id": 2,
-            "name": "Firefly DVD",
-            "description": "15th Anniv Edition",
-            "lenderUserid": 3,
-            "borrowerUserid": 1,
-            "dueDate": "7/14/2018",
-            "image": "http://",
-            "lendDate": "6/1/2018",
-            "archived": false,
-            "returnDate": ""
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "fName": "Steve",
+      "lName": "Collie",
+      "email": "steve@steve.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "fName": "Justina",
+      "lName": "Vickers",
+      "email": "justina@justina.com",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "fName": "Aurora",
+      "lName": "Vickers",
+      "email": "aurora@aurora.com",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "fName": "Brandi",
+      "lName": "Adkins",
+      "email": "brandi@brandi.com",
+      "password": "123"
+    },
+    {
+      "fName": "borrower",
+      "lName": "borrowed",
+      "email": "borrow@borrow.com",
+      "password": "borrowing",
+      "id": 23
+    },
+    {
+      "fName": "Deanna",
+      "lName": "Vickers",
+      "email": "deanna2000@gmail.com",
+      "password": "sdfs",
+      "id": 24
+    }
+  ],
+  "friendsList": [
+    {
+      "id": 1,
+      "requester": 1,
+      "accepter": 2,
+      "accepted": 1
+    },
+    {
+      "id": 2,
+      "friendRequest": 2,
+      "friendAccept": 3,
+      "friendConfirmed": 1
+    },
+    {
+      "id": 3,
+      "friendRequest": 4,
+      "friendAccept": 1,
+      "friendConfirmed": 1
+    }
+  ],
+  "sharedItems": [
+    {
+      "id": 1,
+      "name": "lawnmower",
+      "description": "husqvarna push mower",
+      "lenderUserid": 1,
+      "borrowerUserid": 2,
+      "dueDate": "8/1/2018",
+      "image": "http://",
+      "lendDate": "6/8/2018",
+      "archived": false,
+      "returnDate": ""
+    },
+    {
+      "id": 2,
+      "name": "Firefly DVD",
+      "description": "15th Anniv Edition",
+      "lenderUserid": 3,
+      "borrowerUserid": 1,
+      "dueDate": "7/14/2018",
+      "image": "http://",
+      "lendDate": "6/1/2018",
+      "archived": false,
+      "returnDate": ""
+    }
+  ]
 }

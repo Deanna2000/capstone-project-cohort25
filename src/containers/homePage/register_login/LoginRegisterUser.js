@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 
 class LoginRegisterUser extends Component {
+    constructor(props) {
+        super(props);
 
-    state = {
-        email: "",
-        password: "",
-    }
+        this.state = {
+            user: {
+                fName: '',
+                lName: '',
+                username: '',
+                password: ''
+            },
+            onClick: false
+        }};
+
+
 
     validateForm = (evt) => {
         evt.preventDefault()
@@ -25,9 +34,18 @@ class LoginRegisterUser extends Component {
     }
 
     addUser = (evt)=>{
-        evt.preventDefault()
-        console.log("add user fn")
+            evt.preventDefault();
+            if (this.state.email.length > 0){
+                fetch("http://localhost:5001/users", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password})
+
+            })
     }
+}
 
     handleEmailChange = (evt) => {
         this.setState({ email: evt.target.value })
@@ -38,22 +56,22 @@ class LoginRegisterUser extends Component {
     }
 
     handleFirstNameChange = (evt) => {
-        this.setState({ firstName: evt.target.value })
+        this.setState({ fName: evt.target.value })
     }
 
     handleLastNameChange = (evt) => {
-        this.setState({ lastName: evt.target.value })
+        this.setState({ lName: evt.target.value })
     }
 
     render() {
         return (
             <div>
                 <form>
-                    <input type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.handleEmailChange} />
-                    <input type="password" id="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
+                    <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
+                    <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
                     <button value="Sign In" onClick={this.validateForm}>Sign In</button>
-                    <input type="first name" id="firstName" value={this.state.firstName} onChange={this.handlefirstnameChange} placeholder="First Name" />
-                    <input type="last name" id="lastName" value={this.state.lastName} onChange={this.handlelastnameChange} placeholder="Last Name" />
+                    <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
+                    <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
                     <button value="Sign Up" onClick={this.addUser}>Sign Up</button>
                 </form>
             </div>
@@ -63,4 +81,5 @@ class LoginRegisterUser extends Component {
 
 
 
-export default LoginRegisterUser
+export default LoginRegisterUser;
+

@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <header className="Home-header">
-          <h1 className="Home-title">Welcome to Borrow</h1>
+          <h1 className="Home-title"> Borrow</h1>
         </header>
         <LoginRegisterUser/>
       </div>
