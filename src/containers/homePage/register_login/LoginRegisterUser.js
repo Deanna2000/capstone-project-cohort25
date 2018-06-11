@@ -19,6 +19,14 @@ class LoginRegisterUser extends Component {
                     sessionStorage.setItem("ActiveUser", JSON.stringify({ userItem }))
                 })
         }
+        else {
+            alert('Please enter an email address')
+        }
+    }
+
+    addUser = (evt)=>{
+        evt.preventDefault()
+        console.log("add user fn")
     }
 
     handleEmailChange = (evt) => {
@@ -29,13 +37,24 @@ class LoginRegisterUser extends Component {
         this.setState({ password: evt.target.value })
     }
 
+    handleFirstNameChange = (evt) => {
+        this.setState({ firstName: evt.target.value })
+    }
+
+    handleLastNameChange = (evt) => {
+        this.setState({ lastName: evt.target.value })
+    }
+
     render() {
         return (
             <div>
-                <form onSubmit={this.validateForm}>
+                <form>
                     <input type="text" id="email" value={this.state.email} placeholder="Email" onChange={this.handleEmailChange} />
                     <input type="password" id="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
-                    <input type="submit" value="Submit" />
+                    <button value="Sign In" onClick={this.validateForm}>Sign In</button>
+                    <input type="first name" id="firstName" value={this.state.firstName} onChange={this.handlefirstnameChange} placeholder="First Name" />
+                    <input type="last name" id="lastName" value={this.state.lastName} onChange={this.handlelastnameChange} placeholder="Last Name" />
+                    <button value="Sign Up" onClick={this.addUser}>Sign Up</button>
                 </form>
             </div>
         )
