@@ -1,15 +1,14 @@
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
-import React, { Component } from 'react';
+import React from 'react';
 import Home from '../homePage/index'
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
 
 //add some conditions to view to redirect to login if they are not logged in
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">

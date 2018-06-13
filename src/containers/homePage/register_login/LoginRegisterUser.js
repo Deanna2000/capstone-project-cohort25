@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
+import {
+    Redirect,
+  } from "react-router-dom";
+
 
 // Set up the component to login and register a user
 class LoginRegisterUser extends Component {
-    //What are we bringing in here?
     constructor(props) {
         super(props);
 
         this.state = {
-            user: {
                 fName: '',
                 lName: '',
-                username: '',
-                password: ''
-            },
-            onClick: false
-        }
+                email: '',
+                password: '',
+                onClick: false,
+                shouldDashboardBeDisplayed: false
+            }
     };
 
 
@@ -24,11 +26,12 @@ class LoginRegisterUser extends Component {
         if (this.state.email.length > 0) {
             return fetch(`http://localhost:5001/users?email=${this.state.email}&${this.state.password}`)
                 .then((response) => {
+                    console.log(response)
                     return response.json();
                 }).then((user) => {
-                    console.log(user[0])
-                    const userItem = user[0]
-                    sessionStorage.setItem("ActiveUser", JSON.stringify({ userItem }))
+                    console.log(user)
+                    sessionStorage.setItem("ActiveUser", JSON.stringify( user[0] ))
+                    this.setState({shouldDashboardBeDisplayed: true})
                     console.log("login redirect to dash");
                 })
             }
@@ -51,6 +54,7 @@ class LoginRegisterUser extends Component {
                 .then(response => response.json())
                 .then(user => {
                     sessionStorage.setItem("ActiveUser", JSON.stringify({ user }));
+
                 })
 
         }
@@ -73,6 +77,9 @@ class LoginRegisterUser extends Component {
     }
 
     render() {
+        if (this.state.shouldDashboardBeDisplayed) {
+            return <Redirect to='/dashboard' />
+          }
         return (
             <div>
                 <form>

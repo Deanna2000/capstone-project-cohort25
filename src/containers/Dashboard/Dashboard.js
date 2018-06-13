@@ -3,11 +3,13 @@ import DisplayFriends from './Friends/DisplayFriends'
 
 class Dashboard extends Component {
   render() {
+    const userName = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     return (
       <div className="Dash">
         <header className="Dash-header">
           <h1 className="Dash-title"> Dashboard for Logged In View</h1>
-          <DisplayFriends/>
+          <p className="welcome">Welcome {userName.fName}</p>
+          <DisplayFriends ActiveUser={userName}/>
         </header>
       </div>
     );

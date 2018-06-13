@@ -96,6 +96,12 @@
       "friendRequesterId": 4,
       "requestedPersonId": 1,
       "friendshipConfirmed": 1
+    },
+    {
+        "id": 4,
+        "friendRequesterId": 4,
+        "requestedPersonId": 3,
+        "friendshipConfirmed": 1
     }
   ],
   "sharedItems": [
