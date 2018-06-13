@@ -81,26 +81,26 @@
   "friendsRelationships": [
     {
       "id": 1,
-      "friendRequesterId": 1,
-      "requestedPersonId": 2,
+      "RequesterId": 1,
+      "AccepterId": 2,
       "friendshipConfirmed": 1
     },
     {
       "id": 2,
-      "friendRequesterId": 2,
-      "requestedPersonId": 3,
+      "RequesterId": 2,
+      "AccepterId": 3,
       "friendshipConfirmed": 1
     },
     {
       "id": 3,
-      "friendRequesterId": 4,
-      "requestedPersonId": 1,
+      "RequesterId": 3,
+      "AccepterId": 1,
       "friendshipConfirmed": 1
     },
     {
         "id": 4,
-        "friendRequesterId": 4,
-        "requestedPersonId": 3,
+        "RequesterId": 4,
+        "AccepterId": 3,
         "friendshipConfirmed": 1
     }
   ],
