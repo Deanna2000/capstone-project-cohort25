@@ -41,26 +41,61 @@
       "email": "deanna2000@gmail.com",
       "password": "sdfs",
       "id": 24
+    },
+    {
+      "fName": "orange",
+      "lName": "orange",
+      "email": "orange@orange.com",
+      "password": "orange",
+      "id": 25
+    },
+    {
+      "fName": "green",
+      "lName": "green",
+      "email": "green@green.com",
+      "password": "green",
+      "id": 26
+    },
+    {
+      "fName": "meds",
+      "lName": "meds",
+      "email": "meds@meds.com",
+      "password": "meds",
+      "id": 27
+    },
+    {
+      "fName": "glass",
+      "lName": "glass",
+      "email": "glass@glass.com",
+      "password": "glass",
+      "id": 28
+    },
+    {
+      "fName": "glass",
+      "lName": "glass",
+      "email": "glass@glass.com",
+      "password": "glass",
+      "id": 29
     }
   ],
-  "friendsList": [
+  "friendsRelationships": [
     {
       "id": 1,
-      "requester": 1,
-      "accepter": 2,
-      "accepted": 1
+      "friendRequesterId": 1,
+      "requestedPersonId": 2,
+      "friendshipConfirmed": 1
     },
     {
       "id": 2,
-      "friendRequest": 2,
-      "friendAccept": 3,
-      "friendConfirmed": 1
+      "friendRequesterId": 2,
+      "requestedPersonId": 3,
+      "friendshipConfirmed": 1
     },
     {
       "id": 3,
-      "friendRequest": 4,
-      "friendAccept": 1,
-      "friendConfirmed": 1
+      "friendRequesterId": 4,
+      "requestedPersonId": 1,
+      "friendshipConfirmed": 1
     }
   ],
   "sharedItems": [

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
+// Set up the component to login and register a user
 class LoginRegisterUser extends Component {
+    //What are we bringing in here?
     constructor(props) {
         super(props);
 
@@ -12,7 +14,8 @@ class LoginRegisterUser extends Component {
                 password: ''
             },
             onClick: false
-        }};
+        }
+    };
 
 
 
@@ -26,26 +29,32 @@ class LoginRegisterUser extends Component {
                     console.log(user[0])
                     const userItem = user[0]
                     sessionStorage.setItem("ActiveUser", JSON.stringify({ userItem }))
+                    console.log("login redirect to dash");
                 })
-        }
-        else {
-            alert('Please enter an email address')
-        }
+            }
+            else {
+                alert('Please enter an email address')
+            }
     }
 
-    addUser = (evt)=>{
-            evt.preventDefault();
-            if (this.state.email.length > 0){
-                fetch("http://localhost:5001/users", {
+    addUser = (evt) => {
+        evt.preventDefault();
+        if (this.state.email.length > 0) {
+            fetch("http://localhost:5001/users", {
                 method: "POST",
                 headers: {
-                "Content-Type": "application/json"
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password})
+                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password })
 
             })
+                .then(response => response.json())
+                .then(user => {
+                    sessionStorage.setItem("ActiveUser", JSON.stringify({ user }));
+                })
+
+        }
     }
-}
 
     handleEmailChange = (evt) => {
         this.setState({ email: evt.target.value })

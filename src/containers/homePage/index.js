@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginRegisterUser from './register_login/LoginRegisterUser.js'
+import Dashboard from '../Dashboard/Dashboard'
 import './Home.css';
 
 class Home extends Component {
@@ -10,6 +11,7 @@ class Home extends Component {
           <h1 className="Home-title"> Borrow</h1>
         </header>
         <LoginRegisterUser/>
+        <Dashboard/>
       </div>
     );
   }
