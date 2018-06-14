@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LoginRegisterUser from './register_login/LoginRegisterUser.js'
 import './Home.css';
 
+
+
 class Home extends Component {
   render() {
     return (
