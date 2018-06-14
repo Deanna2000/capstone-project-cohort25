@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FriendsList from './FriendsList'
 
 
 
@@ -85,6 +86,7 @@ class DisplayFriends extends Component {
     return (
       <div className="Friends">
         <header className="Friends-header">
+        <FriendsList/>
           <h3 className="Friends-title"> Friends List</h3>
           <ul className="Friends-List">
             {
