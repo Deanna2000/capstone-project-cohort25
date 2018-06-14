@@ -32,7 +32,7 @@ class DisplayFriends extends Component {
           return fetch(`http://localhost:5001/users?id=${element.RequesterId}`)
             .then(response => response.json())
             .then(information => {
-              let friendsListUpdated = [information[0].fName + " " + information[0].lName]
+              let friendsListUpdated = [`${information[0].fName} ${information[0].lName}`]
               friendsListUpdated = friendsListUpdated.concat(this.state.friendsList)
               this.setState({ friendsList: friendsListUpdated })
               // add those users to an array called allfriends
@@ -67,7 +67,7 @@ class DisplayFriends extends Component {
           return fetch(`http://localhost:5001/users?id=${accepterId}`)
             .then(response => response.json())
             .then(information => {
-              let friendsListUpdated = [information[0].fName + " " + information[0].lName]
+              let friendsListUpdated = [`${information[0].fName} ${information[0].lName}`]
               friendsListUpdated = friendsListUpdated.concat(this.state.friendsList)
               this.setState({ friendsList: friendsListUpdated })
               // Add those users to an array called allFriends
