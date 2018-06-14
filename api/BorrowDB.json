@@ -110,7 +110,7 @@
       "name": "lawnmower",
       "description": "husqvarna push mower",
       "lenderUserid": 1,
-      "borrowerUserid": 2,
+      "borrowerUserid": 3,
       "dueDate": "8/1/2018",
       "image": "http://",
       "lendDate": "6/8/2018",
@@ -128,6 +128,30 @@
       "lendDate": "6/1/2018",
       "archived": false,
       "returnDate": ""
-    }
+    },
+    {
+        "id": 3,
+        "name": "Bacon",
+        "description": "fresh",
+        "lenderUserid": 3,
+        "borrowerUserid": 2,
+        "dueDate": "7/6/2018",
+        "image": "https://photos.google.com/photo/AF1QipOVOchmQmJOTua_f8BXMGKvRYtbRtTXY6tRAiUv",
+        "lendDate": "6/3/2018",
+        "archived": false,
+        "returnDate": ""
+      },
+      {
+        "id": 3,
+        "name": "Puppies",
+        "description": "wild",
+        "lenderUserid": 2,
+        "borrowerUserid": 3,
+        "dueDate": "7/10/2018",
+        "image": "http://",
+        "lendDate": "6/7/2018",
+        "archived": false,
+        "returnDate": ""
+      }
   ]
 }
