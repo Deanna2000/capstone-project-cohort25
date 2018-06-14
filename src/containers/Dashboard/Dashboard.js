@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import DisplayFriends from './Friends/DisplayFriends'
+import DisplayFriends from './Friends/DisplayFriends'
 import DisplayItems from './Items/DisplayItems'
 
 class Dashboard extends Component {
@@ -10,7 +10,7 @@ class Dashboard extends Component {
         <header className="Dash-header">
           <h1 className="Dash-title"> Dashboard for Logged In View</h1>
           <p className="welcome">Welcome {userName.fName}</p>
-          {/* <DisplayFriends ActiveUser={userName}/> */}
+          <DisplayFriends ActiveUser={userName}/>
           <DisplayItems ActiveUser={userName}/>
         </header>
       </div>

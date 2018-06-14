@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class DisplayItems extends Component {
+class ItemDetail extends Component {
   // Set state of the array that I'll be rendering
   state = { borrowedItemsList: [] }
 
@@ -18,7 +18,7 @@ class DisplayItems extends Component {
         // Loop over the 2 objects and get the details
         loanedItems.forEach(element => {
           console.log("item element", element)
-          const itemDetails = element.name
+          const itemDetails = element.title
           tempBorrowedItemsList.push(itemDetails)
           console.log("item details", itemDetails) // should be 2 ID's
           console.log(tempBorrowedItemsList)
@@ -48,4 +48,4 @@ class DisplayItems extends Component {
   }
 }
 
-export default DisplayItems;
+export default ItemDetail;
