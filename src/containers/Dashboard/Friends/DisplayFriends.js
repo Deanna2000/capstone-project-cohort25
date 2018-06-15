@@ -63,7 +63,8 @@ class DisplayFriends extends Component {
     return (
       <div className="Friends">
         <header className="Friends-header">
-        <FriendsList allTheFriends={ this.state.listOfFriends }/>
+        <FriendsList/>
+        {/* <FriendsList allTheFriends={ this.state.listOfFriends }/> */}
           <h3 className="Friends-title"> List of Friends</h3>
           <ul className="Friends-List">
             {

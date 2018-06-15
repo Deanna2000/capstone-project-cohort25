@@ -1,6 +1,7 @@
 import React from "react";
 import friends from "./friends";
 import Friend from "./Friend";
+import DisplayFriends from "./DisplayFriends";
 
 
 
@@ -28,18 +29,12 @@ class FriendsList extends React.Component {
             event.preventDefault()
             this.filterResults()
         }
-        // else if (event && event.key !== 'Enter') {
-        //     event.preventDefault()
-        //     this.setState({ searchText:event.target.value });
-        // }
 
-        //this.setState ({
-        //     ["searchText"]: event(just injected from react).target.value
-        // })
     }
 
     filterResults(){
         const friendsListFiltered = friends
+        // const friendsListFiltered = this.props.allTheFriends
         .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
         .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
         this.setState({ results: friendsListFiltered})
@@ -49,12 +44,7 @@ class FriendsList extends React.Component {
         return this.state.results
         .map( friend => (
             <Friend
-                currentLocation={ friend.current_location || {} }
-                friendCount={ friend.friend_count }
-                key={ friend.$$hashKey }
                 name={ friend.name }
-                pictureUrl={ friend.pic_square }
-                status={ friend.status ? friend.status.message : "" }
             />
         ) );
     }
@@ -65,8 +55,6 @@ class FriendsList extends React.Component {
 
         render() {
             const friendsList = this.getResultsItems()
-            // .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
-            // .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
 
         return (
             <div>
