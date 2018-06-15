@@ -26,13 +26,10 @@ class LoginRegisterUser extends Component {
         if (this.state.email.length > 0) {
             return fetch(`http://localhost:5001/users?email=${this.state.email}&${this.state.password}`)
                 .then((response) => {
-                    console.log(response)
                     return response.json();
                 }).then((user) => {
-                    console.log(user)
                     sessionStorage.setItem("ActiveUser", JSON.stringify( user[0] ))
                     this.setState({shouldDashboardBeDisplayed: true})
-                    console.log("login redirect to dash");
                 })
             }
             else {
