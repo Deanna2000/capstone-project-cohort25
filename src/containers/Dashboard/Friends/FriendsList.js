@@ -1,36 +1,76 @@
 import React from "react";
-import Friend from './Friend'
-import friends from "./friends"
+import friends from "./friends";
+import Friend from "./Friend";
+
+
 
 class FriendsList extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            searchText: ""
-            , orderBy: "name"
-            , order: "ascending"
+            searchText: "",
+            orderBy: "name",
+            order: "ascending",
+            results: friends
         };
+        this.handleChange = this.handleChange.bind(this)
+        this.textChange = this.textChange.bind(this)
     }
 
-    handleChange(field, event) {
-        this.setState({ [field]: event.target.value });
+    componentDidMount(){
+        this.filterResults()
     }
 
-    render() {
-                const friendsList = friends.map(friend => (
-                    <Friend
-                        currentLocation={friend.current_location || {}}
-                        friendCount={friend.friend_count}
-                        key={friend.$$hashKey}
-                        name={friend.name}
-                        pictureUrl={friend.pic_square}
-                        status={friend.status ? friend.status.message : ""}
-                    />
-        ));
+    handleChange(event) {
+        console.log(this.state.searchText)
+        if(event && event.key === 'Enter'){
+            event.preventDefault()
+            this.filterResults()
+        }
+        // else if (event && event.key !== 'Enter') {
+        //     event.preventDefault()
+        //     this.setState({ searchText:event.target.value });
+        // }
+
+        //this.setState ({
+        //     ["searchText"]: event(just injected from react).target.value
+        // })
+    }
+
+    filterResults(){
+        const friendsListFiltered = friends
+        .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
+        .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
+        this.setState({ results: friendsListFiltered})
+    }
+
+    getResultsItems(){
+        return this.state.results
+        .map( friend => (
+            <Friend
+                currentLocation={ friend.current_location || {} }
+                friendCount={ friend.friend_count }
+                key={ friend.$$hashKey }
+                name={ friend.name }
+                pictureUrl={ friend.pic_square }
+                status={ friend.status ? friend.status.message : "" }
+            />
+        ) );
+    }
+
+    textChange(event){
+        this.setState({ searchText: event.target.value })
+    }
+
+        render() {
+            const friendsList = this.getResultsItems()
+            // .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
+            // .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
+
         return (
             <div>
-                <form
+                <div
                     className="form-inline searchForm"
                     role="form"
                 >
@@ -38,7 +78,8 @@ class FriendsList extends React.Component {
 
                         <input
                             className="form-control"
-                            onChange={this.handleChange.bind(this, "searchText")}
+                            onChange={this.textChange}
+                            onKeyPress={this.handleChange}
                             placeholder="Search For Friends"
                             value={this.state.searchText}
                         />
@@ -62,10 +103,10 @@ class FriendsList extends React.Component {
                         </select>
 
                     </div>
-                </form>
+                </div>
 
                 <ul>
-                    <Friend />
+                    { friendsList }
                 </ul>
             </div>
         );
