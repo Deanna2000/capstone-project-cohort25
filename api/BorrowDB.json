@@ -76,6 +76,13 @@
       "email": "glass@glass.com",
       "password": "glass",
       "id": 29
+    },
+    {
+      "fName": "banana",
+      "lName": "banana",
+      "email": "banana@banana.com",
+      "password": "banana",
+      "id": 30
     }
   ],
   "friendsRelationships": [
@@ -98,10 +105,10 @@
       "friendshipConfirmed": 1
     },
     {
-        "id": 4,
-        "RequesterId": 4,
-        "AccepterId": 3,
-        "friendshipConfirmed": 1
+      "id": 4,
+      "RequesterId": 4,
+      "AccepterId": 3,
+      "friendshipConfirmed": 1
     }
   ],
   "sharedItems": [
@@ -130,28 +137,28 @@
       "returnDate": ""
     },
     {
-        "id": 3,
-        "name": "Bacon",
-        "description": "fresh",
-        "lenderUserid": 3,
-        "borrowerUserid": 2,
-        "dueDate": "7/6/2018",
-        "image": "https://photos.google.com/photo/AF1QipOVOchmQmJOTua_f8BXMGKvRYtbRtTXY6tRAiUv",
-        "lendDate": "6/3/2018",
-        "archived": false,
-        "returnDate": ""
-      },
-      {
-        "id": 3,
-        "name": "Puppies",
-        "description": "wild",
-        "lenderUserid": 2,
-        "borrowerUserid": 3,
-        "dueDate": "7/10/2018",
-        "image": "http://",
-        "lendDate": "6/7/2018",
-        "archived": false,
-        "returnDate": ""
-      }
+      "id": 3,
+      "name": "Bacon",
+      "description": "fresh",
+      "lenderUserid": 3,
+      "borrowerUserid": 2,
+      "dueDate": "7/6/2018",
+      "image": "https://photos.google.com/photo/AF1QipOVOchmQmJOTua_f8BXMGKvRYtbRtTXY6tRAiUv",
+      "lendDate": "6/3/2018",
+      "archived": false,
+      "returnDate": ""
+    },
+    {
+      "id": 3,
+      "name": "Puppies",
+      "description": "wild",
+      "lenderUserid": 2,
+      "borrowerUserid": 3,
+      "dueDate": "7/10/2018",
+      "image": "http://",
+      "lendDate": "6/7/2018",
+      "archived": false,
+      "returnDate": ""
+    }
   ]
 }
