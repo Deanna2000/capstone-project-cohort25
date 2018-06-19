@@ -1,0 +1,11 @@
+.nav-item {
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+}
+.nav-item:active{
+    background-color: red;
+}
+.nav-item:hover{
+    background-color: lightgreen;
+}

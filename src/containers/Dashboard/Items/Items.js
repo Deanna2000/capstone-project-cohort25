@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from "react-dom";
-import { Card, CardHeader, CardBody, CardFooter, ImageHeader } from "react-simple-card";
+import { Card, CardBody, ImageHeader } from "react-simple-card";
 
 
 class Items extends Component {
