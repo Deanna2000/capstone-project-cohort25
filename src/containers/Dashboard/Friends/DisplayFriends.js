@@ -48,14 +48,14 @@ class DisplayFriends extends Component {
             .then(accepterUsers => {
               friendsList=friendsList.concat(accepterUsers)
               console.log("friendslist afteraccepterUsers", friendsList)
+              console.log("friendslist3", friendsList)
+              console.log("LOF4", this.state.listOfFriends)
+              this.setState({listOfFriends: friendsList })
             })// closes accepterUsers json
           })// closes accepterUsers foreach
 
           //QUESTION: friendsList has 3 items in it, but when I setState, there are only 2 items showing (outside the scope of the foreach it has only 2 items in friendsList - scope issue? )
 
-          console.log("friendslist3", friendsList)
-          console.log("LOF4", this.state.listOfFriends)
-          this.setState({ listOfFriends: friendsList })
         })
         //closes FriendShips foreach
       }.bind(this)
