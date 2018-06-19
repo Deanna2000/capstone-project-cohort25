@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemList from './ItemList'
 
 
 class DisplayItems extends Component {
@@ -14,11 +15,13 @@ class DisplayItems extends Component {
     fetch(`http://localhost:5001/shareditems?lenderUserid=${this.props.ActiveUser.id}`)
       .then(response => response.json())
       .then(loanedItems => {
+        console.log("loaned itemss", loanedItems)
         // Loop over the 2 objects and get the details
         loanedItems.forEach(element => {
-          const itemDetails = element.name
-          tempBorrowedItemsList.push(itemDetails)
+          // const itemDetails = element.name
+          tempBorrowedItemsList.push(element)
           this.setState({ borrowedItemsList: tempBorrowedItemsList })
+          console.log("borrowed items in state", this.state.borrowedItemsList)
 
         })// Closes loanedItems foreach
       })// Closes loanedItems json
@@ -26,15 +29,16 @@ class DisplayItems extends Component {
   }
 
 
+
+
   render() {
     return (
       <div className="Items">
         <header className="Items-header">
+          <button className="add-loaned-item">Add Borrowed Item</button>
           <h3 className="Items-title"> Items List</h3>
           <ul className="Items-List">
-            {this.state.borrowedItemsList.map(f => {
-              return <li key={this.unique++}>{f}</li>
-            })}
+          <ItemList borrowedItemsDetail={this.state.borrowedItemsList}/>
           </ul>
         </header>
       </div>
@@ -42,4 +46,4 @@ class DisplayItems extends Component {
   }
 }
 
-export default DisplayItems;
+      export default DisplayItems;
