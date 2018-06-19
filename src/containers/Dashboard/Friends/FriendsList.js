@@ -1,5 +1,4 @@
 import React from "react";
-import friends from "./friends";
 import Friend from "./Friend";
 
 
@@ -7,66 +6,57 @@ import Friend from "./Friend";
 class FriendsList extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             searchText: "",
             orderBy: "name",
             order: "ascending",
-            results: friends
+            // results: friends
+            results: this.props.allTheFriends
         };
-        this.handleChange = this.handleChange.bind(this)
-        this.textChange = this.textChange.bind(this)
+        // this.handleChange = this.handleChange.bind(this)
+        // this.textChange = this.textChange.bind(this)
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.filterResults()
     }
 
-    handleChange(event) {
+    handleChange =function(event) {
         console.log(this.state.searchText)
-        if(event && event.key === 'Enter'){
+        if (event && event.key === 'Enter') {
             event.preventDefault()
             this.filterResults()
         }
-        // else if (event && event.key !== 'Enter') {
-        //     event.preventDefault()
-        //     this.setState({ searchText:event.target.value });
-        // }
 
-        //this.setState ({
-        //     ["searchText"]: event(just injected from react).target.value
-        // })
-    }
+    }.bind(this)
 
-    filterResults(){
-        const friendsListFiltered = friends
-        .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
-        .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
-        this.setState({ results: friendsListFiltered})
-    }
+    filterResults = function() {
+        // const friendsListFiltered = friends
+        console.log("flfiltered", this.props.allTheFriends)
+        const friendsListFiltered = this.props.allTheFriends
+            .filter(friend => friend.fName.toLowerCase() === this.state.searchText.toLowerCase() || friend.lName.toLowerCase() === this.state.searchText.toLowerCase())
+        // .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
+        console.log("flf", friendsListFiltered)
+        this.setState({ results:friendsListFiltered })
+        console.log("results", this.state.results)
+        // console.log("results after", results)
+    }.bind(this)
 
-    getResultsItems(){
+    getResultsItems = function() {
         return this.state.results
-        .map( friend => (
-            <Friend
-                currentLocation={ friend.current_location || {} }
-                friendCount={ friend.friend_count }
-                key={ friend.$$hashKey }
-                name={ friend.name }
-                pictureUrl={ friend.pic_square }
-                status={ friend.status ? friend.status.message : "" }
-            />
-        ) );
-    }
+            .map(friend => (
+                <Friend
+                    name={friend.fName}
+                />
+            ));
+    }.bind(this)
 
-    textChange(event){
+    textChange = function(event) {
         this.setState({ searchText: event.target.value })
-    }
+    }.bind(this)
 
-        render() {
-            const friendsList = this.getResultsItems()
-            // .filter( friend => friend.name.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1 )
-            // .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
+    render() {
+        const friendsList = this.getResultsItems()
 
         return (
             <div>
@@ -84,29 +74,29 @@ class FriendsList extends React.Component {
                             value={this.state.searchText}
                         />
 
-                        <select
+                        {/* <select
                             className="input-medium"
                             onChange={this.handleChange.bind(this, "orderBy")}
                             value={this.state.orderBy}
                         >
                             <option value="name">Name</option>
                             <option value="friend_count">#Friends</option>
-                        </select>
+                        </select> */}
 
-                        <select
+                        {/* <select
                             className="input-medium"
                             onChange={this.handleChange.bind(this, "order")}
                             value={this.state.order}
                         >
                             <option value={"descending"}>Descending</option>
                             <option value={"ascending"}>Ascending</option>
-                        </select>
+                        </select> */}
 
                     </div>
                 </div>
 
                 <ul>
-                    { friendsList }
+                    {friendsList}
                 </ul>
             </div>
         );

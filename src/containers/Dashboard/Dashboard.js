@@ -11,7 +11,7 @@ class Dashboard extends Component {
           <h1 className="Dash-title"> Dashboard for Logged In View</h1>
           <p className="welcome">Welcome {userName.fName}</p>
           <DisplayFriends ActiveUser={userName}/>
-          <DisplayItems ActiveUser={userName}/>
+          {/* <DisplayItems ActiveUser={userName}/> */}
         </header>
       </div>
     );
