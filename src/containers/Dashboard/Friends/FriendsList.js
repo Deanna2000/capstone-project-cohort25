@@ -31,11 +31,9 @@ class FriendsList extends React.Component {
     }.bind(this)
 
     filterResults = function() {
-        // const friendsListFiltered = friends
         console.log("flfiltered", this.props.allTheFriends)
         const friendsListFiltered = this.props.allTheFriends
             .filter(friend => friend.fName.toLowerCase() === this.state.searchText.toLowerCase() || friend.lName.toLowerCase() === this.state.searchText.toLowerCase())
-        // .sort( ( a, b ) => a[ this.state.orderBy ] > b[ this.state.orderBy ] ? 1 : -1 )
         console.log("flf", friendsListFiltered)
         this.setState({ results:friendsListFiltered })
         console.log("results", this.state.results)

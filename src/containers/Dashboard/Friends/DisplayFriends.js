@@ -56,8 +56,7 @@ class DisplayFriends extends Component {
 
           //QUESTION: friendsList has 3 items in it, but when I setState, there are only 2 items showing (outside the scope of the foreach it has only 2 items in friendsList - scope issue? )
 
-        })
-        //closes FriendShips foreach
+        })//closes FriendShips foreach
       }.bind(this)
 
   render() {
