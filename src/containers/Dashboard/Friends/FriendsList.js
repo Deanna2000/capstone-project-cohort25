@@ -58,14 +58,18 @@ class FriendsList extends React.Component {
         console.log("results in getResultsItem function", this.state.results)
         return this.state.results
             .map((friend, index) => (
-                <ListGroupItem>
-                    <Friend
-                        fName={friend.fName}
-                        lName={friend.lName}
-                        email={friend.email}
-                        key={index}
-                    />
-                </ListGroupItem>
+                <Row>
+                    <Col>
+                        <ListGroupItem>
+                            <Friend
+                                fName={friend.fName}
+                                lName={friend.lName}
+                                email={friend.email}
+                                key={index}
+                            />
+                        </ListGroupItem>
+                    </Col>
+                </Row>
             ));
     }.bind(this)
 
@@ -105,9 +109,9 @@ class FriendsList extends React.Component {
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >
-                    <ListGroup>
-                        {friendsList}
-                    </ListGroup>
+                        <ListGroup>
+                            {friendsList}
+                        </ListGroup>
                     </Col>
                 </Row>
             </Grid>
