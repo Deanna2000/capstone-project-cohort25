@@ -11,4 +11,5 @@
 .vertical-align {
     display: flex;
     align-items: center;
+    height: 87px;
   }

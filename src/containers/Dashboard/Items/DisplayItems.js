@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ItemList from './ItemList'
+import LoanedItemList from './LoanedItemList'
+import BorrowedItemList from './BorrowedItemList'
 import { Tabs, Tab } from 'react-bootstrap-tabs';
 import AddItem from './AddItem'
 import NavBar from '../NavBar/NavBar'
@@ -8,6 +9,8 @@ class DisplayItems extends Component {
   // Set state of the array that I'll be rendering
   state = {
     loanedItemsList: [],
+    borrowedItemsList: [],
+    activeTab: 0,
   }
 
   unique = 1
@@ -45,14 +48,12 @@ class DisplayItems extends Component {
         })// Closes borrowedItems foreach
       })// Closes borrowedItems json
 
-    }
+  }
 
+  activateTab = function (tabIndex) {
+    this.setState({ activeTab: tabIndex })
+  }.bind(this)
 
-
-    // addItemButton() {
-    //   console.log("button")
-    //   return <AddItem/>
-    // }
 
 
 
@@ -62,13 +63,42 @@ class DisplayItems extends Component {
 
     return (
       <div>
-        <NavBar/>
-        <AddItem/>
-          <button className="add-loaned-item" onClick={this.addItemButton}>Add New Loaned Item</button>
-        <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
+        <NavBar />
+        <div>
+          <ul className="nav nav-tabs">
+            <li role="presentation" className={this.state.activeTab === 0 ? "active" : ""}>
+              <a onClick={() => this.activateTab(0)}>Stuff I Shared</a>
+            </li>
+            <li role="presentation" className={this.state.activeTab === 1 ? "active" : ""}>
+              <a onClick={() => this.activateTab(1)}>Stuff I Borrowed</a>
+            </li>
+            <li role="presentation" className={this.state.activeTab === 2 ? "active" : ""}>
+              <a onClick={() => this.activateTab(2)}>Loan a New Item</a>
+            </li>
+          </ul>
+        </div>
+        {
+          this.state.activeTab === 0 ?
+            <LoanedItemList loanedItems={this.state.loanedItemsList} />
+            :
+            null
+        }
+        {
+          this.state.activeTab === 1 ?
+            <BorrowedItemList borrowedItems={this.state.borrowedItemsList} />
+            :
+            null
+        }
+        {
+          this.state.activeTab === 2 ?
+            <AddItem />
+            :
+            null
+        }
+
+        {/* <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
           <Tab className="tabName" label="Stuff I Shared">
             <ul className="Items-List">
-              <ItemList loanedItemsDetail={this.state.loanedItemsList} />
             </ul>
           </Tab>
           <Tab className="tabName" label="Stuff I Borrowed">
@@ -78,7 +108,7 @@ class DisplayItems extends Component {
           </Tab>
           <Tab className="tabName" label="Loan a New Item">
           </Tab>
-        </Tabs>
+        </Tabs> */}
       </div>
     );
   }
