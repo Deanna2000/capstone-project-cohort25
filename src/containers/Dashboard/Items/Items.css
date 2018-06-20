@@ -9,3 +9,27 @@
 .nav-item:hover{
     background-color: lightgreen;
 }
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    width: 500px;
+}
+
+form {
+    display: inline-grid;
+    margin: auto;
+    width: 30%;
+}
+
+.newItemForm {
+    border: solid rgba(0, 0, 255, 0.76) 2px;
+}
+
+input {
+    text-align: center;
+}

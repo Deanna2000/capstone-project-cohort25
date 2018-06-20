@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DisplayFriends from './Friends/DisplayFriends'
 import DisplayItems from './Items/DisplayItems'
+import styles from './Dashboard.css'
 
 class Dashboard extends Component {
   render() {
@@ -8,7 +9,7 @@ class Dashboard extends Component {
     return (
       <div className="Dash">
         <header className="Dash-header">
-          <h1 className="Dash-title"> Dashboard for Logged In View</h1>
+          <h1 className="Dash-title"> Borrow App</h1>
           <p className="welcome">Welcome {userName.fName}</p>
           <DisplayFriends ActiveUser={userName}/>
           <DisplayItems ActiveUser={userName}/>

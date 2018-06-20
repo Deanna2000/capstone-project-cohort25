@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Items from './Items.css'
 
 
 // Set up the component to add a new loaned item
@@ -6,13 +7,28 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
 
+    // ITEM JSON OBJECT:
+    //   "id": 8,
+    //   "name": "Lunchbox",
+    //   "description": "Polka dots insulated tote",
+    //   "lenderUserid": 3,
+    //   "borrowerUserid": 1,
+    //   "borrowerName": "Steve Collie",
+    //   "dueDate": "7/10/2018",
+    //   "image": "https://images-na.ssl-images-amazon.com/images/I/816w1GpFrhL._SX425_.jpg",
+    //   "lendDate": "6/7/2018",
+    //   "archived": false,
+    //   "returnedDate": ""
+
+
         this.state = {
-                fName: '',
-                lName: '',
-                email: '',
-                password: '',
-                onClick: false,
-                shouldDashboardBeDisplayed: false
+                name: '',
+                description: '',
+                lenderUserid: '',
+                borrowerName: '',
+                dueDate: '',
+                image: '',
+                lendDate: ''
             }
     };
 
@@ -20,56 +36,53 @@ componentDidMount(){
     console.log("on the add item page")
 }
 
-    validateForm = (evt) => {
-        evt.preventDefault()
-        if (this.state.email.length > 0) {
-            return fetch(`http://localhost:5001/users?email=${this.state.email}&${this.state.password}`)
-                .then((response) => {
-                    return response.json();
-                }).then((user) => {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify( user[0] ))
-                    this.setState({shouldDashboardBeDisplayed: true})
-                })
-            }
-            else {
-                alert('Please enter an email address')
-            }
-    }
 
-    addUser = (evt) => {
+    addItem = (evt) => {
         evt.preventDefault();
-        if (this.state.email.length > 0) {
-            fetch("http://localhost:5001/users", {
+        if (this.state.name.length > 0) {
+            fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password })
+                //QUESTION: Should I do sessionStorage.get to bring in the user or do I bring that in
+                //from another component?
+                body: JSON.stringify({ name: this.state.name, description: this.state.description,
+                    lenderUserid: this.state.lenderUserid, borrowerName: this.state.borrowerName,
+                    dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: "" })
 
             })
                 .then(response => response.json())
-                .then(user => {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify({ user }));
+                .then(newItem => {
+                    sessionStorage.setItem("NewItem", JSON.stringify({ newItem }));
 
                 })
 
         }
     }
 
-    handleEmailChange = (evt) => {
-        this.setState({ email: evt.target.value })
+    handleNameChange = (evt) => {
+        this.setState({ name: evt.target.value })
     }
 
-    handlePasswordChange = (evt) => {
-        this.setState({ password: evt.target.value })
+    handleDescriptionChange = (evt) => {
+        this.setState({ description: evt.target.value })
     }
 
-    handleFirstNameChange = (evt) => {
-        this.setState({ fName: evt.target.value })
+    handleBorrowerChange = (evt) => {
+        this.setState({ borrowerName: evt.target.value })
     }
 
-    handleLastNameChange = (evt) => {
-        this.setState({ lName: evt.target.value })
+    handleLendDateChange = (evt) => {
+        this.setState({ lendDate: evt.target.value })
+    }
+
+    handleDueDateChange = (evt) => {
+        this.setState({ dueDate: evt.target.value })
+    }
+
+    handleImageChange = (evt) => {
+        this.setState({ image: evt.target.value })
     }
 
     render() {
@@ -77,13 +90,16 @@ componentDidMount(){
 
         return (
             <div>
-                <form>
-                    <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
-                    <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
-                    <button value="Sign In" onClick={this.validateForm}>Sign In</button>
-                    <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
-                    <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                    <button value="Sign Up" onClick={this.addUser}>Sign Up</button>
+                <form className="newItemForm">
+                    <h3>New Item to Loan</h3>
+                    <p>Please enter some info about the item you are loaning.</p>
+                    <input type="text" id="name" value={this.state.name || ''} onChange={this.handleNameChange} placeholder="Name" />
+                    <input type="text" id="description" value={this.state.description || ''} onChange={this.handleDescriptionChange} placeholder="Description" />
+                    <input type="text" id="borrower" value={this.state.borrowerName || ''} onChange={this.handleBorrowerChange} placeholder="Borrower Name" />
+                    <label>Lend Date<input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
+                    <label>Due Date<input type="date" id="dueDate" value={this.state.dueDate || ''} onChange={this.handleDueDateChange} placeholder="Due Date" /></label>
+                    <input type="text" id="image" value={this.state.image || ''} onChange={this.handleImageChange} placeholder="Image Url" />
+                    <button type="submit" value="Add Loan Item" onClick={this.addItem}>Confirm Loan</button>
                 </form>
             </div>
         )
@@ -93,4 +109,6 @@ componentDidMount(){
 
 
 export default AddItem;
+
+
 

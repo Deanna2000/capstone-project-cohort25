@@ -1,5 +1,6 @@
 import React from "react";
 import Friend from "./Friend";
+import styles from './Friends.css'
 
 
 
@@ -65,7 +66,7 @@ class FriendsList extends React.Component {
                     <div className="form-group">
 
                         <input
-                            className="form-control"
+                            className="form-control friendsSearch"
                             onChange={this.textChange}
                             onKeyPress={this.handleChange}
                             placeholder="Search For Friends"

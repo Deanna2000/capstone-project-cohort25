@@ -48,11 +48,10 @@ class DisplayItems extends Component {
 
 
 
-    addItemButton = (evt) => {
-      console.log("button")
-      evt.preventDefault()
-      return <AddItem/>
-    }
+    // addItemButton() {
+    //   console.log("button")
+    //   return <AddItem/>
+    // }
 
 
 
@@ -62,8 +61,8 @@ class DisplayItems extends Component {
 
     return (
       <div>
+        <AddItem/>
           <button className="add-loaned-item" onClick={this.addItemButton}>Add New Loaned Item</button>
-
         <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
           <Tab className="tabName" label="loaned">
             <ul className="Items-List">
