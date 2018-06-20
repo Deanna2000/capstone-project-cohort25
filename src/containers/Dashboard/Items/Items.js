@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { render } from "react-dom";
-import { Card, CardHeader, CardBody, CardFooter, ImageHeader } from "react-simple-card";
+import { Card, CardBody, ImageHeader } from "react-simple-card";
+import styles from './Items.css'
 
 
 class Items extends Component {
@@ -11,19 +11,21 @@ class Items extends Component {
             let cardStyles = {
                 margin: '20px',
                 width: '250px',
-                height: '250px',
-                display: 'grid-inline',
+                height: '300px',
+                padding: '20px',
               };
+
+
+
     return (
 
-        < div >
+        < div className="cards" >
             <Card style={cardStyles}>
                 <ImageHeader imageSrc={this.props.itemList.image} />
                 <CardBody>
-                <h3>Who has my {this.props.itemList.name}?</h3>
-                <h3>{this.props.itemList.borrowerName}</h3>
+                <h4>Who has my {this.props.itemList.name}?</h4>
+                <h4>{this.props.itemList.borrowerName}</h4>
                 </CardBody>
-                {/* <CardFooter>{this.props.itemList.name}</CardFooter> */}
             </Card>
         </ div >
             )

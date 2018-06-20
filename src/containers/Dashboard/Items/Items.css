@@ -1,0 +1,30 @@
+.nav-item {
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+}
+.nav-item:active{
+    background-color: red;
+}
+.nav-item:hover{
+    background-color: lightgreen;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    width: 500px;
+}
+
+
+.newItemForm {
+    border: solid rgba(0, 0, 255, 0.76) 2px;
+}
+
+input {
+    text-align: center;
+}

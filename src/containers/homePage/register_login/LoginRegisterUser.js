@@ -75,7 +75,7 @@ class LoginRegisterUser extends Component {
 
     render() {
         if (this.state.shouldDashboardBeDisplayed) {
-            return <Redirect to='/dashboard' />
+            return <Redirect to='/mycollection' />
           }
         return (
             <div>
