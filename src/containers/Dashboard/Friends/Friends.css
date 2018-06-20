@@ -1,4 +1,14 @@
-.friendsSearch {
-    width: 50%;
+.list-group {
     margin: auto;
+    width: 100%;
 }
+
+.profileImage {
+    width: 40% !important;
+    height: 85% !important;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+  }

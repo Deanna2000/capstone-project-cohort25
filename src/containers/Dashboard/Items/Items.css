@@ -20,11 +20,6 @@ ul {
     width: 500px;
 }
 
-form {
-    display: inline-grid;
-    margin: auto;
-    width: 30%;
-}
 
 .newItemForm {
     border: solid rgba(0, 0, 255, 0.76) 2px;

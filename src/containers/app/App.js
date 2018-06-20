@@ -6,6 +6,8 @@ import React from 'react';
 import Home from '../homePage/index'
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
+import Friends from '../Dashboard/Friends/DisplayFriends'
+import MyCollection from '../Dashboard/Items/DisplayItems'
 
 //add some conditions to view to redirect to login if they are not logged in
 class App extends React.Component {
@@ -15,7 +17,8 @@ class App extends React.Component {
         <Router>
           <div>
             <Route exact path="/" component={Home}/>
-            <Route path="/dashboard" component={Dashboard}/>
+            <Route path="/friends" component={Friends}/>
+            <Route path="/mycollection" component={MyCollection}/>
 
         </div>
         </Router>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Items from './Items.css'
 
 
 // Set up the component to add a new loaned item
