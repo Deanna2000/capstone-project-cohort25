@@ -44,8 +44,10 @@ input {
     padding-top: 0px !important;
 }
 
-.margin-top {
+.items-container {
     margin-top: 15px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .panel{

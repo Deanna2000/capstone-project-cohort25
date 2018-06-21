@@ -18,7 +18,7 @@ class BorrowedItemList extends Component {
     return (
 
       < div >
-        <Row>{BorrowedItemsList}</Row>
+        <Row className="items-container padding-zero">{BorrowedItemsList}</Row>
       </div >
     );
   }

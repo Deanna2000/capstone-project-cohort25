@@ -18,7 +18,7 @@ class LoanedItemList extends Component {
     return (
 
       < div >
-        <Row className="margin-top padding-zero">{loanedItemsList}</Row>
+        <Row className="items-container padding-zero">{loanedItemsList}</Row>
       </div >
 );
 }
