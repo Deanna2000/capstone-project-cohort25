@@ -6,8 +6,8 @@ class LoanedItemList extends Component {
   getItems = function() {
     return this.props.loanedItems
         .map(itemList => (
-            <Col xs={3} md={3} className="padding-zero">
-              <ItemsLoaned itemList={itemList} key={itemList.id}/>
+            <Col xs={3} md={3} className="padding-zero" key={itemList.id}>
+              <ItemsLoaned itemList={itemList} />
             </Col>
         ));
     }.bind(this)

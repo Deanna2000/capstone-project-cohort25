@@ -45,7 +45,6 @@ class FriendsList extends React.Component {
     }.bind(this)
 
     getResultsItems = function () {
-        console.log("I AM HERE IN FRIEND RESULTS", this.state.results)
         return this.state.results
             .map((friend, index) => (
                 <Row key={friend.id}>

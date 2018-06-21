@@ -4,3 +4,8 @@
     height: 40px;
     margin-bottom: 0;
   }
+
+  .logo {
+      height: 30px !important;
+      margin-top: 10px;
+  }
