@@ -27,7 +27,7 @@ removeFriend = function (){
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="removeFriendButton btn-warning" onClick={this.removeFriend()}>Remove Friend</button>
+                    <button className="removeFriendButton btn btn-warning" onClick={this.removeFriend()}>Remove</button>
                 </Col>
             </Row>
         );
