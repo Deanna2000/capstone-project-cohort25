@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Redirect,
   } from "react-router-dom";
+import './LoginRegisterUser.css'
 
 
 // Set up the component to login and register a user
@@ -79,13 +80,13 @@ class LoginRegisterUser extends Component {
           }
         return (
             <div>
-                <form>
+                <form className="loginView">
                     <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
                     <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
-                    <button value="Sign In" onClick={this.validateForm}>Sign In</button>
+                    <button className="btn-info" value="Sign In" onClick={this.validateForm}>Sign In</button>
                     <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
                     <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                    <button value="Sign Up" onClick={this.addUser}>Sign Up</button>
+                    <button className="btn-info" value="Sign Up" onClick={this.addUser}>Sign Up</button>
                 </form>
             </div>
         )

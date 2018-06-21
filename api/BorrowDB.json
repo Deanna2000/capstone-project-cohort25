@@ -83,6 +83,13 @@
       "email": "banana@banana.com",
       "password": "banana",
       "id": 30
+    },
+    {
+      "fName": "phone",
+      "lName": "phone",
+      "email": "phone@phone.com",
+      "password": "123",
+      "id": 31
     }
   ],
   "friendsRelationships": [
