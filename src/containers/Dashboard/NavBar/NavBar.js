@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import { nav } from 'react-bootstrap';
 
 class NavBar extends Component {
-    render() {
+
+  render() {
+    const userName = (JSON.parse(sessionStorage.getItem("ActiveUser")))
         return (
 <nav className="navbar navbar-default">
   <div className="container-fluid">
@@ -13,7 +15,7 @@ class NavBar extends Component {
         <span className="icon-bar"></span>
         <span className="icon-bar"></span>
       </button>
-      <a className="navbar-brand" href="#">Borrow App</a>
+      <a className="navbar-brand" href="/">Borrow App</a>
     </div>
 
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,6 +24,8 @@ class NavBar extends Component {
         <li><a href="/friends">Friends</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
+      <p className="welcome">Welcome {userName.fName}</p>
+
 
     </div>
   </div>

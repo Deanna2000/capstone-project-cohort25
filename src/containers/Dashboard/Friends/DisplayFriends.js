@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FriendsList from './FriendsList';
+import DisplayUsers from './DisplayUsers'
 import NavBar from '../NavBar/NavBar';
 import { Grid, Row, Col } from 'react-bootstrap'
 
@@ -17,7 +18,7 @@ class DisplayFriends extends Component {
     }
   }
 
-  // Call each of the functions that will get friends of the current user
+  // Call the function that will get friends of the current user when the component loads
   componentDidMount() {
     this.loadFriends()
   }
@@ -25,15 +26,17 @@ class DisplayFriends extends Component {
   loadFriends = function () {
     const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     let friendsList = []
+    let relationshipIDs = []
     // Fetch the instances of accepters that match the current user
     fetch(`http://localhost:5001/friendsRelationships?AccepterId=${loggedInUser.id}`)
-      .then(response => response.json())
-      .then(requesters => {
+    .then(response => response.json())
+    .then(requesters => {
+      // Loop over the objects and get the ID of the requester
+      requesters.forEach(requester => {
+        // Fetch the user objects for ID's the match the connections above
         const queryParams = ""
-        // Loop over the 2 objects and get the ID of the requester
-        requesters.forEach(requester => {
-          // Fetch the user objects for ID's the match the connections above
           this.queryParams = requesters.map(r => `id=${r.RequesterId}`).join("&")
+          relationshipIDs.push(requester.id)
         })// closes requesters foreach
         return fetch(`http://localhost:5001/users?${this.queryParams}`)
       })// closes requesters json
@@ -51,15 +54,9 @@ class DisplayFriends extends Component {
             .then(response => response.json())
             .then(accepterUsers => {
               friendsList = friendsList.concat(accepterUsers)
-              console.log("friendslist afteraccepterUsers", friendsList)
-              console.log("friendslist3", friendsList)
               this.setState({ listOfFriends: friendsList })
-              console.log("LOF4", this.state.listOfFriends)
             })// closes accepterUsers json
         })// closes accepterUsers foreach
-
-        //QUESTION: friendsList has 3 items in it, but when I setState, there are only 2 items showing (outside the scope of the foreach it has only 2 items in friendsList - scope issue? )
-
       })//closes FriendShips foreach
   }.bind(this)
 
@@ -76,6 +73,7 @@ class DisplayFriends extends Component {
           <Row>
             <Col xs={12} md={12} >
               <FriendsList allTheFriends={this.state.listOfFriends} />
+              <DisplayUsers/>
             </Col>
           </Row>
         </Grid>

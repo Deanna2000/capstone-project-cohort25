@@ -5,7 +5,7 @@ import {
 import React from 'react';
 import Home from '../homePage/index'
 import './App.css';
-import Dashboard from '../Dashboard/Dashboard';
+// import Dashboard from '../Dashboard/Dashboard';
 import Friends from '../Dashboard/Friends/DisplayFriends'
 import MyCollection from '../Dashboard/Items/DisplayItems'
 

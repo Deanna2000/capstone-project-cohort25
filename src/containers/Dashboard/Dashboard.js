@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import DisplayFriends from './Friends/DisplayFriends'
-import DisplayItems from './Items/DisplayItems'
-import styles from './Dashboard.css'
+// import DisplayFriends from './Friends/DisplayFriends'
+// import DisplayItems from './Items/DisplayItems'
+// import styles from './Dashboard.css'
 import NavBar from './NavBar/NavBar';
 
 class Dashboard extends Component {

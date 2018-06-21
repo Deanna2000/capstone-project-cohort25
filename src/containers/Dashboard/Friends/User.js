@@ -4,9 +4,10 @@ import './Friends.css'
 import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 
 
-class Friend extends React.Component {
+class User extends React.Component {
 
-removeFriend = function (){
+addFriend = function (){
+    console.log("here in addFriend")
     // const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
 
 
@@ -15,7 +16,7 @@ removeFriend = function (){
     render() {
         return (
             <Row>
-                <Col xs={3} md={3}><img className="vertical-align profileImage" src={profileImage} alt="profile" width="40%" height="40%"/>
+                <Col xs={3} md={3}><img className="vertical-align profileImage" alt="profile" src={profileImage} width="40%" height="40%"/>
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
                     {this.props.fName}
@@ -27,11 +28,11 @@ removeFriend = function (){
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="removeFriendButton" onClick={this.removeFriend()}>Remove Friend</button>
+                    <button className="addFriendButton" onClick={this.addFriend()}>Add Friend</button>
                 </Col>
             </Row>
         );
     }
 }
 
-export default Friend;
+export default User;

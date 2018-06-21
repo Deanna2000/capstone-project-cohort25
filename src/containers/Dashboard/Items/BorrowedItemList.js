@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Items from './Items'
+import ItemsBorrowed from './ItemsBorrowed'
 
 class BorrowedItemList extends Component {
   getItems = function() {
     return this.props.borrowedItems
         .map(itemList => (
-            <Items itemList={itemList}/>
+            <ItemsBorrowed itemList={itemList} key={itemList.id}/>
         ));
     }.bind(this)
 
