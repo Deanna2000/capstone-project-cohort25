@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import UsersList from './UsersList';
-// import NavBar from '../NavBar/NavBar';
 import { Grid, Row, Col } from 'react-bootstrap'
 
 
