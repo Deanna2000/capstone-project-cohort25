@@ -6,18 +6,6 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
 
-    // ITEM JSON OBJECT:
-    //   "id": 8,
-    //   "name": "Lunchbox",
-    //   "description": "Polka dots insulated tote",
-    //   "lenderUserid": 3,
-    //   "borrowerUserid": 1,
-    //   "borrowerName": "Steve Collie",
-    //   "dueDate": "7/10/2018",
-    //   "image": "https://images-na.ssl-images-amazon.com/images/I/816w1GpFrhL._SX425_.jpg",
-    //   "lendDate": "6/7/2018",
-    //   "archived": false,
-    //   "returnedDate": ""
 
 
         this.state = {
@@ -25,6 +13,7 @@ class AddItem extends Component {
                 description: '',
                 lenderUserid: '',
                 borrowerName: '',
+                lenderName: '',
                 dueDate: '',
                 image: '',
                 lendDate: ''
@@ -38,16 +27,16 @@ componentDidMount(){
 
     addItem = (evt) => {
         evt.preventDefault();
+        const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
         if (this.state.name.length > 0) {
             fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                //QUESTION: Should I do sessionStorage.get to bring in the user or do I bring that in
-                //from another component?
+
                 body: JSON.stringify({ name: this.state.name, description: this.state.description,
-                    lenderUserid: this.state.lenderUserid, borrowerName: this.state.borrowerName,
+                    lenderUserid: this.state.lenderUserid, borrowerName: this.state.borrowerName, lenderName: loggedInUser.username, lenderUserid: loggedInUser.id,
                     dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: "" })
 
             })
