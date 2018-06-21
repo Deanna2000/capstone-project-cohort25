@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nav } from 'react-bootstrap';
+import './NavBar.css'
 
 class NavBar extends Component {
 
@@ -24,7 +25,7 @@ class NavBar extends Component {
         <li><a href="/friends">Friends</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
-      <p className="welcome">Welcome {userName.fName}</p>
+      <p className="text-muted navbar-right vertical-align-welcome">Welcome {userName.fName}</p>
 
 
     </div>

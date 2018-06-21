@@ -10,15 +10,7 @@
     background-color: lightgreen;
 }
 
-/* img {
-    height: 200px;
-    width: 100%;
-} */
 
-/* ul {
-    display: flex;
-    width: 500px;
-} */
 
 
 .newItemForm {
@@ -28,9 +20,34 @@
 input {
     text-align: center;
 }
-.card{
-margin: 20px;
-width: 250px;
-height: 300px;
-padding: 20px;
+
+.cardImg{
+    height: 100px;
+    width: 100%;
+}
+
+.btn-info{
+    width: 100%;
+}
+
+.cardTitle {
+    height: 40px;
+}
+
+.btn-warning {
+    width: 100%;
+}
+
+.padding-zero {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 0px !important;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.panel{
+    margin-bottom: 10px !important;
 }

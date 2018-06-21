@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 import './Items.css'
 
 class ItemsBorrowed extends Component {
@@ -12,19 +14,18 @@ class ItemsBorrowed extends Component {
 
         return (
 
-
             <div>
-            <Card>
-              <CardImg top width="100%" src={this.props.itemList.image}alt="Card image cap" />
-              <CardBody>
-                <CardTitle>Who did I borrow {this.props.itemList.name} from? </CardTitle>
-                <CardSubtitle>{this.props.itemList.lenderName}</CardSubtitle>
-                <Button>Returned It</Button>
-              </CardBody>
-            </Card>
-          </div>
+                <div className="panel panel-default">
+                    <div className="panel-body">
+                        <img className="cardImg" src={this.props.itemList.image} />
+                        <h4 className="cardTitle">Whose {this.props.itemList.name} is this? </h4>
+                        <p>{this.props.itemList.lenderName}</p>
+                        <button type="button" class="btn btn-warning">Returned It</button>
+                    </div>
+                </div>
+            </div>
                 )
-            };
-    }
+    };
+}
 
 export default ItemsBorrowed;

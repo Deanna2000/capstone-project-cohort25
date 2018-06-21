@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {FormGroup, Field} from 'react-bootstrap'
 
 // Set up the component to add a new loaned item
 class AddItem extends Component {
@@ -36,7 +36,7 @@ componentDidMount(){
                 },
 
                 body: JSON.stringify({ name: this.state.name, description: this.state.description,
-                    lenderUserid: this.state.lenderUserid, borrowerName: this.state.borrowerName, lenderName: loggedInUser.username, lenderUserid: loggedInUser.id,
+                    lenderUserid: this.state.lenderUserid, borrowerName: this.state.borrowerName, lenderName: loggedInUser.fName&loggedInUser.lName, lenderUserid: loggedInUser.id,
                     dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: "" })
 
             })
@@ -77,6 +77,8 @@ componentDidMount(){
 
 
         return (
+
+
             <div>
                 <form className="newItemForm">
                     <h3>New Item to Loan</h3>

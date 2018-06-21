@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ItemsLoaned from './ItemsLoaned'
+import {Row, Col} from 'react-bootstrap'
 
 class LoanedItemList extends Component {
   getItems = function() {
     return this.props.loanedItems
         .map(itemList => (
-
-            <ItemsLoaned itemList={itemList} key={itemList.id}/>
+            <Col xs={3} md={3} className="padding-zero">
+              <ItemsLoaned itemList={itemList} key={itemList.id}/>
+            </Col>
         ));
     }.bind(this)
 
@@ -16,7 +18,7 @@ class LoanedItemList extends Component {
     return (
 
       < div >
-        <ul>{loanedItemsList}</ul>
+        <Row className="margin-top padding-zero">{loanedItemsList}</Row>
       </div >
 );
 }

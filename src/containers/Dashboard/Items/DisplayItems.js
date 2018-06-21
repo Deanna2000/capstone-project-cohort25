@@ -39,7 +39,6 @@ class DisplayItems extends Component {
           // const itemDetails = element.name
           tempBorrowedItemsList.push(element)
           this.setState({ borrowedItemsList: tempBorrowedItemsList })
-
         })// Closes borrowedItems foreach
       })// Closes borrowedItems json
 

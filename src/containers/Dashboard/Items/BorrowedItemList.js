@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import ItemsBorrowed from './ItemsBorrowed'
+import { Row, Col } from 'react-bootstrap'
 
 class BorrowedItemList extends Component {
-  getItems = function() {
+  getItems = function () {
     return this.props.borrowedItems
-        .map(itemList => (
-            <ItemsBorrowed itemList={itemList} key={itemList.id}/>
-        ));
-    }.bind(this)
+      .map(itemList => (
+        <Col xs={3} md={3} className="padding-zero">
+          <ItemsBorrowed itemList={itemList} key={itemList.id} />
+        </Col>
+      ));
+  }.bind(this)
 
 
   render() {
@@ -15,10 +18,10 @@ class BorrowedItemList extends Component {
     return (
 
       < div >
-        <ul>{BorrowedItemsList}</ul>
+        <Row>{BorrowedItemsList}</Row>
       </div >
-);
-}
+    );
+  }
 }
 
 export default BorrowedItemList;
