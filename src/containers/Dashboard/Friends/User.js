@@ -7,7 +7,6 @@ import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 class User extends React.Component {
 
 addFriend = function (){
-    console.log("here in addFriend")
     // const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
 
 
@@ -28,7 +27,7 @@ addFriend = function (){
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="addFriendButton" onClick={this.addFriend()}>Add Friend</button>
+                    <button className="addFriendButton btn-info" onClick={this.addFriend()}>Add Friend</button>
                 </Col>
             </Row>
         );

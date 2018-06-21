@@ -37,16 +37,13 @@ class UsersList extends React.Component {
     }.bind(this)
 
     searchForAUser = function (user) {
-        console.log("user in searchforuser", user)
          user.map(userDetail => {
-            console.log("searchtext", this.state.searchText)
             return userDetail.fName.toLowerCase().indexOf(this.state.searchText) >= 0
             || userDetail.lName.toLowerCase().indexOf(this.state.searchText) >= 0
             || userDetail.email.toLowerCase().indexOf(this.state.searchText) >= 0;
         })}.bind(this)
 
     getResultsItems = function () {
-        console.log("results in getResultsItem users function", this.state.results)
         return this.state.results
             .map((user, index) => (
                 <Row key={user.id}>
