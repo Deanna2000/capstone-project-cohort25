@@ -27,7 +27,7 @@ addFriend = function (){
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="addFriendButton btn-info" onClick={this.addFriend()}>Add Friend</button>
+                    <button className="addFriendButton btn btn-info" onClick={this.addFriend()}>Add</button>
                 </Col>
             </Row>
         );
