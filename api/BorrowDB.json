@@ -100,20 +100,14 @@
       "friendshipConfirmed": 1
     },
     {
-      "id": 2,
-      "RequesterId": 2,
+      "id": 3,
+      "RequesterId": 4,
       "AccepterId": 3,
       "friendshipConfirmed": 1
     },
     {
       "id": 3,
-      "RequesterId": 3,
-      "AccepterId": 1,
-      "friendshipConfirmed": 1
-    },
-    {
-      "id": 4,
-      "RequesterId": 4,
+      "RequesterId": 24,
       "AccepterId": 3,
       "friendshipConfirmed": 1
     }
@@ -325,6 +319,19 @@
       "archived": false,
       "returnedDate": "",
       "id": 17
+    },
+    {
+      "name": "sunglases",
+      "description": "ray bans",
+      "borrowerName": "Steve Collie",
+      "lenderName": 0,
+      "lenderUserid": 3,
+      "dueDate": "2018-06-22",
+      "image": "https://assets.ray-ban.com/is/image/RayBan/8053672742299_shad_qt?$594$",
+      "lendDate": "2018-06-20",
+      "archived": false,
+      "returnedDate": "",
+      "id": 18
     }
   ]
 }

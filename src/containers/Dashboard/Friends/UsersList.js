@@ -33,7 +33,7 @@ class UsersList extends React.Component {
             usersListFiltered = allTheUsers
                 .filter(user => this.searchForAUser(user))
         }
-        this.setState({ results: usersListFiltered[0] })
+        this.setState({ results: usersListFiltered[0]})
     }.bind(this)
 
     searchForAUser = function (user) {
@@ -44,6 +44,9 @@ class UsersList extends React.Component {
         })}.bind(this)
 
     getResultsItems = function () {
+        if(!this.state.results){
+            return null
+        }
         return this.state.results
             .map((user, index) => (
                 <Row key={user.id}>

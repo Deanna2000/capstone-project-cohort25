@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import {FormGroup, Field} from 'react-bootstrap'
 
 // Set up the component to add a new loaned item
 class AddItem extends Component {
@@ -42,9 +41,9 @@ componentDidMount(){
                 .then(response => response.json())
                 .then(newItem => {
                     sessionStorage.setItem("NewItem", JSON.stringify({ newItem }));
+                    // return <Redirect to='/mycollection';
 
                 })
-
         }
     }
 
@@ -88,7 +87,7 @@ componentDidMount(){
                     <label>Lend Date<input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
                     <label>Due Date<input type="date" id="dueDate" value={this.state.dueDate || ''} onChange={this.handleDueDateChange} placeholder="Due Date" /></label>
                     <input type="text" id="image" value={this.state.image || ''} onChange={this.handleImageChange} placeholder="Image Url" />
-                    <button type="submit" value="Add Loan Item" onClick={this.addItem}>Confirm Loan</button>
+                    <button className="btn btn-info" type="submit" value="Add Loan Item" onClick={this.addItem}>Confirm Loan</button>
                 </form>
             </div>
         )
