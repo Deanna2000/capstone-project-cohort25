@@ -23,41 +23,39 @@ class DisplayFriends extends Component {
     this.loadFriends()
   }
 
-  loadFriends = function () {
+  loadFriends = async function () {
+    this.setState({ listOfFriends: [] })
     const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     let friendsList = []
-    let relationshipIDs = []
-    // Fetch the instances of accepters that match the current user
-    fetch(`http://localhost:5001/friendsRelationships?AccepterId=${loggedInUser.id}`)
-    .then(response => response.json())
-    .then(requesters => {
-      // Loop over the objects and get the ID of the requester
-      requesters.forEach(requester => {
-        // Fetch the user objects for ID's the match the connections above
-        const queryParams = ""
-          this.queryParams = requesters.map(r => `id=${r.RequesterId}`).join("&")
-          relationshipIDs.push(requester.id)
-        })// closes requesters foreach
-        return fetch(`http://localhost:5001/users?${this.queryParams}`)
-      })// closes requesters json
-      .then(response => response.json())
-      .then(requesterUsers => {
-        friendsList = friendsList.concat(requesterUsers)
-        return fetch(`http://localhost:5001/friendsRelationships?RequesterId=${loggedInUser.id}`)
-      })// closes requesters foreach
-      .then(response => response.json())
-      .then(accepters => {
-        // Loop over the 1 object to get the ID's of the accepters
-        accepters.forEach(accepter => {
-          // Fetch the user objects for the users whose ID's match the connectionAcc
-          return fetch(`http://localhost:5001/users?id=${accepter.AccepterId}`)
-            .then(response => response.json())
-            .then(accepterUsers => {
-              friendsList = friendsList.concat(accepterUsers)
-              this.setState({ listOfFriends: friendsList })
-            })// closes accepterUsers json
-        })// closes accepterUsers foreach
-      })//closes FriendShips foreach
+    const relationshipsAcceptedResponse = await fetch(`http://localhost:5001/friendsRelationships?AccepterId=${loggedInUser.id}`)
+    const relationshipsAccepted = await relationshipsAcceptedResponse.json()
+
+    if (relationshipsAccepted.length > 0) {
+      const queryParams = relationshipsAccepted.map(r => `id=${r.RequesterId}`).join("&")
+      const relationshipIDs = relationshipsAccepted.map(r => r.id)
+      const requestersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
+      const requesters = await requestersResponse.json()
+
+      const requestersFixed = requesters.map((requester, index) => {
+        return Object.assign({}, requester, { relationshipId: relationshipIDs[index] })
+      });
+      friendsList = friendsList.concat(requestersFixed)
+    }
+
+    const relationshipsRequestedResponse = await fetch(`http://localhost:5001/friendsRelationships?RequesterId=${loggedInUser.id}`)
+    const relationshipsRequested = await relationshipsRequestedResponse.json()
+    if (relationshipsRequested.length > 0) {
+      const queryParams = relationshipsRequested.map(r => `id=${r.AccepterId}`).join("&")
+      const relationshipIDs = relationshipsRequested.map(r => r.id)
+      const acceptersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
+      const accepters = await acceptersResponse.json()
+      console.log("accepters", accepters)
+      const acceptersFixed = accepters.map((accepter, index) => {
+        return Object.assign({}, accepter, { relationshipId: relationshipIDs[index] })
+      });
+      friendsList = friendsList.concat(acceptersFixed)
+    }
+    this.setState({listOfFriends: friendsList})
   }.bind(this)
 
   render() {
@@ -73,7 +71,7 @@ class DisplayFriends extends Component {
           <Row>
             <Col xs={12} md={12} >
               <FriendsList allTheFriends={this.state.listOfFriends} />
-              <DisplayUsers/>
+              <DisplayUsers />
             </Col>
           </Row>
         </Grid>

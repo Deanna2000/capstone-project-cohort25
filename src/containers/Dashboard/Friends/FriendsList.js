@@ -45,16 +45,22 @@ class FriendsList extends React.Component {
     }.bind(this)
 
     getResultsItems = function () {
+        if(!this.state.results){
+            return null
+        }
         return this.state.results
             .map((friend, index) => (
-                <Row key={friend.id}>
+                <Row key={index}>
                     <Col>
-                        <ListGroupItem>
+                        <ListGroupItem key={index}>
                             <Friend
                                 fName={friend.fName}
                                 lName={friend.lName}
                                 email={friend.email}
+                                friendId={friend.id}
+                                relId={friend.relationshipId}
                                 key={friend.id}
+                                // loadFriends={()=>this.props.loadFriends}
                             />
                         </ListGroupItem>
                     </Col>

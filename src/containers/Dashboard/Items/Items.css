@@ -14,7 +14,7 @@
 
 
 .newItemForm {
-    border: solid rgba(0, 0, 255, 0.76) 2px;
+    display: inline-grid;
 }
 
 input {

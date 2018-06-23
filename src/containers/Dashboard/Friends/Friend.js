@@ -1,21 +1,24 @@
 import React from "react";
-import { Row, Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import './Friends.css'
 import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 
 
 class Friend extends React.Component {
 
-removeFriend = function (){
-    // const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
 
+    removeFriend = () => {
+                    fetch("http://localhost:5001/friendsRelationships/" + this.props.relId, {
+                        method: "DELETE",
+                    })
+                  //ADD A PAGE RELOAD HERE
+                }
 
-}
 
     render() {
         return (
             <Row>
-                <Col xs={3} md={3}><img className="vertical-align profileImage" src={profileImage} alt="profile" width="40%" height="40%"/>
+                <Col xs={3} md={3}><img className="vertical-align profileImage" src={profileImage} alt="profile" width="40%" height="40%" />
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
                     {this.props.fName}
@@ -27,7 +30,7 @@ removeFriend = function (){
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="removeFriendButton btn btn-warning" onClick={this.removeFriend()}>Remove</button>
+                    <button className="removeFriendButton btn btn-warning" onClick={()=>this.removeFriend()}>Remove</button>
                 </Col>
             </Row>
         );
