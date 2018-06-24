@@ -9,14 +9,11 @@ class NavBar extends Component {
     const userName = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     if (sessionStorage.length < 1) {
       console.log("user is NOT logged in")
-      return (
-        <nav className="navbar navbar-default">
-      <img className="logo vertical-align-welcome" alt="logo" src={logo} />
-      </nav>
-      );}
+  }
     else {
       return (
         <nav className="navbar navbar-default">
+      {/* <img className="logo vertical-align-÷welcome" alt="logo" src={logo} /> */}
           <div className="container-fluid">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

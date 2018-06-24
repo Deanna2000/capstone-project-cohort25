@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+
+.homeLogo{
+    margin: auto;
+    height: 60px;
+    background-color: rgba(182, 250, 235, 0.7);
+    background-image: radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.10) 99%),
+    radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.1) 99%);
+    background-size:20px 20px;
+    background-position:0 0, 10px 10px;
+    height: 60px;
+}
+
+.mainSection{
+    background-color:rgba(171, 248, 231, .7);
+    height: 400px;
+}
+
+h1{
+    color: #9B9B9B;
+    font-size: 30px;
+}
+
+.mainSection>h1{
+    float: left;
+
+    margin: auto;
+}
+
+.mainLogo{
+    margin-top: 1%;
+    height: 40px;
+}
+
+body {
+    font-family: 'Amatic SC', cursive;
+  }
+
+.promo{
+    float: left;
+    margin-left: 5%;
+    display: grid;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    color: #9B9B9B;
+    font-size: 30px;
+    margin-top: 2%;
+
+}
+
+.promoImage{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    display: inline-block;
+
+}
+
+.promoImageHome{
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+}
+/* rgba(171, 248, 231, 1) */

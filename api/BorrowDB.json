@@ -104,6 +104,13 @@
       "email": "Table@table.com",
       "password": "123",
       "id": 33
+    },
+    {
+      "fName": "White",
+      "lName": "Wine",
+      "email": "bottle@bottle.com",
+      "password": "123",
+      "id": 34
     }
   ],
   "friendsRelationships": [
