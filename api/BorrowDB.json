@@ -90,6 +90,20 @@
       "email": "phone@phone.com",
       "password": "123",
       "id": 31
+    },
+    {
+      "fName": "Chili",
+      "lName": "Powder",
+      "email": "chili@powder.com",
+      "password": "123",
+      "id": 32
+    },
+    {
+      "fName": "Table",
+      "lName": "Kitchen",
+      "email": "Table@table.com",
+      "password": "123",
+      "id": 33
     }
   ],
   "friendsRelationships": [

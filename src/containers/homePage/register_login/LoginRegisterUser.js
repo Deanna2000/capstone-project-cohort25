@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     Redirect,
-  } from "react-router-dom";
+} from "react-router-dom";
 import './LoginRegisterUser.css'
 
 
@@ -11,13 +11,13 @@ class LoginRegisterUser extends Component {
         super(props);
 
         this.state = {
-                fName: '',
-                lName: '',
-                email: '',
-                password: '',
-                onClick: false,
-                shouldDashboardBeDisplayed: false
-            }
+            fName: '',
+            lName: '',
+            email: '',
+            password: '',
+            onClick: false,
+            shouldDashboardBeDisplayed: false
+        }
     };
 
 
@@ -29,13 +29,13 @@ class LoginRegisterUser extends Component {
                 .then((response) => {
                     return response.json();
                 }).then((user) => {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify( user[0] ))
-                    this.setState({shouldDashboardBeDisplayed: true})
+                    sessionStorage.setItem("ActiveUser", JSON.stringify(user[0]))
+                    this.setState({ shouldDashboardBeDisplayed: true })
                 })
-            }
-            else {
-                alert('Please enter an email address')
-            }
+        }
+        else {
+            alert('Please enter an email address')
+        }
     }
 
     addUser = (evt) => {
@@ -77,16 +77,19 @@ class LoginRegisterUser extends Component {
     render() {
         if (this.state.shouldDashboardBeDisplayed) {
             return <Redirect to='/mycollection' />
-          }
+        }
         return (
-            <div>
-                <form className="loginView">
-                    <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
-                    <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
-                    <button className="btn-info" value="Sign In" onClick={this.validateForm}>Sign In</button>
+            <div className="loginView">
+                <form >
+                    <div className="loginFields">
+                        <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
+                        <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
+
+                    <button className="signIn" value="Sign In" onClick={this.validateForm}>Sign In</button>
+                    </div>
                     <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
                     <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                    <button className="btn-info" value="Sign Up" onClick={this.addUser}>Sign Up</button>
+                    <button className="signUp" value="Sign Up" onClick={this.addUser}>Sign Up</button>
                 </form>
             </div>
         )
