@@ -1,3 +1,79 @@
 .loginView {
     display: inline-grid;
+    background-image: url('../../../components/IMAGES/arrow.png');
+    width: 270px;
+    height:220px;
 }
+
+.loginView:hover{
+    display: inline-grid;
+    background-image: url('../../../components/IMAGES/hoveredarrrow.png');
+    width: 270px;
+    height:220px;
+
+}
+
+.loginView:active{
+    display: inline-grid;
+    background-image: url('../../../components/IMAGES/pressedarrow.png');
+    width: 270px;
+    height:220px;
+    animation-duration: 1s;
+
+}
+
+.loginView:visited{
+    display: inline-grid;
+    background-image: url('../../../components/IMAGES/pressedarrow.png');
+    width: 270px;
+    height:220px;
+    animation-duration: 1s;
+
+}
+
+.loginFields{
+    background-image: url('../../../components/IMAGES/arrow2.png');
+    width: 251px;
+    height: 120px;
+    margin-top: -20px;
+}
+
+#email{
+    margin-top: 14%;
+    margin-left: -15%;
+}
+
+#password{
+    margin-left: 2px;
+}
+
+form{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+.signUp{
+    background-color: transparent !important;
+    margin-top: 6%;
+    margin-left: 3px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-weight: 500;
+    width: inherit;
+}
+
+.signIn{
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-weight: 500;
+    width: 40px;
+    vertical-align: middle;
+    margin-top: -10%;
+    line-height: 1em;
+}
+
