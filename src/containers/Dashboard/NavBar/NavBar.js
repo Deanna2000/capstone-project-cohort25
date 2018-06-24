@@ -14,7 +14,7 @@ class NavBar extends Component {
       return (
         <nav className="navbar navbar-default">
       {/* <img className="logo vertical-align-÷welcome" alt="logo" src={logo} /> */}
-          <div className="container-fluid">
+          <div className="container-fluid navbarHeight">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span className="sr-only">Toggle navigation</span>
@@ -22,7 +22,7 @@ class NavBar extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <img className="logo vertical-align-welcome" alt="logo" src={logo} />
+              <img className="logo" alt="logo" src={logo} />
               {/* <a className="navbar-brand" href="/">Borrow App</a> */}
             </div>
 

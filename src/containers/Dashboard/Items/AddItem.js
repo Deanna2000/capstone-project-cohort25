@@ -45,6 +45,9 @@ componentDidMount(){
 
                 })
         }
+        else {
+            alert("Please enter an item.")
+        }
     }
 
     handleNameChange = (evt) => {
@@ -77,17 +80,17 @@ componentDidMount(){
         return (
 
 
-            <div>
+            <div className="addItemContainer">
                 <form className="newItemForm">
                     <h3>New Item to Loan</h3>
                     <p>Please enter some info about the item you are loaning.</p>
                     <input type="text" id="name" value={this.state.name || ''} onChange={this.handleNameChange} placeholder="Name" />
                     <input type="text" id="description" value={this.state.description || ''} onChange={this.handleDescriptionChange} placeholder="Description" />
                     <input type="text" id="borrower" value={this.state.borrowerName || ''} onChange={this.handleBorrowerChange} placeholder="Borrower Name" />
-                    <label>Lend Date<input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
-                    <label>Due Date<input type="date" id="dueDate" value={this.state.dueDate || ''} onChange={this.handleDueDateChange} placeholder="Due Date" /></label>
+                    <label>Lend Date    <input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
+                    <label>Due Date    <input type="date" id="dueDate" value={this.state.dueDate || ''} onChange={this.handleDueDateChange} placeholder="Due Date" /></label>
                     <input type="text" id="image" value={this.state.image || ''} onChange={this.handleImageChange} placeholder="Image Url" />
-                    <button className="btn btn-info" type="submit" value="Add Loan Item" onClick={this.addItem}>Confirm Loan</button>
+                    <button className="addItemButton" type="submit" value="Add Loan Item" onClick={this.addItem}>Confirm Loan</button>
                 </form>
             </div>
         )

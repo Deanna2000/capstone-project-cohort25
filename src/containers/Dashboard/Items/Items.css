@@ -13,10 +13,6 @@
 
 
 
-.newItemForm {
-    display: inline-grid;
-}
-
 input {
     text-align: center;
 }
@@ -26,17 +22,27 @@ input {
     width: 100%;
 }
 
-.btn-info{
+.returnButtonLoaned {
     width: 100%;
+    background-color: #8BA66A;
+    color: white;
+    font-size: 1.4em !important;
+}
+
+.returnButtonBorrowed {
+    width: 100%;
+    background-color: #E2B6E4;
+    color: white;
+    font-size: 1.4em !important;
 }
 
 .cardTitle {
     height: 40px;
 }
-
+/*
 .btn-warning {
     width: 100%;
-}
+} */
 
 .padding-zero {
     padding-left: 5px !important;
@@ -52,4 +58,75 @@ input {
 
 .panel{
     margin-bottom: 10px !important;
+}
+
+.borrowed{
+    border: solid 2px #E2B6E4;
+}
+
+.loaned{
+    border: solid 2px #8BA66A;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    border: solid 1px #8BA66A !important;
+    border-bottom: solid white !important;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #8BA66A !important;
+}
+
+.addItemContainer {
+    background-image: url('../../../components/IMAGES/addItemArrow.png');
+    background-repeat: no-repeat;
+    width: 510px;
+    height: 480px;
+    margin: auto;
+    margin-top: 30px
+}
+
+.addItemContainer:hover {
+    background-image: url('../../../components/IMAGES/addItemHoveredArrow.png');
+    background-repeat: no-repeat;
+    width: 510px;
+    height: 480px;
+    margin: auto;
+    margin-top: 30px
+}
+
+.addItemContainer:active {
+    background-image: url('../../../components/IMAGES/addItemPressedArrow.png');
+    background-repeat: no-repeat;
+    width: 510px;
+    height: 480px;
+    margin: auto;
+    margin-top: 30px
+}
+
+.newItemForm {
+    display: inline-grid;
+    width: 70% !important;
+    height: 70% !important;
+    margin-left: -15% !important;
+    margin-top: 11% !important;
+}
+
+
+.addItemButton {
+    background-color: transparent !important;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    font-weight: 600;
+    width: 40px;
+    display: block;
+    /* margin-left: 191px; */
+    position: absolute;
+    line-height: 1.2em;
+    outline: none;
+    top: 410px;
+    font-size: 1.3em;
+    right: 268px;
 }

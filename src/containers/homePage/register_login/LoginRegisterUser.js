@@ -73,22 +73,31 @@ class LoginRegisterUser extends Component {
         this.setState({ lName: evt.target.value })
     }
 
+    handleHoverLargeArrow = (evt) => {
+        // change the class to remove the current background image of loginFields (disable hover state)
+    }
+
     render() {
         if (this.state.shouldDashboardBeDisplayed) {
             return <Redirect to='/mycollection' />
         }
         return (
             <div className="loginView">
-                <form >
+                <form className="loginForm">
                     <div className="loginFields">
-                        <input type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
-                        <input type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
-
-                    <button className="signIn" value="Sign In" onClick={this.validateForm}>Sign In</button>
+                        <div className="loginFieldsWrapper">
+                            <input className="loginInputField" type="email" id="email" value={this.state.email || ''} onChange={this.handleEmailChange} placeholder="Email" />
+                            <input className="loginInputField" type="password" id="password" value={this.state.password || ''} onChange={this.handlePasswordChange} placeholder="Password" />
+                        </div>
+                        <button className="signIn" value="Sign In" onClick={this.validateForm}>Sign In</button>
                     </div>
-                    <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
-                    <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                    <button className="signUp" value="Sign Up" onClick={this.addUser}>Sign Up</button>
+                    <div className="registerFields" onMouseOver={this.handleHoverLargeArrow}>
+                        <div className="registerFieldsWrapper">
+                            <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
+                            <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />
+                        </div>
+                        <button className="signUp" value="Sign Up" onClick={this.addUser}>Sign Up</button>
+                    </div>
                 </form>
             </div>
         )

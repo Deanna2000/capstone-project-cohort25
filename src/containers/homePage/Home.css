@@ -3,13 +3,12 @@
 
 .homeLogo{
     margin: auto;
-    height: 60px;
     background-color: rgba(182, 250, 235, 0.7);
     background-image: radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.10) 99%),
     radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.1) 99%);
     background-size:20px 20px;
     background-position:0 0, 10px 10px;
-    height: 60px;
+    height: 80px;
 }
 
 .mainSection{
@@ -29,8 +28,8 @@ h1{
 }
 
 .mainLogo{
-    margin-top: 1%;
     height: 40px;
+    margin-top: 20px;
 }
 
 body {
@@ -41,7 +40,6 @@ body {
     float: left;
     margin-left: 5%;
     display: grid;
-    height: 300px;
     width: 400px;
     text-align: center;
     color: #9B9B9B;
@@ -58,10 +56,7 @@ body {
 
 }
 
-.promoImageHome{
-    margin: auto;
-    margin-top: 20px;
-    height: 100px;
-    width: 100px;
+.backAndForth {
+    margin: 0 10px;
 }
 /* rgba(171, 248, 231, 1) */
