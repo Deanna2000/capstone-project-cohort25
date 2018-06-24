@@ -6,7 +6,7 @@ import {
 import React from 'react';
 import Home from '../homePage/index'
 import './App.css';
-import Friends from '../Dashboard/Friends/DisplayFriends'
+import Friends from '../Dashboard/Friends/DisplayFriendsAndUsers'
 import MyCollection from '../Dashboard/Items/DisplayItems'
 
 //add some conditions to view to redirect to login if they are not logged in

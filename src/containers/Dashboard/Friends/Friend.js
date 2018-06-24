@@ -20,13 +20,13 @@ class Friend extends React.Component {
             <Row>
                 <Col xs={3} md={3}><img className="vertical-align profileImage" src={profileImage} alt="profile" width="40%" height="40%" />
                 </Col>
-                <Col xs={2} md={2} className="vertical-align">
+                <Col xs={2} md={2} className="vertical-align friendItem">
                     {this.props.fName}
                 </Col>
-                <Col xs={2} md={2} className="vertical-align">
+                <Col xs={2} md={2} className="vertical-align friendItem">
                     {this.props.lName}
                 </Col>
-                <Col xs={3} md={3} className="vertical-align">
+                <Col xs={3} md={3} className="vertical-align friendItem">
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">

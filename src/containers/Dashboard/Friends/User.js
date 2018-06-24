@@ -17,13 +17,13 @@ addFriend = function (){
             <Row>
                 <Col xs={3} md={3}><img className="vertical-align profileImage" alt="profile" src={profileImage} width="40%" height="40%"/>
                 </Col>
-                <Col xs={2} md={2} className="vertical-align">
+                <Col xs={2} md={2} className="vertical-align userItem">
                     {this.props.fName}
                 </Col>
-                <Col xs={2} md={2} className="vertical-align">
+                <Col xs={2} md={2} className="vertical-align userItem">
                     {this.props.lName}
                 </Col>
-                <Col xs={3} md={3} className="vertical-align">
+                <Col xs={3} md={3} className="vertical-align userItem">
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">

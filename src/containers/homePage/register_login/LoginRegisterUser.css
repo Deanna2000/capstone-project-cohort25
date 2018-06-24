@@ -4,7 +4,7 @@
 .loginView {
     float: right;
     margin-right: 10%;
-    margin-top: 12%;
+    margin-top: 4%;
     display: inline-grid;
     background-image: url('../../../components/IMAGES/arrow.png');
     background-repeat: no-repeat;
@@ -12,19 +12,33 @@
     height:235px;
 }
 
-.loginView:hover{
+/* .registerFields {
+    background-image: url('../../../components/IMAGES/arrow.png');
+    background-repeat: no-repeat;
+} */
+
+.registerFieldsWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    margin-left: 28px;
+}
+
+/* .loginView:hover{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/hoveredarrow.png');
     background-repeat: no-repeat;
+    background-position-X: -2px;
     width: 275px;
     height:235px;
 
-}
+} */
 
 .loginView:active{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/pressedarrow.png');
     background-repeat: no-repeat;
+    background-position-X: 3px;
     width: 275px;
     height:235px;
     animation-duration: 1s;
@@ -45,19 +59,31 @@
     background-image: url('../../../components/IMAGES/arrow2.png');
     background-repeat: no-repeat;
     width: 255px;
-    height: 120px;
+    padding-bottom: 28px;
     margin-top: -20px;
+    position: relative;
 }
 
 .loginFields:hover{
     background-image: url('../../../components/IMAGES/hoveredarrow2.png');
     background-repeat: no-repeat;
-    width: 255px;
-    height: 120px;
-    margin-top: -20px;
+    background-position-y: -1px;
 }
 
-#email{
+.loginFieldsWrapper {
+    padding-top: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 160px;
+    margin-left: 29px;
+}
+
+.loginFieldsWrapper input, .registerFieldsWrapper input {
+    margin: 2px 0;
+}
+/* #email{
     margin-top: 14%;
     margin-left: -15%;
     width: 67%;
@@ -74,9 +100,9 @@
 
 #lName{
     width: 76%;
-}
+} */
 
-form{
+.loginForm{
     width: 80%;
     height: 80%;
     margin-left: 9.5%;
@@ -85,13 +111,14 @@ form{
 
 .signUp{
     background-color: transparent !important;
-    margin-top: 5%;
+    margin-top: 4px;
     margin-left: 3px;
     border: none;
     box-shadow: none;
     color: white;
     font-weight: 500;
     width: inherit;
+    outline: none;
 }
 
 .signIn{
@@ -101,9 +128,13 @@ form{
     color: white;
     font-weight: 500;
     width: 40px;
-    vertical-align: middle;
-    margin-top: -10%;
+    display: block;
+    margin-left: 191px;
+    position: absolute;
     line-height: 1em;
+    outline: none;
+    top: 47px;
+    right: 22px;
 }
 
 /* body {

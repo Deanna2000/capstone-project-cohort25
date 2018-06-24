@@ -61,7 +61,6 @@ class DisplayFriends extends Component {
   render() {
     return (
       <div className="Friends">
-        <NavBar />
         <Grid>
           <Row>
             <Col xs={12} md={12}>
@@ -71,7 +70,6 @@ class DisplayFriends extends Component {
           <Row>
             <Col xs={12} md={12} >
               <FriendsList allTheFriends={this.state.listOfFriends} />
-              <DisplayUsers />
             </Col>
           </Row>
         </Grid>

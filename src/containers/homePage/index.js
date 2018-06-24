@@ -24,10 +24,11 @@ class Home extends Component {
               <img className="promoImage" alt="promo" src={clothing} />
               <img className="promoImage" alt="promo" src={books} />
               <img className="promoImage" alt="promo" src={lawnmower} />
+              <span className="backAndForth">&#x021C4;</span>
+              <img className="promoImage" alt="promo" src={home} />
               <h1>And Getting It Back</h1>
 
             </div>
-            <img className="promoImageHome" alt="promo" src={home} />
           </div>
           <LoginRegisterUser />
         </div>
