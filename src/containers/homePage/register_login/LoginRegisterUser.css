@@ -1,23 +1,32 @@
+/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */
+
+
 .loginView {
+    float: right;
+    margin-right: 10%;
+    margin-top: 12%;
     display: inline-grid;
     background-image: url('../../../components/IMAGES/arrow.png');
-    width: 270px;
-    height:220px;
+    background-repeat: no-repeat;
+    width: 275px;
+    height:235px;
 }
 
 .loginView:hover{
     display: inline-grid;
-    background-image: url('../../../components/IMAGES/hoveredarrrow.png');
-    width: 270px;
-    height:220px;
+    background-image: url('../../../components/IMAGES/hoveredarrow.png');
+    background-repeat: no-repeat;
+    width: 275px;
+    height:235px;
 
 }
 
 .loginView:active{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/pressedarrow.png');
-    width: 270px;
-    height:220px;
+    background-repeat: no-repeat;
+    width: 275px;
+    height:235px;
     animation-duration: 1s;
 
 }
@@ -25,15 +34,25 @@
 .loginView:visited{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/pressedarrow.png');
-    width: 270px;
-    height:220px;
+    background-repeat: no-repeat;
+    width: 275px;
+    height:235px;
     animation-duration: 1s;
 
 }
 
 .loginFields{
     background-image: url('../../../components/IMAGES/arrow2.png');
-    width: 251px;
+    background-repeat: no-repeat;
+    width: 255px;
+    height: 120px;
+    margin-top: -20px;
+}
+
+.loginFields:hover{
+    background-image: url('../../../components/IMAGES/hoveredarrow2.png');
+    background-repeat: no-repeat;
+    width: 255px;
     height: 120px;
     margin-top: -20px;
 }
@@ -41,22 +60,32 @@
 #email{
     margin-top: 14%;
     margin-left: -15%;
+    width: 67%;
 }
 
 #password{
     margin-left: 2px;
+    width: 67%;
+}
+
+#fName{
+    width: 76%;
+}
+
+#lName{
+    width: 76%;
 }
 
 form{
     width: 80%;
     height: 80%;
-    margin-left: 10%;
+    margin-left: 9.5%;
     margin-top: 8%;
 }
 
 .signUp{
     background-color: transparent !important;
-    margin-top: 6%;
+    margin-top: 5%;
     margin-left: 3px;
     border: none;
     box-shadow: none;
@@ -77,3 +106,6 @@ form{
     line-height: 1em;
 }
 
+/* body {
+    font-family: 'Amatic SC', cursive;
+  } */

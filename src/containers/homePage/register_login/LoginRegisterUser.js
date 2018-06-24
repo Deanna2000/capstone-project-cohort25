@@ -52,7 +52,6 @@ class LoginRegisterUser extends Component {
                 .then(response => response.json())
                 .then(user => {
                     sessionStorage.setItem("ActiveUser", JSON.stringify({ user }));
-
                 })
 
         }
