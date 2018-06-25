@@ -279,20 +279,6 @@
       "returnedDate": ""
     },
     {
-      "id": 10,
-      "name": "Wine Carrier",
-      "description": "Purple with vines",
-      "lenderUserid": 3,
-      "borrowerUserid": 4,
-      "borrowerName": "Brandi Adkins",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "10/2/2018",
-      "image": "https://foter.com/photos/269/insulated-wine-carrier.jpg?s=pi",
-      "lendDate": "6/12/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
       "id": 11,
       "name": "Canning Jars",
       "description": "Quart sized jars (10)",
@@ -305,32 +291,6 @@
       "lendDate": "6/1/2018",
       "archived": false,
       "returnedDate": ""
-    },
-    {
-      "name": "Laundry Basket",
-      "description": "light blue",
-      "lenderUserid": 1,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Steve Collie",
-      "dueDate": "2018-08-12",
-      "image": "http://www.briscoes.co.nz/productimages/medium/1/64998_212692_136977.jpg",
-      "lendDate": "2018-06-01",
-      "id": 12
-    },
-    {
-      "name": "Chair",
-      "description": "silver folding chair",
-      "lenderUserid": 4,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Brandi Adkins",
-      "dueDate": "2018-09-10",
-      "image": "http://www.chairsdirectseating.com/prodimages/BF-DSC_1820.JPEG",
-      "lendDate": "2018-06-01",
-      "archived": false,
-      "returnedDate": "",
-      "id": 15
     },
     {
       "name": "folder",
