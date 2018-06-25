@@ -149,6 +149,12 @@
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 9
+    },
+    {
+      "AccepterId": 33,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 10
     }
   ],
   "sharedItems": [
@@ -331,6 +337,19 @@
       "archived": false,
       "returnedDate": "",
       "id": 18
+    },
+    {
+      "name": "Sleeping Bag",
+      "description": "Brown with red plaid inside",
+      "borrowerName": "Chrissy J",
+      "lenderName": 0,
+      "lenderUserid": 3,
+      "dueDate": "2018-07-14",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61P9tV3I8PL._SX355_.jpg",
+      "lendDate": "2018-06-07",
+      "archived": false,
+      "returnedDate": "",
+      "id": 19
     }
   ]
 }

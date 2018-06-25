@@ -27,7 +27,7 @@ componentDidMount(){
     addItem = (evt) => {
         evt.preventDefault();
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
-        if (this.state.name.length > 0) {
+        if (this.state.name.length > 0 && this.state.borrowerName > 0) {
             fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
                 headers: {
@@ -41,12 +41,13 @@ componentDidMount(){
                 .then(response => response.json())
                 .then(newItem => {
                     sessionStorage.setItem("NewItem", JSON.stringify({ newItem }));
-                    // return <Redirect to='/mycollection';
+                    alert("The item was added to your loaned items.")
+                    document.getElementsByClassName("newItemForm").reset();
 
                 })
         }
         else {
-            alert("Please enter an item.")
+            alert("Please enter an item and a borrower name.")
         }
     }
 
@@ -84,7 +85,7 @@ componentDidMount(){
                 <form className="newItemForm">
                     <h3>New Item to Loan</h3>
                     <p>Please enter some info about the item you are loaning.</p>
-                    <input type="text" id="name" value={this.state.name || ''} onChange={this.handleNameChange} placeholder="Name" />
+                    <input type="text" id="name" value={this.state.name || ''} onChange={this.handleNameChange} placeholder=" Item Name" />
                     <input type="text" id="description" value={this.state.description || ''} onChange={this.handleDescriptionChange} placeholder="Description" />
                     <input type="text" id="borrower" value={this.state.borrowerName || ''} onChange={this.handleBorrowerChange} placeholder="Borrower Name" />
                     <label>Lend Date    <input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
