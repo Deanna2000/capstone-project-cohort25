@@ -45,7 +45,7 @@ class DisplayUsers extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12} >
-              <UsersList allTheUsers={this.state.listOfUsers} />
+              <UsersList allTheUsers={this.state.listOfUsers} friends={this.props.friends}/>
             </Col>
           </Row>
         </Grid>

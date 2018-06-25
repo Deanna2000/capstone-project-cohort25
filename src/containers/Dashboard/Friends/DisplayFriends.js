@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FriendsList from './FriendsList';
-import DisplayUsers from './DisplayUsers'
 import NavBar from '../NavBar/NavBar';
 import { Grid, Row, Col } from 'react-bootstrap'
 

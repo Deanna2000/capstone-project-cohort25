@@ -122,15 +122,33 @@
     },
     {
       "id": 3,
-      "RequesterId": 4,
+      "RequesterId": 24,
       "AccepterId": 3,
       "friendshipConfirmed": 1
     },
     {
-      "id": 3,
-      "RequesterId": 24,
-      "AccepterId": 3,
-      "friendshipConfirmed": 1
+      "AccepterId": 25,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 4
+    },
+    {
+      "AccepterId": 26,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 7
+    },
+    {
+      "AccepterId": 2,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 8
+    },
+    {
+      "AccepterId": 28,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 9
     }
   ],
   "sharedItems": [

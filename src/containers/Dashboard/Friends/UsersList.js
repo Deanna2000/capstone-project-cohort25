@@ -28,34 +28,36 @@ class UsersList extends React.Component {
 
 
     filterResults = function (allTheUsers) {
-        let usersListFiltered = allTheUsers
+        let usersListFiltered = allTheUsers[0]
         if (this.state.searchText.trim() !== "") {
-            usersListFiltered = allTheUsers
+            usersListFiltered = allTheUsers[0]
                 .filter(user => this.searchForAUser(user))
         }
-        this.setState({ results: usersListFiltered[0]})
+        this.setState({ results: usersListFiltered})
     }.bind(this)
 
     searchForAUser = function (user) {
-         user.map(userDetail => {
-            return userDetail.fName.toLowerCase().indexOf(this.state.searchText) >= 0
-            || userDetail.lName.toLowerCase().indexOf(this.state.searchText) >= 0
-            || userDetail.email.toLowerCase().indexOf(this.state.searchText) >= 0;
-        })}.bind(this)
+            return user.fName.toLowerCase().indexOf(this.state.searchText) >= 0
+            || user.lName.toLowerCase().indexOf(this.state.searchText) >= 0
+            || user.email.toLowerCase().indexOf(this.state.searchText) >= 0;
+        }.bind(this)
+
+
 
     getResultsItems = function () {
         if(!this.state.results){
-            return null
+            return console.log("this use does not exist")
         }
         return this.state.results
             .map((user, index) => (
-                <Row key={user.id}>
+                <Row key={index}>
                     <Col>
-                        <ListGroupItem>
+                        <ListGroupItem key={index}>
                             <User
                                 fName={user.fName}
                                 lName={user.lName}
                                 email={user.email}
+                                friendId={user.id}
                                 key={user.id}
                             />
                         </ListGroupItem>
