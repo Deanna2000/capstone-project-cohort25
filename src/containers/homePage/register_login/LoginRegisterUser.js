@@ -3,6 +3,7 @@ import {
     Redirect,
 } from "react-router-dom";
 import './LoginRegisterUser.css'
+import $ from 'jquery'
 
 
 // Set up the component to login and register a user
@@ -57,6 +58,7 @@ class LoginRegisterUser extends Component {
         }
     }
 
+
     handleEmailChange = (evt) => {
         this.setState({ email: evt.target.value })
     }
@@ -73,9 +75,11 @@ class LoginRegisterUser extends Component {
         this.setState({ lName: evt.target.value })
     }
 
-    handleHoverLargeArrow = (evt) => {
-        // change the class to remove the current background image of loginFields (disable hover state)
-    }
+    // handleHoverLargeArrow = (evt) => {
+    //     console.log("pink arrow")
+    //     $(".loginView").unbind('mouseenter moouseleave')
+    //     // change the class to remove the current background image of loginFields (disable hover state)
+    // }
 
     render() {
         if (this.state.shouldDashboardBeDisplayed) {

@@ -1,10 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */
-
-
 .loginView {
     float: right;
     margin-right: 10%;
-    margin-top: 4%;
+    margin-top: 7%;
     display: inline-grid;
     background-image: url('../../../components/IMAGES/arrow.png');
     background-repeat: no-repeat;
@@ -12,10 +9,6 @@
     height:235px;
 }
 
-/* .registerFields {
-    background-image: url('../../../components/IMAGES/arrow.png');
-    background-repeat: no-repeat;
-} */
 
 .registerFieldsWrapper {
     display: flex;
@@ -24,7 +17,7 @@
     margin-left: 28px;
 }
 
-/* .loginView:hover{
+.loginView:hover{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/hoveredarrow.png');
     background-repeat: no-repeat;
@@ -32,7 +25,7 @@
     width: 275px;
     height:235px;
 
-} */
+}
 
 .loginView:active{
     display: inline-grid;
@@ -67,7 +60,7 @@
 .loginFields:hover{
     background-image: url('../../../components/IMAGES/hoveredarrow2.png');
     background-repeat: no-repeat;
-    background-position-y: -1px;
+    background-position-y: -2px;
 }
 
 .loginFieldsWrapper {
@@ -83,24 +76,7 @@
 .loginFieldsWrapper input, .registerFieldsWrapper input {
     margin: 2px 0;
 }
-/* #email{
-    margin-top: 14%;
-    margin-left: -15%;
-    width: 67%;
-}
 
-#password{
-    margin-left: 2px;
-    width: 67%;
-}
-
-#fName{
-    width: 76%;
-}
-
-#lName{
-    width: 76%;
-} */
 
 .loginForm{
     width: 80%;
