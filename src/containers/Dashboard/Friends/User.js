@@ -14,8 +14,6 @@ class User extends React.Component {
     };
     addFriend = () => {
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
-        console.log(fetch("http://localhost:5001/friendsRelationships"))
-        console.log(loggedInUser.id)
         fetch("http://localhost:5001/friendsRelationships", {
             method: "POST",
             headers: {

@@ -7,6 +7,13 @@ import './Items.css'
 
 class ItemsBorrowed extends Component {
 
+    removeBorrowedItem = () => {
+        fetch("http://localhost:5001/sharedItems/" + this.props.itemList.id, {
+            method: "DELETE",
+        })
+        alert("The item has been deleted")
+      //ADD A PAGE REDIRECT HERE
+    }
 
     render() {
 
@@ -20,7 +27,7 @@ class ItemsBorrowed extends Component {
                         <img className="cardImg" alt="borroweditem" src={this.props.itemList.image} />
                         <h4 className="cardTitle">Whose {this.props.itemList.name} is this? </h4>
                         <p>{this.props.itemList.lenderName}</p>
-                        <button type="button" className="btn returnButtonBorrowed">Returned It</button>
+                        <button type="button" className="btn returnButtonBorrowed" onClick={()=>this.removeBorrowedItem()}>Returned It</button>
                     </div>
                 </div>
             </div>
