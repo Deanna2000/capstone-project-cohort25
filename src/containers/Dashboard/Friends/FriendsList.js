@@ -36,9 +36,13 @@ class FriendsList extends React.Component {
                 .filter(friend => this.searchForAFriend(friend))
         }
         this.setState({ results: friendsListFiltered })
+        console.log("friendresults", friendsListFiltered)
     }.bind(this)
 
     searchForAFriend = function (friend) {
+        console.log("friendfriend", friend)
+        console.log("friendsearchText", this.state.searchText)
+        console.log("friendsearchmatch", friend.fName.toLowerCase().indexOf(this.state.searchText))
         return friend.fName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.lName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.email.toLowerCase().indexOf(this.state.searchText) >= 0;
