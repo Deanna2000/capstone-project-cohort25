@@ -13,7 +13,7 @@
 
 .mainSection{
     background-color:rgba(171, 248, 231, .7);
-    height: 400px;
+    height: 330px;
 }
 
 h1{
@@ -27,6 +27,40 @@ h1{
     margin: auto;
 }
 
+.secondSection{
+    display: flex;
+    height: 400px;
+    background-image: url('../../components/IMAGES/sharingtoys.jpg');
+    -webkit-filter: grayscale(100%);
+    z-index: -1;
+    opacity: .5;
+    background-size: 100% auto;
+
+}
+
+.secondSectionText>h3{
+    line-height: 2em;
+    color: #E2B6E4;
+    font-size: 29px;
+    margin: 0 0;
+}
+
+.thirdSection{
+    display: flex;
+    height: 300px;
+    background-color: rgba(182, 250, 235, 0.7);
+
+
+}
+
+.thirdSection>h3{
+    color: #9B9B9B;
+    padding: 28px;
+    line-height: 1.5em;
+    width: 415px;
+    margin-top: 46px;
+    text-align: center;
+}
 .mainLogo{
     height: 40px;
     margin-top: 20px;
@@ -44,7 +78,7 @@ body {
     text-align: center;
     color: #9B9B9B;
     font-size: 30px;
-    margin-top: 2%;
+    margin-top: 5%;
 
 }
 
@@ -59,4 +93,32 @@ body {
 .backAndForth {
     margin: 0 10px;
 }
-/* rgba(171, 248, 231, 1) */
+
+.borrowView {
+    height: 200px;
+    border: solid gray 2px;
+    margin: 50px;
+}
+
+.footer {
+    height: 100px;
+    background-color:  rgba(182, 250, 235, 0.7);
+    background-image: radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.10) 99%),
+    radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.1) 99%);
+    background-size:20px 20px;
+    background-position:0 0, 10px 10px;
+    color: #9B9B9B;
+}
+
+.footer>p {
+    margin: 0 0 0;
+    padding-top: 5px;
+}
+
+.socialicon {
+    height: 40px;
+    width:  40px;
+    margin: 5px;
+}
+
+
