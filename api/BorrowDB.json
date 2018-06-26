@@ -111,6 +111,97 @@
       "email": "bottle@bottle.com",
       "password": "123",
       "id": 34
+    },
+    {
+      "fName": "athena",
+      "lName": "dog",
+      "email": "athena@athena.com",
+      "password": "123",
+      "id": 35
+    },
+    {
+      "fName": "zoe",
+      "lName": "dog",
+      "email": "zoe@zoe.com",
+      "password": "123",
+      "id": 36
+    },
+    {
+      "fName": "lester",
+      "lName": "badcat",
+      "email": "les@les.com",
+      "password": "123",
+      "id": 37
+    },
+    {
+      "fName": "castor",
+      "lName": "dog",
+      "email": "castor@castor.com",
+      "password": "123",
+      "id": 38
+    },
+    {
+      "fName": "purse",
+      "lName": "percy",
+      "email": "purse@purse.com",
+      "password": "123",
+      "id": 39
+    },
+    {
+      "fName": "vernor",
+      "lName": "soda",
+      "email": "vernors@vernors.com",
+      "password": "123",
+      "id": 40
+    },
+    {
+      "fName": "can",
+      "lName": "can",
+      "email": "can@can.com",
+      "password": "123",
+      "id": 41
+    },
+    {
+      "fName": "cup",
+      "lName": "cup",
+      "email": "cup@cup.com",
+      "password": "123",
+      "id": 42
+    },
+    {
+      "fName": "apple",
+      "lName": "core",
+      "email": "apple@apple.com",
+      "password": "123",
+      "id": 43
+    },
+    {
+      "fName": "red",
+      "lName": "hat",
+      "email": "red@red.com",
+      "password": "123",
+      "id": 44
+    },
+    {
+      "fName": "letter",
+      "lName": "mail",
+      "email": "letter@letter.com",
+      "password": "123",
+      "id": 45
+    },
+    {
+      "fName": "b",
+      "lName": "b",
+      "email": "b@b.com",
+      "password": "123",
+      "id": 46
+    },
+    {
+      "fName": "bag",
+      "lName": "bag",
+      "email": "bag@bag.com",
+      "password": "123",
+      "id": 47
     }
   ],
   "friendsRelationships": [
@@ -155,6 +246,32 @@
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 10
+    },
+    {
+      "AccepterId": 1,
+      "friendshipConfirmed": "",
+      "id": 11
+    },
+    {
+      "AccepterId": 2,
+      "friendshipConfirmed": "",
+      "id": 12
+    },
+    {
+      "AccepterId": 3,
+      "friendshipConfirmed": "",
+      "id": 13
+    },
+    {
+      "AccepterId": 4,
+      "friendshipConfirmed": "",
+      "id": 14
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 15
     }
   ],
   "sharedItems": [
