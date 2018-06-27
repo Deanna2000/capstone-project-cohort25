@@ -202,6 +202,34 @@
       "email": "bag@bag.com",
       "password": "123",
       "id": 47
+    },
+    {
+      "fName": "Lydia",
+      "lName": "Lydia",
+      "email": "lydia@lydia.com",
+      "password": "123",
+      "id": 48
+    },
+    {
+      "fName": "pete",
+      "lName": "pete",
+      "email": "pete@pete.com",
+      "password": "123",
+      "id": 49
+    },
+    {
+      "fName": "betty",
+      "lName": "vickers",
+      "email": "betty@betty.com",
+      "password": "123",
+      "id": 50
+    },
+    {
+      "fName": "yellow",
+      "lName": "yell",
+      "email": "yellow@yellow.com",
+      "password": "123",
+      "id": 51
     }
   ],
   "friendsRelationships": [
@@ -272,6 +300,23 @@
       "RequesterId": 35,
       "friendshipConfirmed": "",
       "id": 15
+    },
+    {
+      "AccepterId": 1,
+      "friendshipConfirmed": "",
+      "id": 16
+    },
+    {
+      "AccepterId": 2,
+      "RequesterId": 51,
+      "friendshipConfirmed": "",
+      "id": 17
+    },
+    {
+      "AccepterId": 23,
+      "RequesterId": 51,
+      "friendshipConfirmed": "",
+      "id": 20
     }
   ],
   "sharedItems": [

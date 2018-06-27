@@ -10,7 +10,8 @@ class UsersList extends React.Component {
         super(props);
         this.state = {
             searchText: "",
-            results: []
+            results: [],
+            noResultsLabelDisplay: false,
         };
     }
 
@@ -34,6 +35,11 @@ class UsersList extends React.Component {
                 .filter(user => this.searchForAUser(user))
         }
         this.setState({ results: usersListFiltered})
+        if(usersListFiltered.length===0 && this.state.searchText.trim() !== ""){
+            this.setState({ noResultsLabelDisplay: true })
+        } else {
+            this.setState({ noResultsLabelDisplay: false })
+        }
     }.bind(this)
 
     searchForAUser = function (user) {
@@ -46,7 +52,7 @@ class UsersList extends React.Component {
 
     getResultsItems = function () {
         if(!this.state.results){
-            return console.log("this use does not exist")
+            return null
         }
         return this.state.results
             .map((user, index) => (
@@ -59,6 +65,7 @@ class UsersList extends React.Component {
                                 email={user.email}
                                 friendId={user.id}
                                 key={user.id}
+                                loadUsers={()=>this.props.loadUsers()}
                             />
                         </ListGroupItem>
                     </Col>
@@ -86,6 +93,18 @@ class UsersList extends React.Component {
                         </form>
                     </Col>
                     <Col xs={3} md={3} />
+                </Row>
+                <Row>
+                <Col xs={3} md={3} />
+                <Col xs={6} md={6} >
+                {
+                    this.state.noResultsLabelDisplay ?
+                    <p>{this.state.searchText} is not found, please try inviting them!</p>
+                    :
+                    null
+                }
+                </Col>
+                <Col xs={3} md={3} />
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >

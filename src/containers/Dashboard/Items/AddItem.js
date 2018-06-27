@@ -47,7 +47,7 @@ componentDidMount(){
                 })
         }
         else {
-            alert("Please enter an item and a borrower name.")
+            alert("Please enter an item name and a borrower name.")
         }
     }
 

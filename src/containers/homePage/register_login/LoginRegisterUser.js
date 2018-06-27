@@ -53,8 +53,7 @@ class LoginRegisterUser extends Component {
             })
                 .then(response => response.json())
                 .then(user => {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify({ user }));
-                    console.log("user", user)
+                    sessionStorage.setItem("ActiveUser", JSON.stringify( user ));
                     this.setState({ shouldDashboardBeDisplayed: true })
 
                 })
