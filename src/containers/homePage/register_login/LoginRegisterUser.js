@@ -3,7 +3,6 @@ import {
     Redirect,
 } from "react-router-dom";
 import './LoginRegisterUser.css'
-import $ from 'jquery'
 
 
 // Set up the component to login and register a user
@@ -31,7 +30,6 @@ class LoginRegisterUser extends Component {
                     return response.json();
                 }).then((user) => {
                     sessionStorage.setItem("ActiveUser", JSON.stringify(user[0]))
-                    console.log("user0", user[0])
                     this.setState({ shouldDashboardBeDisplayed: true })
                 })
         }

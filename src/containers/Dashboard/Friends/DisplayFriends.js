@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FriendsList from './FriendsList';
-import NavBar from '../NavBar/NavBar';
 import { Grid, Row, Col } from 'react-bootstrap'
 
 
@@ -48,7 +47,6 @@ class DisplayFriends extends Component {
       const relationshipIDs = relationshipsRequested.map(r => r.id)
       const acceptersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
       const accepters = await acceptersResponse.json()
-      console.log("accepters", accepters)
       const acceptersFixed = accepters.map((accepter, index) => {
         return Object.assign({}, accepter, { relationshipId: relationshipIDs[index] })
       });

@@ -8,44 +8,40 @@ class AddItem extends Component {
 
 
         this.state = {
-                name: '',
-                description: '',
-                lenderUserid: '',
-                borrowerName: '',
-                lenderName: '',
-                dueDate: '',
-                image: '',
-                lendDate: ''
-            }
+            name: '',
+            description: '',
+            lenderUserid: '',
+            borrowerName: '',
+            lenderName: '',
+            dueDate: '',
+            image: '',
+            lendDate: ''
+        }
     };
-
-componentDidMount(){
-    console.log("on the add item page")
-}
 
 
     addItem = (evt) => {
         evt.preventDefault();
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
-        if (this.state.name.length > 0 && this.state.borrowerName > 0) {
+        if (this.state.name.length > 0 && this.state.borrowerName.length > 0) {
             fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-
-                body: JSON.stringify({ name: this.state.name, description: this.state.description, borrowerName: this.state.borrowerName, lenderName: loggedInUser.fName&loggedInUser.lName, lenderUserid: loggedInUser.id,
-                    dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: "" })
-
+                body: JSON.stringify({
+                    name: this.state.name, description: this.state.description, borrowerName: this.state.borrowerName, lenderName: loggedInUser.fName + " " + loggedInUser.lName, lenderUserid: loggedInUser.id,
+                    dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: ""
+                })
             })
                 .then(response => response.json())
                 .then(newItem => {
                     sessionStorage.setItem("NewItem", JSON.stringify({ newItem }));
-                    alert("The item was added to your loaned items.")
-                    document.getElementsByClassName("newItemForm").reset();
-
                 })
-        }
+                .then(() => { this.props.loadItems()
+                })
+                // .then(() =>  this.setState({ name: this.state.name }))
+            }
         else {
             alert("Please enter an item name and a borrower name.")
         }
@@ -60,7 +56,10 @@ componentDidMount(){
     }
 
     handleBorrowerChange = (evt) => {
+
+        // show a drop down of all your current friends
         this.setState({ borrowerName: evt.target.value })
+
     }
 
     handleLendDateChange = (evt) => {

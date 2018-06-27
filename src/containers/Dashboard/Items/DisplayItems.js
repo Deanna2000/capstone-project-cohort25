@@ -13,8 +13,11 @@ class DisplayItems extends Component {
   }
 
   unique = 1
-
   componentDidMount() {
+    this.loadItems()
+  }
+
+  loadItems = async function () {
     const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     const tempLoanedItemsList = []
     // Fetch all instances of the Lender ID matching the logged in user
@@ -42,7 +45,7 @@ class DisplayItems extends Component {
         })// Closes borrowedItems foreach
       })// Closes borrowedItems json
 
-  }
+  }.bind(this)
 
   activateTab = function (tabIndex) {
     this.setState({ activeTab: tabIndex })
@@ -71,19 +74,19 @@ class DisplayItems extends Component {
         </div>
         {
           this.state.activeTab === 0 ?
-            <LoanedItemList loanedItems={this.state.loanedItemsList} />
+            <LoanedItemList loanedItems={this.state.loanedItemsList} loadItems={()=> this.loadItems()} />
             :
             null
         }
         {
           this.state.activeTab === 1 ?
-            <BorrowedItemList borrowedItems={this.state.borrowedItemsList} />
+            <BorrowedItemList borrowedItems={this.state.borrowedItemsList} loadItems={()=> this.loadItems()}/>
             :
             null
         }
         {
           this.state.activeTab === 2 ?
-            <AddItem />
+            <AddItem loadItems={()=> this.loadItems()} />
             :
             null
         }

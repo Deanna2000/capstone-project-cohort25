@@ -28,39 +28,34 @@ class User extends React.Component {
             .then(response => response.json())
             .then(newFriend => {
                 sessionStorage.setItem("NewFriend", JSON.stringify({ newFriend }));
-               //redirect to find new friends view?
+                //redirect to find new friends view?
 
             })
     }
 
 
-    //if they are your friend, display "friends" badge instead of a button
-render() {
-    // if (this.props.email === this.props.email) {
+    render() {
 
-    // return (console.log("you are friends with", this.props.lName))
-    // }
-    // else {
 
-    return (
-        <Row>
-            <Col xs={3} md={3}><img className="vertical-align profileImage" alt="profile" src={profileImage} width="40%" height="40%" />
-            </Col>
-            <Col xs={2} md={2} className="vertical-align userItem">
-                {this.props.fName}
-            </Col>
-            <Col xs={2} md={2} className="vertical-align userItem">
-                {this.props.lName}
-            </Col>
-            <Col xs={3} md={3} className="vertical-align userItem">
-                {this.props.email}
-            </Col>
-            <Col xs={2} md={2} className="vertical-align">
-                <button className="addFriendButton btn btn-info" onClick={()=>this.addFriend()}>Add</button>
-            </Col>
-        </Row>
-    );
-}
+        return (
+            <Row>
+                <Col xs={3} md={3}><img className="vertical-align profileImage" alt="profile" src={profileImage} width="40%" height="40%" />
+                </Col>
+                <Col xs={2} md={2} className="vertical-align userItem">
+                    {this.props.fName}
+                </Col>
+                <Col xs={2} md={2} className="vertical-align userItem">
+                    {this.props.lName}
+                </Col>
+                <Col xs={3} md={3} className="vertical-align userItem">
+                    {this.props.email}
+                </Col>
+                <Col xs={2} md={2} className="vertical-align">
+                    <button className="addFriendButton btn btn-info" onClick={() => this.addFriend()}>Add</button>
+                </Col>
+            </Row>
+        );
+    }
 }
 
 
