@@ -6,6 +6,7 @@
 .profileImage {
     width: 72% !important;
     height: 85% !important;
+    opacity: .7;
 }
 
 .vertical-align {

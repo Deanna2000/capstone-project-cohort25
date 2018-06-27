@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     font-size: 1.5em;
+    color: #9B9B9B;
     padding-top: 10px;
   }
 
@@ -14,10 +15,11 @@
 
   li {
     font-size: 1.5em;
+    color: #9B9B9B;
   }
 
   a {
-      color: black !important;
+      color: #9B9B9B !important;
   }
 
   .nav-tabs > li.active > a{

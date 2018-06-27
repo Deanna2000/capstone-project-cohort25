@@ -68,7 +68,7 @@ class DisplayFriends extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12} >
-              <FriendsList allTheFriends={this.state.listOfFriends} />
+              <FriendsList allTheFriends={this.state.listOfFriends} loadFriends={()=> this.loadFriends()}/>
             </Col>
           </Row>
         </Grid>

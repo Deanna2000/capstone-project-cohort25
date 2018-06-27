@@ -11,7 +11,9 @@ class Friend extends React.Component {
                     fetch("http://localhost:5001/friendsRelationships/" + this.props.relId, {
                         method: "DELETE",
                     })
-                  //ADD A PAGE RELOAD HERE
+                    .then(()=>
+                        {this.props.loadFriends()}
+                    )
                 }
 
 

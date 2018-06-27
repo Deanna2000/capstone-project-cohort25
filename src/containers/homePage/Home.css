@@ -3,7 +3,7 @@
 
 .homeLogo{
     margin: auto;
-    background-color: rgba(182, 250, 235, 0.7);
+    background-color: rgba(171, 248, 231, .7);
     background-image: radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.10) 99%),
     radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.1) 99%);
     background-size:20px 20px;

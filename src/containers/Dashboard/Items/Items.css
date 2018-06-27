@@ -10,8 +10,18 @@
     background-color: lightgreen;
 }
 
+p {
+    color: #9B9B9B;
+}
+
 input {
     text-align: center;
+    height: 30px;
+    margin: 2px;
+}
+
+label {
+    margin: 0 auto;
 }
 
 .cardImg{
@@ -35,6 +45,7 @@ input {
 
 .cardTitle {
     height: 40px;
+    color: #9B9B9B;
 }
 
 .padding-zero {
@@ -99,6 +110,7 @@ input {
 
 .newItemForm {
     display: inline-grid;
+    color: #9B9B9B;
     width: 70% !important;
     height: 70% !important;
     margin-left: -15% !important;

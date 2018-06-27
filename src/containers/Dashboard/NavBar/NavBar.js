@@ -5,6 +5,11 @@ import logo from '../../../components/IMAGES/Borrow-Logo.png'
 
 class NavBar extends Component {
 
+
+  logoutUser = (evt) => {
+    sessionStorage.removeItem("ActiveUser")
+  }
+
   render() {
     const userName = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     if (sessionStorage.length < 1) {
@@ -30,7 +35,7 @@ class NavBar extends Component {
               <ul className="nav navbar-nav">
                 <li ><a href="/mycollection">My Collection </a></li>
                 <li><a href="/friends">Friends</a></li>
-                <li><a href="/">Logout</a></li>
+                <li><a href="/" onClick={(evt) => this.logoutUser(evt)}>Logout</a></li>
               </ul>
               <p className="text-muted navbar-right vertical-align-welcome">Welcome {userName.fName}</p>
             </div>

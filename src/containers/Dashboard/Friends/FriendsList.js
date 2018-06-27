@@ -1,7 +1,7 @@
 import React from "react";
 import Friend from "./Friend";
 import './Friends.css';
-import { Grid, Row, Col, FormGroup, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Grid, Row, Col, FormGroup, FormControl, ListGroup, ListGroupItem, Label } from 'react-bootstrap';
 
 
 
@@ -12,8 +12,8 @@ class FriendsList extends React.Component {
             searchText: "",
             orderBy: "name",
             order: "ascending",
-            // results: friends
-            results: []
+            results: [],
+            noResultsLabelDisplay: false,
         };
     }
 
@@ -36,13 +36,14 @@ class FriendsList extends React.Component {
                 .filter(friend => this.searchForAFriend(friend))
         }
         this.setState({ results: friendsListFiltered })
-        console.log("friendresults", friendsListFiltered)
+        if(friendsListFiltered.length===0 && this.state.searchText.trim() !== ""){
+            this.setState({ noResultsLabelDisplay: true })
+        } else {
+            this.setState({ noResultsLabelDisplay: false })
+        }
     }.bind(this)
 
     searchForAFriend = function (friend) {
-        console.log("friendfriend", friend)
-        console.log("friendsearchText", this.state.searchText)
-        console.log("friendsearchmatch", friend.fName.toLowerCase().indexOf(this.state.searchText))
         return friend.fName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.lName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.email.toLowerCase().indexOf(this.state.searchText) >= 0;
@@ -64,7 +65,7 @@ class FriendsList extends React.Component {
                                 friendId={friend.id}
                                 relId={friend.relationshipId}
                                 key={friend.id}
-                                // loadFriends={()=>this.props.loadFriends}
+                                loadFriends={()=>this.props.loadFriends()}
                             />
                         </ListGroupItem>
                     </Col>
@@ -92,6 +93,18 @@ class FriendsList extends React.Component {
                         </form>
                     </Col>
                     <Col xs={3} md={3} />
+                </Row>
+                <Row>
+                <Col xs={3} md={3} />
+                <Col xs={6} md={6} >
+                {
+                    this.state.noResultsLabelDisplay ?
+                    <p>{this.state.searchText} is not found, please try adding them!</p>
+                    :
+                    null
+                }
+                </Col>
+                <Col xs={3} md={3} />
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >
