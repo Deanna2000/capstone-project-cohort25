@@ -7,7 +7,10 @@ class BorrowedItemList extends Component {
     return this.props.borrowedItems
       .map(itemList => (
         <Col xs={3} md={3} className="padding-zero" key={itemList.id}>
-          <ItemsBorrowed itemList={itemList} />
+          <ItemsBorrowed
+          itemList={itemList}
+          loadItems={() => this.props.loadItems()}
+           />
         </Col>
       ));
   }.bind(this)

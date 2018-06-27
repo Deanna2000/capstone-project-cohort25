@@ -317,23 +317,33 @@
       "RequesterId": 51,
       "friendshipConfirmed": "",
       "id": 20
+    },
+    {
+      "AccepterId": 3,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 21
+    },
+    {
+      "AccepterId": 2,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 22
+    },
+    {
+      "AccepterId": 23,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 23
+    },
+    {
+      "AccepterId": 4,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 24
     }
   ],
   "sharedItems": [
-    {
-      "id": 1,
-      "name": "lawnmower",
-      "description": "husqvarna push mower",
-      "lenderUserid": 1,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Steve Collie",
-      "dueDate": "8/1/2018",
-      "image": "https://mobileimages.lowes.com/product/converted/085388/085388235473.jpg",
-      "lendDate": "6/8/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
     {
       "id": 2,
       "name": "Firefly DVD",
@@ -359,62 +369,6 @@
       "dueDate": "7/6/2018",
       "image": "https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/1600x800/landscape-1456165374-bacon-strips.jpg?resize=768:*",
       "lendDate": "6/3/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 4,
-      "name": "Puppies",
-      "description": "Wild Things",
-      "lenderUserid": 2,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Justina Vickers",
-      "dueDate": "9/1/2018",
-      "image": "http://cdn-img.health.com/sites/default/files/styles/large_16_9/public/styles/main/public/gettyimages-522881398.jpg?itok=0g33xDwx",
-      "lendDate": "6/10/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 5,
-      "name": "Flowers",
-      "description": "Pretty",
-      "lenderUserid": 2,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Justina Vickers",
-      "dueDate": "8/14/2018",
-      "image": "https://www.rd.com/wp-content/uploads/2017/05/06-Seeds-to-Plant-in-May-for-Fabulous-Easy-to-Grow-Flowers-All-Summer-Long-1024x683.jpg",
-      "lendDate": "6/7/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 6,
-      "name": "Sunglasses",
-      "description": "Ray Ban",
-      "lenderUserid": 4,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Brandi Adkins",
-      "dueDate": "7/20/2018",
-      "image": "https://assets.ray-ban.com/is/image/RayBan/8053672742299_shad_qt?$594$",
-      "lendDate": "6/7/2018",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 7,
-      "name": "Dishes",
-      "description": "Lulu china set (8)",
-      "lenderUserid": 1,
-      "borrowerUserid": 3,
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "Steve Collie",
-      "dueDate": "7/10/2018",
-      "image": "https://i.pinimg.com/736x/76/94/dd/7694dd09e22b33d98c8d3a0877f05d44--place-settings-table-settings.jpg",
-      "lendDate": "6/7/2018",
       "archived": false,
       "returnedDate": ""
     },
@@ -461,23 +415,10 @@
       "returnedDate": ""
     },
     {
-      "name": "folder",
-      "description": "red binder",
-      "lenderUserid": 3,
-      "borrowerUserid": 4,
-      "borrowerName": "Brandi Adkins",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-07-12",
-      "image": "https://target.scene7.com/is/image/Target/18780622_Alt03?wid=488&hei=488&fmt=pjpeg",
-      "lendDate": "2018-06-20",
-      "archived": false,
-      "returnedDate": "",
-      "id": 16
-    },
-    {
       "name": "phone",
       "description": "iphone6",
       "lenderUserid": 3,
+      "borrowerUserid": 1,
       "borrowerName": "Steve Collie",
       "lenderName": "Aurora Vickers",
       "dueDate": "2018-06-29",
@@ -488,30 +429,72 @@
       "id": 17
     },
     {
-      "name": "sunglases",
-      "description": "ray bans",
-      "borrowerName": "Steve Collie",
-      "lenderName": 0,
-      "lenderUserid": 3,
-      "dueDate": "2018-06-22",
-      "image": "https://assets.ray-ban.com/is/image/RayBan/8053672742299_shad_qt?$594$",
+      "name": "camelbak",
+      "description": "green waterbottle",
+      "borrowerName": "Aurora Vickers",
+      "lenderName": "Steve Collie",
+      "borrowerUserid": 3,
+      "lenderUserid": 1,
+      "dueDate": "2018-07-13",
+      "image": "https://6f3b8ef5c44ab5c4a6f8-2ffdd9d6553b25b4a8508669b55e19d9.ssl.cf1.rackcdn.com/colorized_large__7095_huntergreen_2016.png",
       "lendDate": "2018-06-20",
       "archived": false,
       "returnedDate": "",
-      "id": 18
+      "id": 20
+    },
+    {
+      "name": "jacket",
+      "description": "green bomber",
+      "borrowerName": "Aurora Vickers",
+      "lenderName": "Steve Collie",
+      "borrowerUserid": 3,
+      "lenderUserid": 1,
+      "dueDate": "2018-07-14",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGIT9OIikIKFSmts7SktCzXyTdAt5jAK8uXEOX5sYoXIfp9KjMnw",
+      "lendDate": "2018-06-05",
+      "archived": false,
+      "returnedDate": "",
+      "id": 22
+    },
+    {
+      "name": "test2",
+      "description": "test2",
+      "borrowerName": "Aurora Vickers",
+      "lenderName": "Steve Collie",
+      "borrowerUserid": 3,
+      "lenderUserid": 1,
+      "dueDate": "2018-07-01",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61P9tV3I8PL._SX355_.jpg",
+      "lendDate": "2018-06-01",
+      "archived": false,
+      "returnedDate": "",
+      "id": 24
+    },
+    {
+      "name": "blurg",
+      "description": "",
+      "borrowerName": "aurora",
+      "lenderName": "Steve Collie",
+      "lenderUserid": 1,
+      "dueDate": "",
+      "image": "",
+      "lendDate": "",
+      "archived": false,
+      "returnedDate": "",
+      "id": 30
     },
     {
       "name": "Sleeping Bag",
       "description": "Brown with red plaid inside",
-      "borrowerName": "Chrissy J",
-      "lenderName": 0,
-      "lenderUserid": 3,
-      "dueDate": "2018-07-14",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/61P9tV3I8PL._SX355_.jpg",
-      "lendDate": "2018-06-07",
+      "borrowerName": "Steve Collie",
+      "lenderName": "athena dog",
+      "lenderUserid": 35,
+      "dueDate": "2018-08-05",
+      "image": "http://www.sportys.com/media/catalog/product/cache/3/image/400x/040ec09b1e35df139433887a97daa66f/5/2/5202-f4u_1.jpg",
+      "lendDate": "2018-01-01",
       "archived": false,
       "returnedDate": "",
-      "id": 19
+      "id": 31
     }
   ]
 }

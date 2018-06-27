@@ -1,7 +1,7 @@
 import React from "react";
 import Friend from "./Friend";
 import './Friends.css';
-import { Grid, Row, Col, FormGroup, FormControl, ListGroup, ListGroupItem, Label } from 'react-bootstrap';
+import { Grid, Row, Col, FormGroup, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 
 
@@ -36,7 +36,7 @@ class FriendsList extends React.Component {
                 .filter(friend => this.searchForAFriend(friend))
         }
         this.setState({ results: friendsListFiltered })
-        if(friendsListFiltered.length===0 && this.state.searchText.trim() !== ""){
+        if (friendsListFiltered.length === 0 && this.state.searchText.trim() !== "") {
             this.setState({ noResultsLabelDisplay: true })
         } else {
             this.setState({ noResultsLabelDisplay: false })
@@ -50,7 +50,7 @@ class FriendsList extends React.Component {
     }.bind(this)
 
     getResultsItems = function () {
-        if(!this.state.results){
+        if (!this.state.results) {
             return null
         }
         return this.state.results
@@ -65,7 +65,7 @@ class FriendsList extends React.Component {
                                 friendId={friend.id}
                                 relId={friend.relationshipId}
                                 key={friend.id}
-                                loadFriends={()=>this.props.loadFriends()}
+                                loadFriends={() => this.props.loadFriends()}
                             />
                         </ListGroupItem>
                     </Col>
@@ -95,16 +95,16 @@ class FriendsList extends React.Component {
                     <Col xs={3} md={3} />
                 </Row>
                 <Row>
-                <Col xs={3} md={3} />
-                <Col xs={6} md={6} >
-                {
-                    this.state.noResultsLabelDisplay ?
-                    <p>{this.state.searchText} is not found, please try adding them!</p>
-                    :
-                    null
-                }
-                </Col>
-                <Col xs={3} md={3} />
+                    <Col xs={3} md={3} />
+                    <Col xs={6} md={6} >
+                        {
+                            this.state.noResultsLabelDisplay ?
+                                <p>{this.state.searchText} is not found, please try adding them!</p>
+                                :
+                                null
+                        }
+                    </Col>
+                    <Col xs={3} md={3} />
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >

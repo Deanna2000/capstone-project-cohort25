@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LoginRegisterUser from './register_login/LoginRegisterUser.js'
 import './Home.css';
-import NavBar from '../Dashboard/NavBar/NavBar'
+// import NavBar from '../Dashboard/NavBar/NavBar'
 import logo from '../../components/IMAGES/Borrow-Logo.png'
 import clothing from '../../components/IMAGES/Clothing.png'
 import books from '../../components/IMAGES/books.png'

@@ -7,7 +7,7 @@ class LoanedItemList extends Component {
     return this.props.loanedItems
         .map(itemList => (
             <Col xs={3} md={3} className="padding-zero" key={itemList.id}>
-              <ItemsLoaned itemList={itemList} />
+              <ItemsLoaned itemList={itemList} loadItems={() => this.props.loadItems()}/>
             </Col>
         ));
     }.bind(this)
