@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './NavBar.css';
-import { Modal } from 'react-bootstrap';
+import { Modal } from 'bootstrap';
 import profileImage from '../../../components/IMAGES/profile-icon-28.png'
-
 
 // Set up the component to login and register a user
 class UserProfile extends Component {
@@ -28,7 +27,7 @@ class UserProfile extends Component {
         evt.preventDefault();
         if (this.state.email.length > 0) {
             fetch("http://localhost:5001/users", {
-                method: "POST",
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -71,11 +70,12 @@ class UserProfile extends Component {
     }
 
     render() {
+        console.log("in the profile")
 
 
         return (
             <div className="static-modal">
-                <Modal.Dialog className="editProfileModal">
+                <Modal.Dialog>
                     <Modal.Header>
                         <Modal.Title>Update Your Profile</Modal.Title>
                     </Modal.Header>
@@ -92,7 +92,7 @@ class UserProfile extends Component {
                     </Modal.Footer>
                 </Modal.Dialog>
             </div>
-            );
+        );
     }
 }
 

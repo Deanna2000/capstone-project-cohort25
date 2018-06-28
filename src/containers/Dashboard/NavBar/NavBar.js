@@ -19,7 +19,11 @@ class NavBar extends Component {
 
   openProfile = (evt) => {
     console.log("user profile")
-    return <UserProfile myProfile={this.state.loggedInUser}/>
+    return (
+            <div>
+            <UserProfile myProfile={this.state.loggedInUser}/>
+            </div>
+    )
   }
 
 
@@ -27,7 +31,6 @@ class NavBar extends Component {
   render() {
     const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     if (sessionStorage.length < 1) {
-      console.log("user is NOT logged in")
   }
     else {
       return (

@@ -116,7 +116,7 @@ class AddItem extends Component {
         const userFriends = this.state.listOfFriends
         userFriends.map(friend =>{
             console.log("friend", friend.id)
-            items.push(<option key={friend.id} value={friend.fName+" "+friend.lName}>{friend.fName+" "+friend.lName}</option>
+            items.push(<option key={friend.id} value={friend.fName+" "+friend.lName+","+friend.id}>{friend.fName+" "+friend.lName}</option>
             )
         }
     )
@@ -125,7 +125,7 @@ class AddItem extends Component {
 
 
     onDropdownSelected = (evt) => {
-        console.log("THE VAL", evt.target.key);
+        console.log("THE VAL", evt.target.value);
         this.setState({ borrowerName: evt.target.value })
         console.log("key", this.state.key)
     }
