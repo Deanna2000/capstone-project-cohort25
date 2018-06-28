@@ -190,13 +190,6 @@
       "id": 45
     },
     {
-      "fName": "b",
-      "lName": "b",
-      "email": "b@b.com",
-      "password": "123",
-      "id": 46
-    },
-    {
       "fName": "bag",
       "lName": "bag",
       "email": "bag@bag.com",
@@ -533,71 +526,32 @@
       "id": 31
     },
     {
-      "name": "towel",
-      "description": "white",
-      "borrowerName": "Brandi Adkins",
-      "lenderName": "athena dog",
-      "lenderUserid": 35,
-      "dueDate": "",
-      "image": "",
-      "lendDate": "",
-      "archived": false,
-      "returnedDate": "",
-      "id": 34
-    },
-    {
-      "name": "glass",
-      "description": "tea",
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "athena dog",
-      "lenderUserid": 35,
-      "dueDate": "",
-      "image": "",
-      "lendDate": "",
-      "archived": false,
-      "returnedDate": "",
-      "id": 35
-    },
-    {
-      "name": "tablecloth",
-      "description": "red",
-      "borrowerName": "Aurora Vickers",
-      "lenderName": "athena dog",
-      "lenderUserid": 35,
-      "dueDate": "2018-07-21",
-      "image": "",
+      "name": "Capo",
+      "description": "silver guitar capo",
+      "borrowerName": "Justina Vickers",
+      "borrowerUserid": "2",
+      "lenderName": "Aurora Vickers",
+      "lenderUserid": 3,
+      "dueDate": "2018-07-04",
+      "image": "http://www.elephantmusicstore.com/product_images/q/323/guitar-buddy-capo-silver__18687_std.jpg",
       "lendDate": "2018-06-13",
       "archived": false,
       "returnedDate": "",
-      "id": 36
+      "id": 32
     },
     {
-      "name": "pancho",
-      "description": "blu",
+      "name": "purse",
+      "description": "holographic purse",
       "borrowerName": "Aurora Vickers",
-      "borrowerUserid": "Aurora Vickers",
-      "lenderName": "athena dog",
-      "lenderUserid": 35,
-      "dueDate": "",
-      "image": "",
-      "lendDate": "",
+      "borrowerUserid": "3",
+      "lenderName": "Justina Vickers",
+      "lenderUserid": 2,
+      "dueDate": "2018-07-14",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51nD77LoyhL.jpg",
+      "lendDate": "2018-06-27",
       "archived": false,
       "returnedDate": "",
-      "id": 37
-    },
-    {
-      "name": "dogbed",
-      "description": "red",
-      "borrowerName": "athena dog",
-      "borrowerUserid": "athena dog",
-      "lenderName": "Aurora Vickers",
-      "lenderUserid": 3,
-      "dueDate": "",
-      "image": "",
-      "lendDate": "",
-      "archived": false,
-      "returnedDate": "",
-      "id": 38
+      "id": 33
     }
   ]
 }

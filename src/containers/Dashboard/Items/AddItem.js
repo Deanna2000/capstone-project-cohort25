@@ -57,7 +57,6 @@ class AddItem extends Component {
         friendsList = friendsList.concat(acceptersFixed)
       }
       this.setState({listOfFriends: friendsList})
-      console.log("LOF TOP", this.state.listOfFriends)
     }.bind(this)
 
 
@@ -66,14 +65,13 @@ class AddItem extends Component {
         evt.preventDefault();
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
         if (this.state.name.length > 0 && this.state.borrowerName.length > 0) {
-            console.log("id", this.state.borrowerName.key)
             fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    name: this.state.name, description: this.state.description, borrowerName: this.state.borrowerName, borrowerUserid: this.state.borrowerName, lenderName: loggedInUser.fName + " " + loggedInUser.lName, lenderUserid: loggedInUser.id,
+                    name: this.state.name, description: this.state.description, borrowerName: this.state.borrowerName, borrowerUserid: this.state.borrowerUserid, lenderName: loggedInUser.fName + " " + loggedInUser.lName, lenderUserid: loggedInUser.id,
                     dueDate: this.state.dueDate, image: this.state.image, lendDate: this.state.lendDate, archived: false, returnedDate: ""
                 })
             })
@@ -99,6 +97,10 @@ class AddItem extends Component {
         this.setState({ description: evt.target.value })
     }
 
+    handleBorrowerNameChange = (evt) => {
+        this.setState({ borrowerName: evt.target.value })
+    }
+
     handleLendDateChange = (evt) => {
         this.setState({ lendDate: evt.target.value })
     }
@@ -115,19 +117,18 @@ class AddItem extends Component {
         let items = []
         const userFriends = this.state.listOfFriends
         userFriends.map(friend =>{
-            console.log("friend", friend.id)
-            items.push(<option key={friend.id} value={friend.fName+" "+friend.lName}>{friend.fName+" "+friend.lName}</option>
+            // console.log("friend", friend.id)
+            items.push(<option key={friend.id} value={friend.fName+" "+friend.lName+"_"+friend.id}>{friend.fName+" "+friend.lName}</option>
             )
         }
     )
     return items;
-}
+    }
 
 
     onDropdownSelected = (evt) => {
-        console.log("THE VAL", evt.target.key);
-        this.setState({ borrowerName: evt.target.value })
-        console.log("key", this.state.key)
+        this.setState({ borrowerName: evt.target.value.slice(0, evt.target.value.lastIndexOf("_")) })
+        this.setState({ borrowerUserid: evt.target.value.slice(evt.target.value.lastIndexOf("_")+1) })
     }
 
     render() {
@@ -148,6 +149,7 @@ class AddItem extends Component {
                         {this.createSelectItems()}
                     </select>
 
+                    <input type="text" id="borrowerName" value={this.state.borrowerName || ''} onChange={this.handleBorrowerNameChange} placeholder="Borrower Name" />
                     <label>Lend Date    <input type="date" id="lendDate" value={this.state.lendDate || ''} onChange={this.handleLendDateChange} placeholder="Lend Date" /></label>
                     <label>Due Date    <input type="date" id="dueDate" value={this.state.dueDate || ''} onChange={this.handleDueDateChange} placeholder="Due Date" /></label>
                     <input type="text" id="image" value={this.state.image || ''} onChange={this.handleImageChange} placeholder="Image Url" />

@@ -3,6 +3,7 @@ import {
     Redirect,
 } from "react-router-dom";
 import './LoginRegisterUser.css'
+import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 
 
 // Set up the component to login and register a user
@@ -15,6 +16,8 @@ class LoginRegisterUser extends Component {
             lName: '',
             email: '',
             password: '',
+            profileImage: '',
+            location: '',
             onClick: false,
             shouldDashboardBeDisplayed: false
         }
@@ -46,7 +49,7 @@ class LoginRegisterUser extends Component {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password })
+                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password, profileImage: this.state.profileImage, location: '' })
 
             })
                 .then(response => response.json())
