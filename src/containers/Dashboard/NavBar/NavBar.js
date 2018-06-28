@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { nav } from 'react-bootstrap';
 import './NavBar.css';
 import logo from '../../../components/IMAGES/Borrow-Logo.png';
-import UserProfile from './UserProfile'
+// import UserProfile from './UserProfile'
 
 class NavBar extends Component {
   constructor(props) {
@@ -19,11 +19,11 @@ class NavBar extends Component {
 
   openProfile = (evt) => {
     console.log("user profile")
-    return (
-            <div>
-            <UserProfile myProfile={this.state.loggedInUser}/>
-            </div>
-    )
+    // return (
+    //         <div>
+    //         <UserProfile myProfile={this.state.loggedInUser}/>
+    //         </div>
+    // )
   }
 
 
