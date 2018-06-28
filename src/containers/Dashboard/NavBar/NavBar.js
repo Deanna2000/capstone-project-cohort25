@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
 import { nav } from 'react-bootstrap';
 import './NavBar.css';
-import logo from '../../../components/IMAGES/Borrow-Logo.png'
+import logo from '../../../components/IMAGES/Borrow-Logo.png';
+import UserProfile from './UserProfile'
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+        loggedInUser: {},
+    }
+  }
 
   logoutUser = (evt) => {
     sessionStorage.removeItem("ActiveUser")
   }
 
+  openProfile = (evt) => {
+    console.log("user profile")
+    return <UserProfile myProfile={this.state.loggedInUser}/>
+  }
+
+
+
   render() {
-    const userName = (JSON.parse(sessionStorage.getItem("ActiveUser")))
+    const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
     if (sessionStorage.length < 1) {
       console.log("user is NOT logged in")
   }
@@ -37,7 +51,8 @@ class NavBar extends Component {
                 <li><a href="/friends">Friends</a></li>
                 <li><a href="/" onClick={(evt) => this.logoutUser(evt)}>Logout</a></li>
               </ul>
-              <p className="text-muted navbar-right vertical-align-welcome">Welcome {userName.fName}</p>
+              <button className="text-muted navbar-right vertical-align-welcome" onClick={(evt) => this.openProfile(evt)}>Welcome {loggedInUser.fName} </button>
+
             </div>
           </div>
       </nav>
