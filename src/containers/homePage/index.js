@@ -43,7 +43,7 @@ class Home extends Component {
         </div>
         <div className="thirdSection">
           <img className="borrowView" alt="borrowscreenshot" src={borrowView} />
-          <h3>Keep track of everything you have loaned or borrowed. You just set a due date and we will handle reminding both you and the borrower/loaner when it's time to get an item back.  </h3>
+          <h3>Keep track of everything you have loaned or borrowed. You just set a due date and we will handle reminding both you and the borrower when it's time to get an item back.  </h3>
         </div>
         <div className="footer">
           <p>@2018 Borrow App  </p>
