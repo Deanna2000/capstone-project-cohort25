@@ -108,7 +108,7 @@ class FriendsList extends React.Component {
                 </Row>
                 <Row>
                     <Col xs={12} md={12} >
-                        <ListGroup>
+                        <ListGroup className="friendsView">
                             {friendsList}
                         </ListGroup>
                     </Col>

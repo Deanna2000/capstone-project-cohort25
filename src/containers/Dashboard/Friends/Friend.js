@@ -32,7 +32,7 @@ class Friend extends React.Component {
                     {this.props.email}
                 </Col>
                 <Col xs={2} md={2} className="vertical-align">
-                    <button className="removeFriendButton btn btn-warning" onClick={()=>this.removeFriend()}>Remove</button>
+                    <button className="removeFriendButton" onClick={()=>this.removeFriend()}>Remove</button>
                 </Col>
             </Row>
         );

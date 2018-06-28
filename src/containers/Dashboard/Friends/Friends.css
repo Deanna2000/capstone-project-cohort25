@@ -4,9 +4,10 @@
 }
 
 .profileImage {
-    width: 72% !important;
-    height: 85% !important;
-    opacity: .7;
+    width: 50% !important;
+    height: 80% !important;
+    opacity: .6;
+    margin: 10px;
 }
 
 .vertical-align {
@@ -22,3 +23,38 @@
 .userItem {
 font-size: 1.3em !important;
 }
+
+.removeFriendButton {
+    width: 60px;
+    background-color: #E2B6E4;
+    color: white;
+    font-size: 1.4em !important;
+}
+
+.addFriendButton {
+    width: 60px;
+    background-color: #8BA66A !important;
+    color: white;
+    font-size: 1.4em !important;
+}
+
+.friendsView .list-group-item {
+    margin: 5px;
+    background-color: #8BA66A !important;
+    color: white;
+}
+
+.list-group-item {
+    margin: 5px;
+    padding: 0 !important;
+    color: #9B9B9B;
+}
+
+.Friends-title {
+    color: #9B9B9B;
+}
+
+.Users-title {
+    color: #9B9B9B;
+}
+
