@@ -341,6 +341,42 @@
       "RequesterId": 35,
       "friendshipConfirmed": "",
       "id": 24
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 25
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 26
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 27
+    },
+    {
+      "AccepterId": 25,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 28
+    },
+    {
+      "AccepterId": 25,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 29
+    },
+    {
+      "AccepterId": 25,
+      "RequesterId": 35,
+      "friendshipConfirmed": "",
+      "id": 30
     }
   ],
   "sharedItems": [
@@ -495,6 +531,59 @@
       "archived": false,
       "returnedDate": "",
       "id": 31
+    },
+    {
+      "name": "towel",
+      "description": "white",
+      "borrowerName": "Brandi Adkins",
+      "lenderName": "athena dog",
+      "lenderUserid": 35,
+      "dueDate": "",
+      "image": "",
+      "lendDate": "",
+      "archived": false,
+      "returnedDate": "",
+      "id": 34
+    },
+    {
+      "name": "glass",
+      "description": "tea",
+      "borrowerName": "Aurora Vickers",
+      "lenderName": "athena dog",
+      "lenderUserid": 35,
+      "dueDate": "",
+      "image": "",
+      "lendDate": "",
+      "archived": false,
+      "returnedDate": "",
+      "id": 35
+    },
+    {
+      "name": "tablecloth",
+      "description": "red",
+      "borrowerName": "Aurora Vickers",
+      "lenderName": "athena dog",
+      "lenderUserid": 35,
+      "dueDate": "2018-07-21",
+      "image": "",
+      "lendDate": "2018-06-13",
+      "archived": false,
+      "returnedDate": "",
+      "id": 36
+    },
+    {
+      "name": "pancho",
+      "description": "blu",
+      "borrowerName": "Aurora Vickers",
+      "borrowerUserid": "Aurora Vickers",
+      "lenderName": "athena dog",
+      "lenderUserid": 35,
+      "dueDate": "",
+      "image": "",
+      "lendDate": "",
+      "archived": false,
+      "returnedDate": "",
+      "id": 37
     }
   ]
 }
