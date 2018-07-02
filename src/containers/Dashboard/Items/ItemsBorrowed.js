@@ -13,8 +13,6 @@ class ItemsBorrowed extends Component {
 
     render() {
 
-
-
         return (
 
             <div>
@@ -23,6 +21,7 @@ class ItemsBorrowed extends Component {
                         <img className="cardImg" alt="borroweditem" src={this.props.itemList.image} />
                         <h4 className="cardTitle">Whose {this.props.itemList.name} is this? </h4>
                         <p>{this.props.itemList.lenderName}</p>
+                        <p className="duedate">Due: {this.props.itemList.dueDate}</p>
                         <button type="button" className="btn returnButtonBorrowed" onClick={() => this.removeBorrowedItem()}>Returned It</button>
                     </div>
                 </div>

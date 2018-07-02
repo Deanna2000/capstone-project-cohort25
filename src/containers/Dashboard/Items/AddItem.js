@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+// import { notificationEmail } from '../../Notifications/Notifications'
+// import { promises } from 'fs';
+
 
 // Set up the component to add a new loaned item
 class AddItem extends Component {
@@ -22,41 +25,41 @@ class AddItem extends Component {
 
     // Call the function that will get friends of the current user when the component loads
     componentDidMount() {
-      this.loadFriends()
+        this.loadFriends()
     }
 
     loadFriends = async function () {
-      this.setState({ listOfFriends: [] })
-      const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
-      let friendsList = []
-      const relationshipsAcceptedResponse = await fetch(`http://localhost:5001/friendsRelationships?AccepterId=${loggedInUser.id}`)
-      const relationshipsAccepted = await relationshipsAcceptedResponse.json()
+        this.setState({ listOfFriends: [] })
+        const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
+        let friendsList = []
+        const relationshipsAcceptedResponse = await fetch(`http://localhost:5001/friendsRelationships?AccepterId=${loggedInUser.id}`)
+        const relationshipsAccepted = await relationshipsAcceptedResponse.json()
 
-      if (relationshipsAccepted.length > 0) {
-        const queryParams = relationshipsAccepted.map(r => `id=${r.RequesterId}`).join("&")
-        const relationshipIDs = relationshipsAccepted.map(r => r.id)
-        const requestersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
-        const requesters = await requestersResponse.json()
+        if (relationshipsAccepted.length > 0) {
+            const queryParams = relationshipsAccepted.map(r => `id=${r.RequesterId}`).join("&")
+            const relationshipIDs = relationshipsAccepted.map(r => r.id)
+            const requestersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
+            const requesters = await requestersResponse.json()
 
-        const requestersFixed = requesters.map((requester, index) => {
-          return Object.assign({}, requester, { relationshipId: relationshipIDs[index] })
-        });
-        friendsList = friendsList.concat(requestersFixed)
-      }
+            const requestersFixed = requesters.map((requester, index) => {
+                return Object.assign({}, requester, { relationshipId: relationshipIDs[index] })
+            });
+            friendsList = friendsList.concat(requestersFixed)
+        }
 
-      const relationshipsRequestedResponse = await fetch(`http://localhost:5001/friendsRelationships?RequesterId=${loggedInUser.id}`)
-      const relationshipsRequested = await relationshipsRequestedResponse.json()
-      if (relationshipsRequested.length > 0) {
-        const queryParams = relationshipsRequested.map(r => `id=${r.AccepterId}`).join("&")
-        const relationshipIDs = relationshipsRequested.map(r => r.id)
-        const acceptersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
-        const accepters = await acceptersResponse.json()
-        const acceptersFixed = accepters.map((accepter, index) => {
-          return Object.assign({}, accepter, { relationshipId: relationshipIDs[index] })
-        });
-        friendsList = friendsList.concat(acceptersFixed)
-      }
-      this.setState({listOfFriends: friendsList})
+        const relationshipsRequestedResponse = await fetch(`http://localhost:5001/friendsRelationships?RequesterId=${loggedInUser.id}`)
+        const relationshipsRequested = await relationshipsRequestedResponse.json()
+        if (relationshipsRequested.length > 0) {
+            const queryParams = relationshipsRequested.map(r => `id=${r.AccepterId}`).join("&")
+            const relationshipIDs = relationshipsRequested.map(r => r.id)
+            const acceptersResponse = await fetch(`http://localhost:5001/users?${queryParams}`)
+            const accepters = await acceptersResponse.json()
+            const acceptersFixed = accepters.map((accepter, index) => {
+                return Object.assign({}, accepter, { relationshipId: relationshipIDs[index] })
+            });
+            friendsList = friendsList.concat(acceptersFixed)
+        }
+        this.setState({ listOfFriends: friendsList })
     }.bind(this)
 
 
@@ -82,7 +85,24 @@ class AddItem extends Component {
                 .then(() => {
                     this.props.loadItems()
                 })
-            // .then(() =>  this.setState({ name: this.state.name }))
+                // .then(() => {
+                //    notificationEmail(loggedInUser.email, "Item Loaned", "You have just loaned a new item on Borrow App.")
+                //    return Promise.resolve()
+                // })
+                .then(() => this.setState({
+                    name: '',
+                    description: '',
+                    lenderUserid: '',
+                    borrowerName: '',
+                    borrowerUserid: '',
+                    lenderName: '',
+                    dueDate: '',
+                    image: '',
+                    lendDate: '',
+                }))
+                .then (() => {
+                    alert("The item was added to your loaned items list.")
+                })
         }
         else {
             alert("Please enter an item name and a borrower name.")
@@ -116,19 +136,19 @@ class AddItem extends Component {
     createSelectItems() {
         let items = []
         const userFriends = this.state.listOfFriends
-        userFriends.map(friend =>{
+        userFriends.map(friend => {
             // console.log("friend", friend.id)
-            items.push(<option key={friend.id} value={friend.fName+" "+friend.lName+"_"+friend.id}>{friend.fName+" "+friend.lName}</option>
+            items.push(<option key={friend.id} value={friend.fName + " " + friend.lName + "_" + friend.id}>{friend.fName + " " + friend.lName}</option>
             )
         }
-    )
-    return items;
+        )
+        return items;
     }
 
 
     onDropdownSelected = (evt) => {
         this.setState({ borrowerName: evt.target.value.slice(0, evt.target.value.lastIndexOf("_")) })
-        this.setState({ borrowerUserid: evt.target.value.slice(evt.target.value.lastIndexOf("_")+1) })
+        this.setState({ borrowerUserid: evt.target.value.slice(evt.target.value.lastIndexOf("_") + 1) })
     }
 
     render() {

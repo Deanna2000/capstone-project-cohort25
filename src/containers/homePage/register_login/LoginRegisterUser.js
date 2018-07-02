@@ -32,8 +32,12 @@ class LoginRegisterUser extends Component {
                 .then((response) => {
                     return response.json();
                 }).then((user) => {
+                    if (user <= 0){
+                        alert("Please enter a valid email and password")
+                    } else {
                     sessionStorage.setItem("ActiveUser", JSON.stringify(user[0]))
                     this.setState({ shouldDashboardBeDisplayed: true })
+                    }
                 })
         }
         else {
@@ -49,7 +53,7 @@ class LoginRegisterUser extends Component {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password, profileImage: this.state.profileImage, location: '' })
+                body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password, profileImage: '', location: '' })
 
             })
                 .then(response => response.json())
@@ -78,12 +82,6 @@ class LoginRegisterUser extends Component {
     handleLastNameChange = (evt) => {
         this.setState({ lName: evt.target.value })
     }
-
-    // handleHoverLargeArrow = (evt) => {
-    //     console.log("pink arrow")
-    //     $(".loginView").unbind('mouseenter moouseleave')
-    //     // change the class to remove the current background image of loginFields (disable hover state)
-    // }
 
     render() {
         if (this.state.shouldDashboardBeDisplayed) {
