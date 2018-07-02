@@ -3,8 +3,7 @@ import FriendsList from './FriendsList';
 import { Grid, Row, Col } from 'react-bootstrap'
 
 
-
-
+// Set container to display the friends
 class DisplayFriends extends Component {
   unique = 1
 

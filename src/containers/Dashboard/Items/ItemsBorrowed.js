@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Items.css'
 
+
+// Render the borrowed items
 class ItemsBorrowed extends Component {
 
     removeBorrowedItem = () => {

@@ -3,8 +3,7 @@ import UsersList from './UsersList';
 import { Grid, Row, Col } from 'react-bootstrap'
 
 
-
-
+// Set container to display the users
 class DisplayUsers extends Component {
   unique = 1
 
@@ -16,11 +15,10 @@ class DisplayUsers extends Component {
     }
   }
 
- // Call the function that will get all users when the component loads
- componentDidMount() {
-  this.loadUsers()
-}
-
+  // Call the function that will get all users when the component loads
+  componentDidMount() {
+    this.loadUsers()
+  }
 
   loadUsers = function () {
     let userList = []
@@ -45,7 +43,7 @@ class DisplayUsers extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12} >
-              <UsersList allTheUsers={this.state.listOfUsers} friends={this.props.friends}/>
+              <UsersList allTheUsers={this.state.listOfUsers} friends={this.props.friends} />
             </Col>
           </Row>
         </Grid>

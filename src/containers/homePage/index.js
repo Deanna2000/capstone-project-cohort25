@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LoginRegisterUser from './register_login/LoginRegisterUser.js'
 import './Home.css';
-// import NavBar from '../Dashboard/NavBar/NavBar'
 import logo from '../../components/IMAGES/Borrow-Logo.png'
 import clothing from '../../components/IMAGES/Clothing.png'
 import books from '../../components/IMAGES/books.png'
@@ -10,7 +9,7 @@ import home from '../../components/IMAGES/home.png'
 import borrowView from '../../components/IMAGES/itemsView.png'
 import fbicon from '../../components/IMAGES/facebookicon.png'
 import twicon from '../../components/IMAGES/twittericon.png'
-import picon from '../../components/IMAGES/pinteresticon.png'
+import pinteresticon from '../../components/IMAGES/pinteresticon.png'
 import linkicon from '../../components/IMAGES/linkedinicon.png'
 
 
@@ -18,7 +17,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <div className="homeLogo">
+        <div className="logoContainer">
           <img className="mainLogo" alt="logo" src={logo} />
         </div>
         <div className="mainSection">
@@ -31,7 +30,6 @@ class Home extends Component {
               <span className="backAndForth">&#x021C4;</span>
               <img className="promoImage" alt="promo" src={home} />
               <h1>And Getting It Back</h1>
-
             </div>
           </div>
           <LoginRegisterUser />
@@ -43,16 +41,16 @@ class Home extends Component {
         </div>
         <div className="thirdSection">
           <img className="borrowView" alt="borrowscreenshot" src={borrowView} />
-          <h3>Keep track of everything you have loaned or borrowed. You just set a due date and we will handle reminding both you and the borrower when it's time to get an item back.  </h3>
+          <h3 className="borrowViewText">Track everything you loan or borrow. <br/>
+          Set a due date and we will handle reminding both you and the borrower when it's time to get an item back.</h3>
         </div>
         <div className="footer">
           <p>@2018 Borrow App  </p>
           <p>Follow us on social media</p>
           <img className="socialicon" alt="fbicon" src={fbicon} />
           <img className="socialicon" alt="twicon" src={twicon} />
-          <img className="socialicon" alt="picon" src={picon} />
+          <img className="socialicon" alt="pinteresticon" src={pinteresticon} />
           <img className="socialicon" alt="liicon" src={linkicon} />
-
         </div>
       </div>
     );

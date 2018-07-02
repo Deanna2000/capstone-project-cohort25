@@ -3,8 +3,7 @@ import Friend from "./Friend";
 import './Friends.css';
 import { Grid, Row, Col, FormGroup, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-
-
+// Friends search and display of the friends view
 class FriendsList extends React.Component {
     constructor(props) {
         super(props);
@@ -17,18 +16,20 @@ class FriendsList extends React.Component {
         };
     }
 
+    // Set initial view of all friends
     componentWillReceiveProps(nextProps) {
         this.filterResults(nextProps.allTheFriends)
     }
 
+    // Bring in the filter function after a search term is entered
     handleChange = function (event) {
         if (event && event.key === 'Enter') {
             event.preventDefault()
             this.filterResults(this.props.allTheFriends)
         }
-
     }.bind(this)
 
+    // Display the filtered results
     filterResults = function (allTheFriends) {
         let friendsListFiltered = allTheFriends
         if (this.state.searchText.trim() !== "") {
@@ -43,12 +44,14 @@ class FriendsList extends React.Component {
         }
     }.bind(this)
 
+    // Perform the search across the fields firstname, lastname and email
     searchForAFriend = function (friend) {
         return friend.fName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.lName.toLowerCase().indexOf(this.state.searchText) >= 0
             || friend.email.toLowerCase().indexOf(this.state.searchText) >= 0;
     }.bind(this)
 
+    // Set the format to the display the results
     getResultsItems = function () {
         if (!this.state.results) {
             return null
@@ -73,11 +76,14 @@ class FriendsList extends React.Component {
             ));
     }.bind(this)
 
+    // Event handler to capture the search input
     textChange = function (event) {
         this.setState({ searchText: event.target.value })
     }.bind(this)
 
+    // Render the search bar and the list of all users (initial result)
     render() {
+
         const friendsList = this.getResultsItems()
 
         return (
@@ -114,7 +120,6 @@ class FriendsList extends React.Component {
                     </Col>
                 </Row>
             </Grid>
-
         );
     }
 }

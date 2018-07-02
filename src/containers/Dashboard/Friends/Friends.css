@@ -14,11 +14,11 @@
     display: flex;
     align-items: center;
     height: 87px;
-  }
+}
 
 .friendItem {
     font-size: 1.3em !important;
-  }
+}
 
 .userItem {
 font-size: 1.3em !important;

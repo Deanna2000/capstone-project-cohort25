@@ -3,6 +3,7 @@
 // import { Modal } from 'bootstrap';
 // import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 
+
 // // Set up the component to login and register a user
 // class UserProfile extends Component {
 //     constructor(props) {
@@ -19,8 +20,6 @@
 //             shouldDashboardBeDisplayed: false
 //         }
 //     }
-
-
 
 
 //     updateUserProfile = (evt) => {

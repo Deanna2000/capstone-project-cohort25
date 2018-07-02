@@ -1,3 +1,4 @@
+/* Large arrow register form container */
 .loginView {
     float: right;
     margin-right: 10%;
@@ -9,14 +10,6 @@
     height:235px;
 }
 
-
-.registerFieldsWrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 160px;
-    margin-left: 28px;
-}
-
 .loginView:hover{
     display: inline-grid;
     background-image: url('../../../components/IMAGES/hoveredarrow.png');
@@ -24,7 +17,6 @@
     background-position-X: -2px;
     width: 275px;
     height:235px;
-
 }
 
 .loginView:active{
@@ -34,8 +26,7 @@
     background-position-X: 3px;
     width: 275px;
     height:235px;
-    animation-duration: 1s;
-
+    /* animation-duration: 1s; */
 }
 
 .loginView:visited{
@@ -44,10 +35,11 @@
     background-repeat: no-repeat;
     width: 275px;
     height:235px;
-    animation-duration: 1s;
+    /* animation-duration: 1s; */
 
 }
 
+/* Small arrow login form container */
 .loginFields{
     background-image: url('../../../components/IMAGES/arrow2.png');
     background-repeat: no-repeat;
@@ -63,6 +55,7 @@
     background-repeat: no-repeat;
     background-position-y: -2px;
 }
+
 
 .loginFieldsWrapper {
     padding-top: 28px;
@@ -80,6 +73,7 @@
     font-size: 16px;
 }
 
+/* Input fields for login */
 .loginForm{
     width: 80%;
     height: 80%;
@@ -87,6 +81,15 @@
     margin-top: 8%;
 }
 
+/* Input fields for register */
+.registerFieldsWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    margin-left: 28px;
+}
+
+/* Sign up button */
 .signUp{
     background-color: transparent !important;
     margin-top: 13px;
@@ -100,6 +103,7 @@
     outline: none;
 }
 
+/* Sign in button */
 .signIn{
     background-color: transparent !important;
     border: none;
