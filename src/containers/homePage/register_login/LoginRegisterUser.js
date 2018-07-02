@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {
-    Redirect,
-} from "react-router-dom";
+import { Redirect, } from "react-router-dom";
 import './LoginRegisterUser.css'
-import profileImage from '../../../components/IMAGES/profile-icon-28.png'
 
 
 // Set up the component to login and register a user
@@ -11,6 +8,7 @@ class LoginRegisterUser extends Component {
     constructor(props) {
         super(props);
 
+        // Set initial values for form fields and event listeners
         this.state = {
             fName: '',
             lName: '',
@@ -23,8 +21,7 @@ class LoginRegisterUser extends Component {
         }
     };
 
-
-
+    // validate an existing user for Login process
     validateForm = (evt) => {
         evt.preventDefault()
         if (this.state.email.length > 0) {
@@ -32,19 +29,20 @@ class LoginRegisterUser extends Component {
                 .then((response) => {
                     return response.json();
                 }).then((user) => {
-                    if (user <= 0){
+                    if (user <= 0) {
                         alert("Please enter a valid email and password")
                     } else {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify(user[0]))
-                    this.setState({ shouldDashboardBeDisplayed: true })
+                        sessionStorage.setItem("ActiveUser", JSON.stringify(user[0]))
+                        this.setState({ shouldDashboardBeDisplayed: true })
                     }
                 })
         }
         else {
-            alert('Please enter an email address')
+            alert("Please enter an email address and password")
         }
     }
 
+    // Add a new user for registration
     addUser = (evt) => {
         evt.preventDefault();
         if (this.state.email.length > 0) {
@@ -54,19 +52,18 @@ class LoginRegisterUser extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, password: this.state.password, profileImage: '', location: '' })
-
             })
                 .then(response => response.json())
                 .then(user => {
-                    sessionStorage.setItem("ActiveUser", JSON.stringify( user ));
+                    sessionStorage.setItem("ActiveUser", JSON.stringify(user));
                     this.setState({ shouldDashboardBeDisplayed: true })
-
                 })
-
+        } else {
+            alert("Please fill in all the fields to register")
         }
     }
 
-
+    // Functions for event listeners
     handleEmailChange = (evt) => {
         this.setState({ email: evt.target.value })
     }
@@ -83,11 +80,14 @@ class LoginRegisterUser extends Component {
         this.setState({ lName: evt.target.value })
     }
 
+    // Login and Registration forms
     render() {
+
         if (this.state.shouldDashboardBeDisplayed) {
             return <Redirect to='/mycollection' />
         }
         return (
+
             <div className="loginView">
                 <form className="loginForm">
                     <div className="loginFields">
@@ -97,7 +97,7 @@ class LoginRegisterUser extends Component {
                         </div>
                         <button className="signIn" value="Sign In" onClick={this.validateForm}>Sign In</button>
                     </div>
-                    <div className="registerFields" onMouseOver={this.handleHoverLargeArrow}>
+                    <div className="registerFields">
                         <div className="registerFieldsWrapper">
                             <input type="text" id="fName" value={this.state.fName || ''} onChange={this.handleFirstNameChange} placeholder="First Name" />
                             <input type="text" id="lName" value={this.state.lName || ''} onChange={this.handleLastNameChange} placeholder="Last Name" />

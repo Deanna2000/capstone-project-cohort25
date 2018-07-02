@@ -125,42 +125,6 @@
       "friendshipConfirmed": 1
     },
     {
-      "id": 3,
-      "RequesterId": 5,
-      "AccepterId": 3,
-      "friendshipConfirmed": 1
-    },
-    {
-      "AccepterId": 6,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 4
-    },
-    {
-      "AccepterId": 8,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 7
-    },
-    {
-      "AccepterId": 2,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 8
-    },
-    {
-      "AccepterId": 12,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 9
-    },
-    {
-      "AccepterId": 11,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 10
-    },
-    {
       "AccepterId": 2,
       "RequesterId": 7,
       "friendshipConfirmed": "",
@@ -179,28 +143,34 @@
       "id": 22
     },
     {
-      "AccepterId": 9,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 23
-    },
-    {
       "AccepterId": 4,
       "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 24
     },
     {
-      "AccepterId": 1,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 27
-    },
-    {
       "AccepterId": 6,
       "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 28
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 29
+    },
+    {
+      "AccepterId": 2,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 30
+    },
+    {
+      "AccepterId": 5,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 31
     }
   ],
   "sharedItems": [

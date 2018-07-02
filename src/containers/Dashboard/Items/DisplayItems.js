@@ -4,8 +4,9 @@ import BorrowedItemList from './BorrowedItemList'
 import AddItem from './AddItem'
 import NavBar from '../NavBar/NavBar'
 
+
 class DisplayItems extends Component {
-  // Set state of the array that I'll be rendering
+  // Set state of the array that I'll be rendering and set default tab for collections view
   state = {
     loanedItemsList: [],
     borrowedItemsList: [],
@@ -51,12 +52,10 @@ class DisplayItems extends Component {
     this.setState({ activeTab: tabIndex })
   }.bind(this)
 
-
-
   render() {
 
-
     return (
+
       <div>
         <NavBar />
         <div>
@@ -74,19 +73,19 @@ class DisplayItems extends Component {
         </div>
         {
           this.state.activeTab === 0 ?
-            <LoanedItemList loanedItems={this.state.loanedItemsList} loadItems={()=> this.loadItems()} />
+            <LoanedItemList loanedItems={this.state.loanedItemsList} loadItems={() => this.loadItems()} />
             :
             null
         }
         {
           this.state.activeTab === 1 ?
-            <BorrowedItemList borrowedItems={this.state.borrowedItemsList} loadItems={()=> this.loadItems()}/>
+            <BorrowedItemList borrowedItems={this.state.borrowedItemsList} loadItems={() => this.loadItems()} />
             :
             null
         }
         {
           this.state.activeTab === 2 ?
-            <AddItem loadItems={()=> this.loadItems()} />
+            <AddItem loadItems={() => this.loadItems()} />
             :
             null
         }

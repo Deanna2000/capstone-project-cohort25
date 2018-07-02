@@ -1,7 +1,16 @@
+/* Styling for the main landing page of the app */
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+h1 {
+    color: #9B9B9B;
+    font-size: 30px;
+}
 
-.homeLogo{
+body {
+    font-family: 'Amatic SC', cursive;
+}
+
+.logoContainer {
     margin: auto;
     background-color: rgba(171, 248, 231, .7);
     background-image: radial-gradient(closest-side, transparent 99%, rgba(0,0,0,.10) 99%),
@@ -11,23 +20,22 @@
     height: 80px;
 }
 
-.mainSection{
+.mainLogo {
+    height: 40px;
+    margin-top: 20px;
+}
+
+.mainSection {
     background-color:rgba(171, 248, 231, .7);
     height: 330px;
 }
 
-h1{
-    color: #9B9B9B;
-    font-size: 30px;
-}
-
-.mainSection>h1{
+.mainSection>h1 {
     float: left;
-
     margin: auto;
 }
 
-.secondSection{
+.secondSection {
     display: flex;
     height: 400px;
     background-image: url('../../components/IMAGES/sharingtoys.jpg');
@@ -35,42 +43,33 @@ h1{
     z-index: -1;
     opacity: .5;
     background-size: 100% auto;
-
 }
 
-.secondSectionText>h3{
+.secondSectionText>h3 {
     line-height: 2em;
     color: #E2B6E4;
+    background-color: gray;
     font-size: 29px;
+    font-weight: 500;
     margin: 0 0;
 }
 
-.thirdSection{
+.thirdSection {
     display: flex;
-    height: 300px;
+    height: 320px;
     background-color: rgba(182, 250, 235, 0.7);
-
-
 }
 
-.thirdSection>h3{
+.thirdSection>h3 {
     color: #9B9B9B;
     padding: 28px;
     line-height: 1.5em;
     width: 415px;
-    margin-top: 46px;
+    margin-top: 42px;
     text-align: center;
 }
-.mainLogo{
-    height: 40px;
-    margin-top: 20px;
-}
 
-body {
-    font-family: 'Amatic SC', cursive;
-  }
-
-.promo{
+.promo {
     float: left;
     margin-left: 5%;
     display: grid;
@@ -79,25 +78,28 @@ body {
     color: #9B9B9B;
     font-size: 30px;
     margin-top: 5%;
-
 }
 
-.promoImage{
+.promoImage {
     height: 50px;
     width: 50px;
     margin: 15px;
     display: inline-block;
-
 }
 
 .backAndForth {
     margin: 0 10px;
 }
 
+/* Screen shot of the borrow app */
 .borrowView {
-    height: 200px;
+    height: 220px;
     border: solid gray 2px;
     margin: 50px;
+}
+
+.borrowViewText {
+    font-size: 28px;
 }
 
 .footer {

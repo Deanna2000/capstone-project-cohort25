@@ -1,23 +1,7 @@
-.nav-item {
-    display: inline-flex;
-    list-style: none;
-    padding: 10px;
-}
-.nav-item:active{
-    background-color: red;
-}
-.nav-item:hover{
-    background-color: lightgreen;
-}
 
 p {
     color: #9B9B9B;
     margin: 0 0 2px !important;
-}
-
-.duedate {
-    color: #d05454;
-    font-weight: 800;
 }
 
 input {
@@ -30,7 +14,12 @@ label {
     margin: 0 auto;
 }
 
-.cardImg{
+.duedate {
+    color: #d05454;
+    font-weight: 800;
+}
+
+.cardImg {
     height: 100px;
     width: 100%;
 }
@@ -66,15 +55,15 @@ label {
     margin-right: 0 !important;
 }
 
-.panel{
+.panel {
     margin-bottom: 10px !important;
 }
 
-.borrowed{
+.borrowed {
     border: solid 2px #E2B6E4;
 }
 
-.loaned{
+.loaned {
     border: solid 2px #8BA66A;
 }
 
@@ -132,7 +121,6 @@ label {
     font-weight: 600;
     width: 40px;
     display: block;
-    /* margin-left: 191px; */
     position: absolute;
     line-height: 1.2em;
     outline: none;

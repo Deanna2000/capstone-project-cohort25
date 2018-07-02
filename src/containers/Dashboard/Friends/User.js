@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import './Friends.css';
 import profileImage from '../../../components/IMAGES/profile-icon-28.png';
 
-
+// Display the current app users' information (detail)
 class User extends React.Component {
     constructor(props) {
         super(props);
@@ -12,6 +12,8 @@ class User extends React.Component {
             requesterId: '',
         }
     };
+
+    // Event listener to add a friend (create relationship)
     addFriend = () => {
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
         fetch("http://localhost:5001/friendsRelationships", {
@@ -19,25 +21,21 @@ class User extends React.Component {
             headers: {
                 "Content-Type": "application/json"
             },
-
             body: JSON.stringify({
                 AccepterId: this.props.friendId, RequesterId: loggedInUser.id, friendshipConfirmed: ""
             })
-
-        })
+            })
             .then(response => response.json())
             .then(newFriend => {
                 sessionStorage.setItem("NewFriend", JSON.stringify({ newFriend }));
-                //redirect to find new friends view?
-
             })
     }
 
-
+    // Display the user details
     render() {
 
-
         return (
+
             <Row>
                 <Col xs={3} md={3}><img className="vertical-align profileImage" alt="profile" src={profileImage} width="40%" height="40%" />
                 </Col>

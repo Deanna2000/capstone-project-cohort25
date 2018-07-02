@@ -9,6 +9,7 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
 
+        // Initialize form fields
         this.state = {
             name: '',
             description: '',
@@ -28,6 +29,7 @@ class AddItem extends Component {
         this.loadFriends()
     }
 
+    // I will refactor this when I tweak the structure to have both items and friends connected at the parent level
     loadFriends = async function () {
         this.setState({ listOfFriends: [] })
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
@@ -63,10 +65,10 @@ class AddItem extends Component {
     }.bind(this)
 
 
-
     addItem = (evt) => {
         evt.preventDefault();
         const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
+        // Add the loaned item detail to the DB
         if (this.state.name.length > 0 && this.state.borrowerName.length > 0) {
             fetch("http://localhost:5001/sharedItems", {
                 method: "POST",
@@ -80,11 +82,13 @@ class AddItem extends Component {
             })
                 .then(response => response.json())
                 .then(newItem => {
+                    // Add the item to session storage
                     sessionStorage.setItem("NewItem", JSON.stringify({ newItem }));
                 })
                 .then(() => {
                     this.props.loadItems()
                 })
+                // Notification email - need to fix the mailgun DNS issue first
                 // .then(() => {
                 //    notificationEmail(loggedInUser.email, "Item Loaned", "You have just loaned a new item on Borrow App.")
                 //    return Promise.resolve()
@@ -100,7 +104,7 @@ class AddItem extends Component {
                     image: '',
                     lendDate: '',
                 }))
-                .then (() => {
+                .then(() => {
                     alert("The item was added to your loaned items list.")
                 })
         }
@@ -109,6 +113,7 @@ class AddItem extends Component {
         }
     }
 
+    // Event listeners for the loan item detail form
     handleNameChange = (evt) => {
         this.setState({ name: evt.target.value })
     }
@@ -133,6 +138,7 @@ class AddItem extends Component {
         this.setState({ image: evt.target.value })
     }
 
+    // Add values to the drop down menu for friends
     createSelectItems() {
         let items = []
         const userFriends = this.state.listOfFriends
@@ -145,17 +151,16 @@ class AddItem extends Component {
         return items;
     }
 
-
+    // When the borrower (friend) is selected, save the name in borrowerName and the id in borrowerUserid
     onDropdownSelected = (evt) => {
         this.setState({ borrowerName: evt.target.value.slice(0, evt.target.value.lastIndexOf("_")) })
         this.setState({ borrowerUserid: evt.target.value.slice(evt.target.value.lastIndexOf("_") + 1) })
     }
 
+    // Render the form for adding a new item
     render() {
 
-
         return (
-
 
             <div className="addItemContainer">
                 <form className="newItemForm">

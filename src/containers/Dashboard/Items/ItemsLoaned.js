@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import './Items.css'
 
+
+// Render the loaned items
 class ItemsLoaned extends Component {
 
     removeLoanedItem = () => {
         fetch("http://localhost:5001/sharedItems/" + this.props.itemList.id, {
             method: "DELETE",
         })
-        .then(() => { this.props.loadItems() }
-        )
+            .then(() => { this.props.loadItems() }
+            )
     }
-
 
     render() {
 
         return (
+
             <div>
                 <div className="panel panel-default">
                     <div className="panel-body loaned">

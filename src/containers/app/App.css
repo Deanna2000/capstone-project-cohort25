@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+body {
+  font-family: 'Amatic SC', cursive !important;
+}
 
 .App {
   text-align: center;
@@ -30,6 +33,4 @@
   to { transform: rotate(360deg); }
 }
 
-body {
-  font-family: 'Amatic SC', cursive !important;
-}
+
