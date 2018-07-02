@@ -10,14 +10,14 @@
     {
       "fName": "Justina",
       "lName": "Vickers",
-      "email": "justina@justina.com",
+      "email": "dndplayersnash@gmail.com",
       "password": "123",
       "id": 2
     },
     {
       "fName": "Aurora",
       "lName": "Vickers",
-      "email": "aurora@aurora.com",
+      "email": "doodropapp@gmail.com",
       "password": "123",
       "id": 3
     },
@@ -29,200 +29,92 @@
       "id": 4
     },
     {
-      "fName": "borrower",
-      "lName": "borrowed",
-      "email": "borrow@borrow.com",
-      "password": "borrowing",
-      "id": 23
-    },
-    {
       "fName": "Deanna",
       "lName": "Vickers",
       "email": "deanna2000@gmail.com",
-      "password": "sdfs",
-      "id": 24
-    },
-    {
-      "fName": "orange",
-      "lName": "orange",
-      "email": "orange@orange.com",
-      "password": "orange",
-      "id": 25
-    },
-    {
-      "fName": "green",
-      "lName": "green",
-      "email": "green@green.com",
-      "password": "green",
-      "id": 26
-    },
-    {
-      "fName": "meds",
-      "lName": "meds",
-      "email": "meds@meds.com",
-      "password": "meds",
-      "id": 27
-    },
-    {
-      "fName": "glass",
-      "lName": "glass",
-      "email": "glass@glass.com",
-      "password": "glass",
-      "id": 28
-    },
-    {
-      "fName": "glass",
-      "lName": "glass",
-      "email": "glass@glass.com",
-      "password": "glass",
-      "id": 29
-    },
-    {
-      "fName": "banana",
-      "lName": "banana",
-      "email": "banana@banana.com",
-      "password": "banana",
-      "id": 30
-    },
-    {
-      "fName": "phone",
-      "lName": "phone",
-      "email": "phone@phone.com",
       "password": "123",
-      "id": 31
+      "id": 5
+    },
+    {
+      "fName": "Pineapple",
+      "lName": "Pancakes",
+      "email": "pineapple@pancakes.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "fName": "Athena",
+      "lName": "Dog",
+      "email": "athena@athena.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "fName": "Zoe",
+      "lName": "Dog",
+      "email": "zoe@zoe.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "fName": "Lester",
+      "lName": "Badcat",
+      "email": "les@les.com",
+      "password": "123",
+      "id": 9
     },
     {
       "fName": "Chili",
       "lName": "Powder",
       "email": "chili@powder.com",
       "password": "123",
-      "id": 32
+      "id": 10
     },
     {
       "fName": "Table",
       "lName": "Kitchen",
       "email": "Table@table.com",
       "password": "123",
-      "id": 33
+      "id": 11
     },
     {
-      "fName": "White",
-      "lName": "Wine",
-      "email": "bottle@bottle.com",
-      "password": "123",
-      "id": 34
-    },
-    {
-      "fName": "athena",
-      "lName": "dog",
-      "email": "athena@athena.com",
-      "password": "123",
-      "id": 35
-    },
-    {
-      "fName": "zoe",
-      "lName": "dog",
-      "email": "zoe@zoe.com",
-      "password": "123",
-      "id": 36
-    },
-    {
-      "fName": "lester",
-      "lName": "badcat",
-      "email": "les@les.com",
-      "password": "123",
-      "id": 37
-    },
-    {
-      "fName": "castor",
-      "lName": "dog",
-      "email": "castor@castor.com",
-      "password": "123",
-      "id": 38
-    },
-    {
-      "fName": "purse",
-      "lName": "percy",
-      "email": "purse@purse.com",
-      "password": "123",
-      "id": 39
-    },
-    {
-      "fName": "vernor",
-      "lName": "soda",
-      "email": "vernors@vernors.com",
-      "password": "123",
-      "id": 40
-    },
-    {
-      "fName": "can",
-      "lName": "can",
-      "email": "can@can.com",
-      "password": "123",
-      "id": 41
-    },
-    {
-      "fName": "cup",
-      "lName": "cup",
-      "email": "cup@cup.com",
-      "password": "123",
-      "id": 42
-    },
-    {
-      "fName": "apple",
-      "lName": "core",
-      "email": "apple@apple.com",
-      "password": "123",
-      "id": 43
-    },
-    {
-      "fName": "red",
-      "lName": "hat",
-      "email": "red@red.com",
-      "password": "123",
-      "id": 44
-    },
-    {
-      "fName": "letter",
-      "lName": "mail",
-      "email": "letter@letter.com",
-      "password": "123",
-      "id": 45
-    },
-    {
-      "fName": "bag",
-      "lName": "bag",
-      "email": "bag@bag.com",
-      "password": "123",
-      "id": 47
-    },
-    {
-      "fName": "Lydia",
-      "lName": "Lydia",
-      "email": "lydia@lydia.com",
-      "password": "123",
-      "id": 48
-    },
-    {
-      "fName": "pete",
-      "lName": "pete",
-      "email": "pete@pete.com",
-      "password": "123",
-      "id": 49
-    },
-    {
-      "fName": "betty",
-      "lName": "vickers",
+      "fName": "Betty",
+      "lName": "Vickers",
       "email": "betty@betty.com",
       "password": "123",
-      "id": 50
+      "id": 12
     },
     {
-      "fName": "yellow",
-      "lName": "yell",
-      "email": "yellow@yellow.com",
+      "fName": "green",
+      "lName": "green",
+      "email": "green@green.com",
       "password": "123",
-      "id": 51
+      "id": 13
+    },
+    {
+      "fName": "banana",
+      "lName": "banana",
+      "email": "banana@banana.com",
+      "password": "123",
+      "id": 14
+    },
+    {
+      "fName": "olive",
+      "lName": "juice",
+      "email": "olive@olive.com",
+      "password": "123",
+      "profileImage": "",
+      "location": "",
+      "id": 15
+    },
+    {
+      "fName": "hatty",
+      "lName": "hatman",
+      "email": "hat@hat.com",
+      "password": "123",
+      "profileImage": "",
+      "location": "",
+      "id": 16
     }
   ],
   "friendsRelationships": [
@@ -234,18 +126,18 @@
     },
     {
       "id": 3,
-      "RequesterId": 24,
+      "RequesterId": 5,
       "AccepterId": 3,
       "friendshipConfirmed": 1
     },
     {
-      "AccepterId": 25,
+      "AccepterId": 6,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 4
     },
     {
-      "AccepterId": 26,
+      "AccepterId": 8,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 7
@@ -257,119 +149,58 @@
       "id": 8
     },
     {
-      "AccepterId": 28,
+      "AccepterId": 12,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 9
     },
     {
-      "AccepterId": 33,
+      "AccepterId": 11,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 10
     },
     {
-      "AccepterId": 1,
-      "friendshipConfirmed": "",
-      "id": 11
-    },
-    {
       "AccepterId": 2,
-      "friendshipConfirmed": "",
-      "id": 12
-    },
-    {
-      "AccepterId": 3,
-      "friendshipConfirmed": "",
-      "id": 13
-    },
-    {
-      "AccepterId": 4,
-      "friendshipConfirmed": "",
-      "id": 14
-    },
-    {
-      "AccepterId": 1,
-      "RequesterId": 35,
+      "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 15
     },
     {
-      "AccepterId": 1,
-      "friendshipConfirmed": "",
-      "id": 16
-    },
-    {
       "AccepterId": 2,
-      "RequesterId": 51,
+      "RequesterId": 14,
       "friendshipConfirmed": "",
       "id": 17
     },
     {
-      "AccepterId": 23,
-      "RequesterId": 51,
-      "friendshipConfirmed": "",
-      "id": 20
-    },
-    {
-      "AccepterId": 3,
-      "RequesterId": 35,
-      "friendshipConfirmed": "",
-      "id": 21
-    },
-    {
-      "AccepterId": 2,
-      "RequesterId": 35,
+      "AccepterId": 5,
+      "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 22
     },
     {
-      "AccepterId": 23,
-      "RequesterId": 35,
+      "AccepterId": 9,
+      "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 23
     },
     {
       "AccepterId": 4,
-      "RequesterId": 35,
+      "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 24
     },
     {
       "AccepterId": 1,
-      "RequesterId": 35,
-      "friendshipConfirmed": "",
-      "id": 25
-    },
-    {
-      "AccepterId": 1,
-      "RequesterId": 35,
-      "friendshipConfirmed": "",
-      "id": 26
-    },
-    {
-      "AccepterId": 1,
-      "RequesterId": 35,
+      "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 27
     },
     {
-      "AccepterId": 25,
-      "RequesterId": 35,
+      "AccepterId": 6,
+      "RequesterId": 7,
       "friendshipConfirmed": "",
       "id": 28
-    },
-    {
-      "AccepterId": 25,
-      "RequesterId": 35,
-      "friendshipConfirmed": "",
-      "id": 29
-    },
-    {
-      "AccepterId": 25,
-      "RequesterId": 35,
-      "friendshipConfirmed": "",
-      "id": 30
     }
   ],
   "sharedItems": [
@@ -381,9 +212,9 @@
       "borrowerUserid": 1,
       "borrowerName": "Steve Collie",
       "lenderName": "Aurora Vickers",
-      "dueDate": "7/14/2018",
+      "dueDate": "2018-07-14",
       "image": "https://a248.e.akamai.net/ib.huluim.com/show_key_art/827?size=1600x600&region=US",
-      "lendDate": "6/1/2018",
+      "lendDate": "2018-06-01",
       "archived": false,
       "returnedDate": ""
     },
@@ -395,9 +226,9 @@
       "borrowerUserid": 2,
       "borrowerName": "Justina Vickers",
       "lenderName": "Aurora Vickers",
-      "dueDate": "7/6/2018",
+      "dueDate": "2018-07-06",
       "image": "https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/1600x800/landscape-1456165374-bacon-strips.jpg?resize=768:*",
-      "lendDate": "6/3/2018",
+      "lendDate": "2018-06-03",
       "archived": false,
       "returnedDate": ""
     },
@@ -409,9 +240,9 @@
       "borrowerUserid": 1,
       "borrowerName": "Steve Collie",
       "lenderName": "Aurora Vickers",
-      "dueDate": "7/10/2018",
+      "dueDate": "2018-07-10",
       "image": "https://images-na.ssl-images-amazon.com/images/I/816w1GpFrhL._SX425_.jpg",
-      "lendDate": "6/7/2018",
+      "lendDate": "2018-06-07",
       "archived": false,
       "returnedDate": ""
     },
@@ -423,9 +254,9 @@
       "borrowerUserid": 2,
       "borrowerName": "Justina Vickers",
       "lenderName": "Aurora Vickers",
-      "dueDate": "7/18/2018",
+      "dueDate": "2018-07-18",
       "image": "https://media.mwstatic.com/product-images/880x660/Primary/628/628644.jpg",
-      "lendDate": "6/1/2018",
+      "lendDate": "2018-06-01",
       "archived": false,
       "returnedDate": ""
     },
@@ -437,9 +268,9 @@
       "borrowerUserid": 4,
       "borrowerName": "Brandi Adkins",
       "lenderName": "Aurora Vickers",
-      "dueDate": "9/16/2018",
+      "dueDate": "2018-09-16",
       "image": "http://laurelleaffarm.com/item-photos/big-two-quart-size-glass-mason-jars-vintage-canning-jar-kitchen-canisters-Laurel-Leaf-Farm-item-no-nt6219-1.jpg",
-      "lendDate": "6/1/2018",
+      "lendDate": "2018-06-01",
       "archived": false,
       "returnedDate": ""
     },
@@ -552,6 +383,20 @@
       "archived": false,
       "returnedDate": "",
       "id": 33
+    },
+    {
+      "name": "baking pan",
+      "description": "cupcake pan (12)",
+      "borrowerName": "Justina Vickers",
+      "borrowerUserid": "2",
+      "lenderName": "Aurora Vickers",
+      "lenderUserid": 3,
+      "dueDate": "2018-07-20",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91l5eNZ%2BtCL._SX466_.jpg",
+      "lendDate": "2018-06-06",
+      "archived": false,
+      "returnedDate": "",
+      "id": 34
     }
   ]
 }
