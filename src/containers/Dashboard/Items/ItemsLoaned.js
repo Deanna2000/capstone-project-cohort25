@@ -23,7 +23,6 @@ class ItemsLoaned extends Component {
                         <img className="cardImg" alt="loanedItem" src={this.props.itemList.image} />
                         <h4 className="cardTitle">Who has my {this.props.itemList.name}?</h4>
                         <p>{this.props.itemList.borrowerName}</p>
-                        <p className="duedate">Due: {this.props.itemList.dueDate}</p>
                         <button type="button" className="btn returnButtonLoaned" onClick={() => this.removeLoanedItem()}>It's Returned</button>
                     </div>
                 </div>

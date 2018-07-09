@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { nav } from 'react-bootstrap';
 import './NavBar.css';
 import logo from '../../../components/IMAGES/Borrow-Logo.png';
-// import UserProfile from './UserProfile'
+import UserProfile from './UserProfile'
 
 
 class NavBar extends Component {
@@ -11,6 +11,7 @@ class NavBar extends Component {
 
     this.state = {
       loggedInUser: {},
+      userProfileOpen: false
     }
   }
 
@@ -19,19 +20,22 @@ class NavBar extends Component {
   }
 
   openProfile = (evt) => {
-    console.log("user profile")
-    // return (
-    //         <div>
-    //         <UserProfile myProfile={this.state.loggedInUser}/>
-    //         </div>
-    // )
-  }
+    console.log("evt listener to open user profile")
+    this.setState({ userProfileOpen: true })
+    console.log("toggle to open profile", this.state.userProfileOpen)
+    }
 
-
+//myProfile={this.state.loggedInUser} <----add this to the user profile component call above
 
   render() {
 
     const loggedInUser = (JSON.parse(sessionStorage.getItem("ActiveUser")))
+
+    if(this.state.userProfileOpen === true){
+      return (
+            <UserProfile />
+    )
+  }
     if (sessionStorage.length < 1) {
     }
     else {

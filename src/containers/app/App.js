@@ -4,7 +4,7 @@ import React from 'react';
 import Home from '../homePage/index'
 import './App.css';
 import Friends from '../Dashboard/Friends/DisplayFriendsAndUsers'
-import MyCollection from '../Dashboard/Items/DisplayItems'
+import MyCollection from '../Dashboard/Items/DisplayItems';
 
 
 // Sets up the main view and the routing to main app urls

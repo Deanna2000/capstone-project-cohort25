@@ -119,12 +119,6 @@
   ],
   "friendsRelationships": [
     {
-      "id": 1,
-      "RequesterId": 1,
-      "AccepterId": 2,
-      "friendshipConfirmed": 1
-    },
-    {
       "AccepterId": 2,
       "RequesterId": 7,
       "friendshipConfirmed": "",
@@ -155,27 +149,32 @@
       "id": 28
     },
     {
-      "AccepterId": 1,
+      "AccepterId": 2,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 29
     },
     {
-      "AccepterId": 2,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 30
-    },
-    {
-      "AccepterId": 5,
+      "AccepterId": 12,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 31
+    },
+    {
+      "AccepterId": 1,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 32
+    },
+    {
+      "AccepterId": 4,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 33
     }
   ],
   "sharedItems": [
     {
-      "id": 2,
       "name": "Firefly DVD",
       "description": "15th Anniv Edition",
       "lenderUserid": 3,
@@ -186,10 +185,10 @@
       "image": "https://a248.e.akamai.net/ib.huluim.com/show_key_art/827?size=1600x600&region=US",
       "lendDate": "2018-06-01",
       "archived": false,
-      "returnedDate": ""
+      "returnedDate": "",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Bacon",
       "description": "fresh",
       "lenderUserid": 3,
@@ -200,80 +199,25 @@
       "image": "https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/1600x800/landscape-1456165374-bacon-strips.jpg?resize=768:*",
       "lendDate": "2018-06-03",
       "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 8,
-      "name": "Lunchbox",
-      "description": "Polka dots insulated tote",
-      "lenderUserid": 3,
-      "borrowerUserid": 1,
-      "borrowerName": "Steve Collie",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-07-10",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/816w1GpFrhL._SX425_.jpg",
-      "lendDate": "2018-06-07",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 9,
-      "name": "Table",
-      "description": "Folding Camp Table",
-      "lenderUserid": 3,
-      "borrowerUserid": 2,
-      "borrowerName": "Justina Vickers",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-07-18",
-      "image": "https://media.mwstatic.com/product-images/880x660/Primary/628/628644.jpg",
-      "lendDate": "2018-06-01",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "id": 11,
-      "name": "Canning Jars",
-      "description": "Quart sized jars (10)",
-      "lenderUserid": 3,
-      "borrowerUserid": 4,
-      "borrowerName": "Brandi Adkins",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-09-16",
-      "image": "http://laurelleaffarm.com/item-photos/big-two-quart-size-glass-mason-jars-vintage-canning-jar-kitchen-canisters-Laurel-Leaf-Farm-item-no-nt6219-1.jpg",
-      "lendDate": "2018-06-01",
-      "archived": false,
-      "returnedDate": ""
-    },
-    {
-      "name": "phone",
-      "description": "iphone6",
-      "lenderUserid": 3,
-      "borrowerUserid": 1,
-      "borrowerName": "Steve Collie",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-06-29",
-      "image": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/01/02/104924110-3ED2-REQ-010218-iPhone6.1910x1000.jpg",
-      "lendDate": "2018-06-21",
-      "archived": false,
       "returnedDate": "",
-      "id": 17
+      "id": 3
     },
     {
-      "name": "camelbak",
+      "name": "Takeya",
       "description": "green waterbottle",
       "borrowerName": "Aurora Vickers",
       "lenderName": "Steve Collie",
       "borrowerUserid": 3,
       "lenderUserid": 1,
       "dueDate": "2018-07-13",
-      "image": "https://6f3b8ef5c44ab5c4a6f8-2ffdd9d6553b25b4a8508669b55e19d9.ssl.cf1.rackcdn.com/colorized_large__7095_huntergreen_2016.png",
+      "image": "https://static1.squarespace.com/static/543b59abe4b018d3e8991d15/t/54695666e4b04cdc05d82866/1416189552826/TakeyaBottle_TheDesignDetail",
       "lendDate": "2018-06-20",
       "archived": false,
       "returnedDate": "",
       "id": 20
     },
     {
-      "name": "jacket",
+      "name": "Jacket",
       "description": "green bomber",
       "borrowerName": "Aurora Vickers",
       "lenderName": "Steve Collie",
@@ -287,8 +231,8 @@
       "id": 22
     },
     {
-      "name": "test2",
-      "description": "test2",
+      "name": "Sleeping Bag",
+      "description": "brown with red plaid",
       "borrowerName": "Aurora Vickers",
       "lenderName": "Steve Collie",
       "borrowerUserid": 3,
@@ -301,14 +245,43 @@
       "id": 24
     },
     {
-      "name": "blurg",
-      "description": "",
+      "name": "Canning Jars",
+      "description": "Quart sized jars (10)",
+      "lenderUserid": 3,
+      "borrowerUserid": 4,
+      "borrowerName": "Brandi Adkins",
+      "lenderName": "Aurora Vickers",
+      "dueDate": "2018-09-16",
+      "image": "http://laurelleaffarm.com/item-photos/big-two-quart-size-glass-mason-jars-vintage-canning-jar-kitchen-canisters-Laurel-Leaf-Farm-item-no-nt6219-1.jpg",
+      "lendDate": "2018-06-01",
+      "archived": false,
+      "returnedDate": "",
+      "id": 11
+    },
+    {
+      "name": "Phone",
+      "description": "iPhone6",
+      "lenderUserid": 3,
+      "borrowerUserid": 1,
+      "borrowerName": "Steve Collie",
+      "lenderName": "Aurora Vickers",
+      "dueDate": "2018-06-29",
+      "image": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/01/02/104924110-3ED2-REQ-010218-iPhone6.1910x1000.jpg",
+      "lendDate": "2018-06-21",
+      "archived": false,
+      "returnedDate": "",
+      "id": 38
+    },
+    {
+      "name": "Italian Leather Sofa",
+      "description": "tan sofa",
       "borrowerName": "aurora",
+      "borrowerUserid": "3",
       "lenderName": "Steve Collie",
       "lenderUserid": 1,
-      "dueDate": "",
-      "image": "",
-      "lendDate": "",
+      "dueDate": "2018-08-14",
+      "image": "https://cdn10.pamono.com/p/z/1/7/176978_joenepabv4/vintage-italian-leather-sofa-from-molinari-1.jpg",
+      "lendDate": "2018-07-01",
       "archived": false,
       "returnedDate": "",
       "id": 30
@@ -334,15 +307,15 @@
       "lenderName": "Aurora Vickers",
       "lenderUserid": 3,
       "dueDate": "2018-07-04",
-      "image": "http://www.elephantmusicstore.com/product_images/q/323/guitar-buddy-capo-silver__18687_std.jpg",
+      "image": "http://img.fasttechcdn.com/734/7345301/7345301-1.jpg",
       "lendDate": "2018-06-13",
       "archived": false,
       "returnedDate": "",
       "id": 32
     },
     {
-      "name": "purse",
-      "description": "holographic purse",
+      "name": "Purse",
+      "description": "Luminouse geometric",
       "borrowerName": "Aurora Vickers",
       "borrowerUserid": "3",
       "lenderName": "Justina Vickers",
@@ -355,8 +328,8 @@
       "id": 33
     },
     {
-      "name": "baking pan",
-      "description": "cupcake pan (12)",
+      "name": "Baking Pan",
+      "description": "Cupcake Pan (12)",
       "borrowerName": "Justina Vickers",
       "borrowerUserid": "2",
       "lenderName": "Aurora Vickers",
@@ -367,6 +340,62 @@
       "archived": false,
       "returnedDate": "",
       "id": 34
+    },
+    {
+      "name": "Mandolin",
+      "description": "Fender Wood Grain",
+      "borrowerName": "Justina Vickers",
+      "borrowerUserid": "2",
+      "lenderName": "Aurora Vickers",
+      "lenderUserid": 3,
+      "dueDate": "2018-07-21",
+      "image": "https://stuff.fendergarage.com/images/O/7/a/fcwd-products-acoustic-guitars-mandolin-01-hero.jpg",
+      "lendDate": "2018-07-02",
+      "archived": false,
+      "returnedDate": "",
+      "id": 35
+    },
+    {
+      "name": "Yacht",
+      "description": "super yacht",
+      "borrowerName": "Steve Collie",
+      "borrowerUserid": "1",
+      "lenderName": "Aurora Vickers",
+      "lenderUserid": 3,
+      "dueDate": "2018-07-07",
+      "image": "https://cdn.jamesedition.com/media/W1siZiIsImRhdGEvaW1hZ2VzLzI3OTgyMzg2X3NvdXJjZS5qcGciXSxbInAiLCJ0aHVtYiIsIjIwMDB4Il0sWyJwIiwid2F0ZXJtYXJrIl0sWyJwIiwiZW5jb2RlIiwianBnIiwiLXN0cmlwIC1xdWFsaXR5IDgwIC1pbnRlcmxhY2UgUGxhbmUiXV0/super-yacht-co-ownership-own-a-benetti-delfino-95-from-2-450-000.jpg?sha=5adb662b55d0a20c",
+      "lendDate": "2018-07-01",
+      "archived": false,
+      "returnedDate": "",
+      "id": 36
+    },
+    {
+      "name": "Table",
+      "description": "Folding Camp Table",
+      "lenderUserid": 3,
+      "borrowerUserid": 2,
+      "borrowerName": "Justina Vickers",
+      "lenderName": "Aurora Vickers",
+      "dueDate": "2018-07-18",
+      "image": "https://media.mwstatic.com/product-images/880x660/Primary/628/628644.jpg",
+      "lendDate": "2018-06-01",
+      "archived": false,
+      "returnedDate": "",
+      "id": 9
+    },
+    {
+      "name": "horcrux",
+      "description": "movolo gaunt's ring",
+      "borrowerName": "Justina Vickers",
+      "borrowerUserid": "2",
+      "lenderName": "Aurora Vickers",
+      "lenderUserid": 3,
+      "dueDate": "2018-07-27",
+      "image": "https://s3.amazonaws.com/gs-geo-images/2e676978-11be-4f94-9d17-6442b0856808.jpg",
+      "lendDate": "2018-07-03",
+      "archived": false,
+      "returnedDate": "",
+      "id": 39
     }
   ]
 }
