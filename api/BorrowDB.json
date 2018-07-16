@@ -19,6 +19,8 @@
       "lName": "Vickers",
       "email": "doodropapp@gmail.com",
       "password": "123",
+      "profileImage": "",
+      "location": "",
       "id": 3
     },
     {
@@ -171,6 +173,12 @@
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 33
+    },
+    {
+      "AccepterId": 7,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 34
     }
   ],
   "sharedItems": [

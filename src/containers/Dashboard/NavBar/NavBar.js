@@ -33,7 +33,7 @@ class NavBar extends Component {
 
     if(this.state.userProfileOpen === true){
       return (
-            <UserProfile />
+            <UserProfile userProfileOpen={this.state.userProfileOpen}/>
     )
   }
     if (sessionStorage.length < 1) {
