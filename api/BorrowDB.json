@@ -163,22 +163,22 @@
       "id": 31
     },
     {
-      "AccepterId": 1,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 32
-    },
-    {
-      "AccepterId": 4,
-      "RequesterId": 3,
-      "friendshipConfirmed": "",
-      "id": 33
-    },
-    {
       "AccepterId": 7,
       "RequesterId": 3,
       "friendshipConfirmed": "",
       "id": 34
+    },
+    {
+      "AccepterId": 11,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 35
+    },
+    {
+      "AccepterId": 10,
+      "RequesterId": 3,
+      "friendshipConfirmed": "",
+      "id": 36
     }
   ],
   "sharedItems": [
@@ -251,20 +251,6 @@
       "archived": false,
       "returnedDate": "",
       "id": 24
-    },
-    {
-      "name": "Canning Jars",
-      "description": "Quart sized jars (10)",
-      "lenderUserid": 3,
-      "borrowerUserid": 4,
-      "borrowerName": "Brandi Adkins",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-09-16",
-      "image": "http://laurelleaffarm.com/item-photos/big-two-quart-size-glass-mason-jars-vintage-canning-jar-kitchen-canisters-Laurel-Leaf-Farm-item-no-nt6219-1.jpg",
-      "lendDate": "2018-06-01",
-      "archived": false,
-      "returnedDate": "",
-      "id": 11
     },
     {
       "name": "Phone",
@@ -376,20 +362,6 @@
       "archived": false,
       "returnedDate": "",
       "id": 36
-    },
-    {
-      "name": "Table",
-      "description": "Folding Camp Table",
-      "lenderUserid": 3,
-      "borrowerUserid": 2,
-      "borrowerName": "Justina Vickers",
-      "lenderName": "Aurora Vickers",
-      "dueDate": "2018-07-18",
-      "image": "https://media.mwstatic.com/product-images/880x660/Primary/628/628644.jpg",
-      "lendDate": "2018-06-01",
-      "archived": false,
-      "returnedDate": "",
-      "id": 9
     },
     {
       "name": "horcrux",
